@@ -1,0 +1,22 @@
+Prioritaire:
+- Filtre/Tri sur la liste des personnes (FIXME)
+- Si changement de personne/onglet demander la sauvegarde si les informations de la personnes ont été modifié (TODO 1) (TODO 5)
+- Implementer les paramètres std (couleur, police,...) (TODO 2)
+- Finir implementer le format date et popup pour modifier ces dates (TODO 3)
+- Image icone des personnes à metre en place (TODO 4)
+- plus de mere, pere que des typeLien dans FPersonne (TODO 6)
+
+Taches restantes:
+- Sauvegarder les données (choix std, paramètres) xml?
+- Revu de code
+- Centrer sur la personne selectionnée
+- Information à rajouter dans FenInf/ pouvoir modifier les infos
+- Bloquer les splits (uniquement droit de cacher pas modifier les dimenions)
+- Ajout/Supression de personnes / de liens entre les personnes à implémenter
+- Créer les algorithmes pour les différents mode d'affichage (que enfants, freres/soeurs, ...)
+- Copie onglet arbre (pointe sur même structure arbre)
+- Pouvoir modifier les fonts des onglets arbres, les couleurs des écris, ... (standard, par onglet arbre)
+- Pouvoir fusionner 2 arbres
+- Pouvoir imprimer
+- Formater (nom en majuscule/ prénom commence majuscule puis minuscules...)
+- Calendrier avec les dates d'anniversaire.

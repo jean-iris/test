@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "DTDinternationnalisation.dtd" >
+<properties>
+	<entry langue="francais" rubr="nom">"Nom :"</entry>
+	<entry langue="english" rubr="nom">"Name :"</entry>
+
+	<entry langue="francais" rubr="prenom">"Prénom :"</entry>
+	<entry langue="english" rubr="prenom">"First name :"</entry>
+</properties>
