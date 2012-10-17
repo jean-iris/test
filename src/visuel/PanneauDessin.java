@@ -49,6 +49,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         fondEcrant = new javax.swing.JMenuItem();
         trait = new javax.swing.JMenuItem();
         typeAffich = new javax.swing.JMenuItem();
+        typeAffichHori = new javax.swing.JMenuItem();
         sauvGED = new javax.swing.JMenuItem();
         resetCouleurSpecial = new javax.swing.JMenuItem();
 
@@ -75,6 +76,14 @@ public class PanneauDessin extends javax.swing.JPanel {
             }
         });
         menuClickDroit.add(typeAffich);
+
+        typeAffichHori.setText("Changer d'oriantation");
+        typeAffichHori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeAffichHoriActionPerformed(evt);
+            }
+        });
+        menuClickDroit.add(typeAffichHori);
 
         sauvGED.setText("Sauver format GED");
         sauvGED.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +209,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         }
         peupler();
     }//GEN-LAST:event_typeAffichActionPerformed
-
+    
     private void sauvGEDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sauvGEDActionPerformed
         // action sur sauver GED
         GestionFichierGed traitementGed = new GestionFichierGed ();
@@ -226,6 +235,18 @@ public class PanneauDessin extends javax.swing.JPanel {
         resetCouleurSpecial();
         repaint();
     }//GEN-LAST:event_resetCouleurSpecialActionPerformed
+
+    private void typeAffichHoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichHoriActionPerformed
+        if (verticalAffichage)
+        {
+            verticalAffichage = false;
+        }
+        else
+        {
+            verticalAffichage = true;
+        }
+        peupler();
+    }//GEN-LAST:event_typeAffichHoriActionPerformed
     
     private void resetCouleurSpecial() {
         if( mapCouleurSpecial != null) {
@@ -458,7 +479,7 @@ public class PanneauDessin extends javax.swing.JPanel {
 
         //réinitialisation zoom
         zoom = 100;
-
+        
         //réinitialisation chaine la plus longue
         String textLePlusLong = "";
         rapportPoliceText = 1;
@@ -569,6 +590,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private javax.swing.JMenuItem sauvGED;
     private javax.swing.JMenuItem trait;
     private javax.swing.JMenuItem typeAffich;
+    private javax.swing.JMenuItem typeAffichHori;
     // End of variables declaration//GEN-END:variables
     // variable
     private int zoom = 100;
