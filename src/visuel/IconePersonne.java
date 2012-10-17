@@ -87,27 +87,27 @@ public class IconePersonne extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        popupMenu = new java.awt.PopupMenu();
-        selectionner = new java.awt.MenuItem();
-        couleurSpeciale = new java.awt.MenuItem();
+        menuCliqueIcone = new javax.swing.JPopupMenu();
+        selectionner = new javax.swing.JMenuItem();
+        couleurSpeciale = new javax.swing.JMenuItem();
         imagePersonne = new javax.swing.JButton();
         infoPersonne = new javax.swing.JTextPane();
 
-        selectionner.setLabel("Selectionner");
+        selectionner.setText("selectionner");
         selectionner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectionnerActionPerformed(evt);
             }
         });
-        popupMenu.add(selectionner);
+        menuCliqueIcone.add(selectionner);
 
-        couleurSpeciale.setLabel("Couleur spéciale");
+        couleurSpeciale.setText("couleurSpeciale");
         couleurSpeciale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 couleurSpecialeActionPerformed(evt);
             }
         });
-        popupMenu.add(couleurSpeciale);
+        menuCliqueIcone.add(couleurSpeciale);
 
         setForeground(couleurFontIcone);
         setLayout(null);
@@ -117,10 +117,20 @@ public class IconePersonne extends javax.swing.JPanel {
                 imagePersonneMouseClicked(evt);
             }
         });
+        imagePersonne.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imagePersonneActionPerformed(evt);
+            }
+        });
         add(imagePersonne);
         imagePersonne.setBounds(0, 0, 70, 70);
 
         infoPersonne.setEditable(false);
+        infoPersonne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                infoPersonneMouseClicked(evt);
+            }
+        });
         add(infoPersonne);
         infoPersonne.setBounds(0, 70, 70, 30);
     }// </editor-fold>//GEN-END:initComponents
@@ -132,7 +142,7 @@ public class IconePersonne extends javax.swing.JPanel {
             fen.getSplitPrincipal().regenerer(numeroID);
         }
         if (evt.getButton() == 3) {
-            popupMenu.show(evt.getComponent(), evt.getX(), evt.getY());
+            menuCliqueIcone.show(evt.getComponent(), evt.getX(), evt.getY());
         }
     }//GEN-LAST:event_imagePersonneMouseClicked
 
@@ -150,6 +160,21 @@ public class IconePersonne extends javax.swing.JPanel {
         pan.addCouleurSpecial(numeroID, couleur);
         pan.repaint();
     }//GEN-LAST:event_couleurSpecialeActionPerformed
+
+    private void imagePersonneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagePersonneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_imagePersonneActionPerformed
+
+    private void infoPersonneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_infoPersonneMouseClicked
+        // cliqué sur le text
+        if (evt.getButton() == 1) {
+            FenPrinc fen = (FenPrinc) getRootPane().getParent();
+            fen.getSplitPrincipal().regenerer(numeroID);
+        }
+        if (evt.getButton() == 3) {
+            menuCliqueIcone.show(evt.getComponent(), evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_infoPersonneMouseClicked
 
     @Override
     public void setSize(int width, int height) {
@@ -224,11 +249,11 @@ public class IconePersonne extends javax.swing.JPanel {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.MenuItem couleurSpeciale;
+    private javax.swing.JMenuItem couleurSpeciale;
     private javax.swing.JButton imagePersonne;
     private javax.swing.JTextPane infoPersonne;
-    private java.awt.PopupMenu popupMenu;
-    private java.awt.MenuItem selectionner;
+    private javax.swing.JPopupMenu menuCliqueIcone;
+    private javax.swing.JMenuItem selectionner;
     // End of variables declaration//GEN-END:variables
     //variables locales
     private Dimension dim = new Dimension(85, 120);

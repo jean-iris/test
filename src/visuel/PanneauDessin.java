@@ -141,8 +141,17 @@ public class PanneauDessin extends javax.swing.JPanel {
             gridBagConstraints.fill = GridBagConstraints.NONE;
             monIcone.setSize(x2, y2);
             monIcone.setTaillePolice(nouvelleTaillePolice);
+            if (verticalAffichage)
+            {
             gridBagConstraints.ipadx = x2;
             gridBagConstraints.ipady = y2 + 10;
+            }
+            else
+            {
+                gridBagConstraints.ipadx = x2 + 10;
+                gridBagConstraints.ipady = y2;
+            }
+            
             grille.setConstraints(monIcone, gridBagConstraints);
         }
 
@@ -253,10 +262,10 @@ public class PanneauDessin extends javax.swing.JPanel {
         Integer id;
 
         for (int i = 0; i < mesIcones.length; i++) {
-                rec = mesIcones[i].getBounds();
-                ico = (IconePersonne)mesIcones[i];
-                id = ico.getNumeroID();
-                mapIcones.put(id,rec);
+            rec = mesIcones[i].getBounds();
+            ico = (IconePersonne)mesIcones[i];
+            id = ico.getNumeroID();
+            mapIcones.put(id,rec);
         }
 
         Set<Integer> listeID = mapIcones.keySet();
@@ -290,9 +299,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                         if (rec2 != null)
                         {
                             cdc.setColor(couleurTraiID);
+                            if (verticalAffichage)
+                            {
                             cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
-                            cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec2.y + rec2.height - 6 );
-                            cdc.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y + rec.height - 10  );
+                                cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y + rec.height - 6   );
+                                cdc.drawLine(rec.x + rec.width / 2   ,rec.y + rec.height - 6    ,rec.x + rec.width / 2    ,rec.y + rec.height - 10  );
+                        }
+                            else
+                            {
+                                cdc.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 );
+                                cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec.x + rec.width - 6   ,rec.y + rec.height / 2   );
+                                cdc.drawLine(rec.x + rec.width - 6   ,rec.y + rec.height / 2   ,rec.x + rec.width - 10  ,rec.y + rec.height / 2   );
+                            }
                         }
                     }
                 }
@@ -341,9 +359,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                 if (rec2 != null)
                 {
                     cdc.setColor(couleurTraiID);
+                    if (verticalAffichage)
+                    {
                     cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6);
                     cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec2.y + rec2.height - 6);
                     cdc.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec.y                   );
+                }
+                    else
+                    {
+                        cdc.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2);
+                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec.y + rec.height / 2  );
+                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2   ,rec.x                   ,rec.y  + rec.height / 2 );
+                    }
                 }
             }
 
@@ -354,9 +381,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                 if (rec2 != null)
                 {
                     cdc.setColor(couleurTraiID);
+                    if (verticalAffichage)
+                    {
                     cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
                     cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec2.y + rec2.height - 6 );
                     cdc.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y                    );
+                }
+                    else
+                    {
+                        cdc.drawLine(rec2.x + rec2.width - 10 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6  ,rec2.y + rec2.height / 2 );
+                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2  ,rec2.x + rec2.width - 6  ,rec.y + rec.height / 2   );
+                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2    ,rec.x                    ,rec.y + rec.height / 2   );
+                    }
                 }
             }
             
@@ -367,10 +403,21 @@ public class PanneauDessin extends javax.swing.JPanel {
             {
                 couleurTraiID = mapCouleurSpecial.get(id);
                 cdc.setColor(couleurTraiID);
+                if (verticalAffichage)
+                {
                 cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x + rec.width, rec.y - 1              );
                 cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x - 1        , rec.y + rec.height - 10);
                 cdc.drawLine(rec.x + rec.width, rec.y - 1              , rec.x + rec.width, rec.y + rec.height - 10);
                 cdc.drawLine(rec.x - 1        , rec.y + rec.height - 10, rec.x + rec.width, rec.y + rec.height - 10);
+            }
+                else
+                {
+                    //TODO: a tester
+                    cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x + rec.width - 10, rec.y - 1         );
+                    cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x - 1             , rec.y + rec.height);
+                    cdc.drawLine(rec.x + rec.width - 10, rec.y - 1         , rec.x + rec.width - 10, rec.y + rec.height);
+                    cdc.drawLine(rec.x - 1             , rec.y + rec.height, rec.x + rec.width - 10, rec.y + rec.height);
+                }
             }
         }
     }
@@ -427,10 +474,22 @@ public class PanneauDessin extends javax.swing.JPanel {
             textLePlusLong =  nouvelleIcone.estTextLePusLong(textLePlusLong);//A la création sauvegarde du texte le plus long
             GridBagConstraints gridBagConstraints = new GridBagConstraints();
             gridBagConstraints.fill = GridBagConstraints.NONE;
+            if (verticalAffichage)
+            {
             gridBagConstraints.gridx = pp.y;
             gridBagConstraints.gridy = pp.x;
             gridBagConstraints.ipadx = nouvelleIcone.getSize().width;
             gridBagConstraints.ipady = nouvelleIcone.getSize().height + 10;
+                
+            }
+            else
+            {
+                gridBagConstraints.gridx = pp.x;
+                gridBagConstraints.gridy = pp.y;
+                gridBagConstraints.ipadx = nouvelleIcone.getSize().width + 10;
+                gridBagConstraints.ipady = nouvelleIcone.getSize().height;
+            }
+            
             gridBagConstraints.weightx = 1.0;
             gridBagConstraints.weighty = 1.0;
             this.add(nouvelleIcone, gridBagConstraints);
@@ -520,6 +579,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private Color couleurFont = new Color(238,238,238); // couleur de 0 à 255
     private Integer idCourant = -1;
     private int typeAffichage = 1; //MAIN CHANGE TYPE AFFICHAGE 
+    private Boolean verticalAffichage= true; //TODO a définir dans les instances + hautes (voir typeAffichage)
     private Arbre arbre = null;
     private StyledDocument typeEcriture = null;
     private HashMap <Integer, Color> mapCouleurSpecial = new HashMap <Integer, Color>();

@@ -7,6 +7,7 @@ Prioritaire:
 - plus de mere, pere que des typeLien dans FPersonne (TODO 6)
 
 Taches restantes:
+- Ajout/Supression de personnes / de liens entre les personnes à implémenter
 - Sauvegarder les données (choix std, paramètres) xml?
 - Revu de code
 - Centrer sur la personne selectionnée
@@ -20,3 +21,6 @@ Taches restantes:
 - Pouvoir imprimer
 - Formater (nom en majuscule/ prénom commence majuscule puis minuscules...)
 - Calendrier avec les dates d'anniversaire.
+
+- affichage arbre en horizontal
+- affichage arbre sans icones
