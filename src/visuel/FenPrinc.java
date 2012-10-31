@@ -414,7 +414,7 @@ public class FenPrinc extends javax.swing.JFrame {
     public SplitPrincipal getSplitPrincipal() {
         return splitPrincipal;
     }
-    //zone de gette/sette
+    //zone de get/set
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aPropos;
     private javax.swing.JMenu aide;

@@ -49,20 +49,6 @@ public class FenArbre extends JScrollPane {
         setIdCourant(idCourant);
     }
     
-    
-    public FenArbre(SplitPrincipal split, Arbre arbre){
-        super();
-//        principal = split;
-        this.arbre = arbre;
-        this.idCourant = arbre.getRacine();
-        initComponents();
-
-        AdjustmentListener listener = new ModifScroll();
-        this.getHorizontalScrollBar().addAdjustmentListener(listener);
-        this.getVerticalScrollBar().addAdjustmentListener(listener);
-        setIdCourant(idCourant); 
-        split.regenerer2(this);
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -94,22 +80,12 @@ public class FenArbre extends JScrollPane {
         setViewportView(panneauArbre);
     }// </editor-fold>//GEN-END:initComponents
 
-//    @Override
-//    public void paint(Graphics g) {
-////        Container frame = getRootPane().getParent();
-////        if (frame instanceof FenPrinc) {
-////            FenPrinc fen = (FenPrinc) getRootPane().getParent();
-////            fen.getSplitPrincipal().regenerer2(idCourant);
-////        }
-//        super.paint(g);
-//
-//    }
-
 //    zone contrôleur
     private class ModifScroll implements AdjustmentListener {
         // This method is called whenever the value of a scrollbar is changed,
         // either by the user or programmatically.
 
+        @Override
         public void adjustmentValueChanged(AdjustmentEvent evt) {
             panneauArbre.repaint();
         }
@@ -139,16 +115,7 @@ public class FenArbre extends JScrollPane {
 //        }
 
     }//GEN-LAST:event_selectFen
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private visuel.PanneauDessin panneauArbre;
-    // End of variables declaration//GEN-END:variables
-    private Arbre arbre;
-//    private SplitPrincipal principal = null;
-    private Integer idCourant = -1;
-    private Point coorMouse = null;
 
-    
-    
     public Integer getIdCourant() {
         return idCourant;
     }    
@@ -203,4 +170,12 @@ public class FenArbre extends JScrollPane {
     public Arbre getArbre() {
         return arbre;
     }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private visuel.PanneauDessin panneauArbre;
+    // End of variables declaration//GEN-END:variables
+    private Arbre arbre;
+    private Integer idCourant = -1;
+    private Point coorMouse = null;
+
 }

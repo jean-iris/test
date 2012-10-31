@@ -7,9 +7,7 @@ package visuel;
 import arbreGene.Arbre;
 import arbreGene.TypeLien;
 import java.awt.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 import javax.swing.text.StyledDocument;
@@ -26,6 +24,8 @@ public class PanneauDessin extends javax.swing.JPanel {
      */
     public PanneauDessin() {
         initComponents();
+        timer = new Timer();
+        maTacheDiff = new RemindTask();
     }
     
     /**
@@ -34,6 +34,8 @@ public class PanneauDessin extends javax.swing.JPanel {
     public PanneauDessin(Arbre arbre) {
         initComponents();
         this.arbre = arbre;
+        timer = new Timer();
+        maTacheDiff = new RemindTask();
     }
     
     /**
@@ -114,20 +116,42 @@ public class PanneauDessin extends javax.swing.JPanel {
         });
         setLayout(new java.awt.GridBagLayout());
     }// </editor-fold>//GEN-END:initComponents
+    
+    class RemindTask extends TimerTask {
 
+        @Override
+        public void run() {
+            modifZoom();
+        }
+        
+    }
+
+    
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
         // evenement souris molette
         
+        if (zoom >= 20 && zoom <= 600) {
+            zoom -= evt.getWheelRotation() * 5;
+            if (zoom < 20) { zoom = 20;}
+            if (zoom > 600) { zoom = 600;}
+            
+            try 
+            {
+                timer.schedule(maTacheDiff, TIMEDIFF);
+            }
+            catch (IllegalStateException is)
+            {
+                //rien à faire
+            }
+        }
+
+        
+        
+    }//GEN-LAST:event_formMouseWheelMoved
+    
+    private void modifZoom(){
         grille = (GridBagLayout) getLayout();
         
-        if (zoom <= 600 && evt.getWheelRotation() == -1) {
-            zoom += 5;
-        } else if (zoom >= 20 && evt.getWheelRotation() == 1) {
-            zoom -= 5;
-        }
-        //TODO poids incrémentation zoom?
-
-
         Component[] mesComposants = getComponents();
 
         //calcul taille du text a metre en place
@@ -166,8 +190,9 @@ public class PanneauDessin extends javax.swing.JPanel {
 
         getParent().getParent().getParent().repaint();
         repaint();
-    }//GEN-LAST:event_formMouseWheelMoved
-
+        maTacheDiff = new RemindTask();
+    }
+    
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         // evenement souris appuyée
         if(evt.getButton() == 3)
@@ -202,6 +227,7 @@ public class PanneauDessin extends javax.swing.JPanel {
 
     private void typeAffichActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichActionPerformed
         // action type d'affichage
+        //TODO 0 remplacer par un radio bouton
         typeAffichage ++;
         if(typeAffichage > 3)
         {
@@ -606,4 +632,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private StyledDocument typeEcriture = null;
     private HashMap <Integer, Color> mapCouleurSpecial = new HashMap <Integer, Color>();
     private Color couleurTrai = new Color(0,0,0);
+    private Timer timer;
+    private TimerTask maTacheDiff;
+    private final long TIMEDIFF = 200;
 }

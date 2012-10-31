@@ -125,7 +125,8 @@ public class SplitPrincipal extends JSplitPane {
 
     protected void nouvelOnglet(Arbre arbre, String ongletNom) {
         //panArbre = new FenArbre(arbre);
-        panArbre = new FenArbre(this, arbre);
+        panArbre = new FenArbre(arbre);
+        regenerer2(panArbre);
         panArbre.setName(ongletNom);
         ongletArbre.add(panArbre);
         ongletArbre.setSelectedComponent(panArbre);
