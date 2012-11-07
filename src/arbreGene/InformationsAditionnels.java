@@ -23,8 +23,8 @@ public class InformationsAditionnels {
 
     // zone constructeur
     /**
-        * constructeur paramétré
-        */
+    * constructeur paramétré
+    */
     public InformationsAditionnels(String nomFichierPhoto, String commantaire,
         ArrayList<DocAnnexe> documentAnnexe) {
         super();
@@ -34,23 +34,21 @@ public class InformationsAditionnels {
     }
 
     /**
-        * constructeur par d�faut
-        */
+    * constructeur par défaut
+    */
     public InformationsAditionnels() {
         super();
     }
 
     /**
-        * constructeur copie
-        */
+    * constructeur copie
+    */
     public InformationsAditionnels(InformationsAditionnels monInfo) {
         super();
         this.nomFichierPhoto = monInfo.nomFichierPhoto;
         this.commantaire = monInfo.commantaire;
         this.documentAnnexe = monInfo.documentAnnexe;
     }
-
-
 
     // zone méthode
 

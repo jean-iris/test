@@ -14,16 +14,15 @@ import javax.swing.text.StyledDocument;
  *
  * @author Guillet
  */
-public class IconePersonne extends ModelIconePersonne {
+public class IconePersonneType2 extends ModelIconePersonne {
 
     /**
      * Creates new form IconePersonne
      */
-    public IconePersonne() {
+    public IconePersonneType2() {
         initComponents();
         setSize(dim);
-        imagePersonne.setBounds(new Rectangle(0, 0, this.getSize().width, this.getSize().height * 2 / 3));
-        infoPersonne.setBounds(new Rectangle(0, (dim.height * 2 / 3) + 1, dim.width, (dim.height * 1 / 3)));
+        infoPersonne.setBounds(new Rectangle(0, 0, dim.width, dim.height));
         infoPersonne.setMargin(new Insets(1, 1, 1, 1));
         infoPersonne.setFont(new Font(nomText, styleText, 7));
         setSize(dim);
@@ -32,12 +31,11 @@ public class IconePersonne extends ModelIconePersonne {
     /**
      * Creates new form IconePersonne
      */
-    public IconePersonne(Personne identite, Integer ind, Color couleurFontIcone, StyledDocument StyledDocument) {
+    public IconePersonneType2(Personne identite, Integer ind, Color couleurFontIcone, StyledDocument StyledDocument) {
         this.couleurFontIcone = couleurFontIcone;
         initComponents();
         setSize(dim);
-        imagePersonne.setBounds(new Rectangle(0, 0, this.getSize().width, this.getSize().height * 2 / 3));
-        infoPersonne.setBounds(new Rectangle(0, (dim.height * 2 / 3) + 1, dim.width, (dim.height * 1 / 3)));
+        infoPersonne.setBounds(new Rectangle(0, 0, dim.width, dim.height));
         infoPersonne.setMargin(new Insets(1, 1, 1, 1));
         infoPersonne.setFont(new Font(nomText, styleText, 7));
         String text = identite.getPrenom() + "\n" + identite.getNom() + "\n" + identite.getDateNaissance() + " - " + identite.getDateDeces() + "\nage:" + identite.getAge();
@@ -60,21 +58,6 @@ public class IconePersonne extends ModelIconePersonne {
 
         this.numeroID = ind;
 
-        ima = null;
-        //TODO 4 si image existe dans base de données, on la prend, sinon on prend les icones standards
-        if ("Homme".equals(identite.getSexe())) {
-            ima = new ImageIcon("images généalogie/homme4.JPG").getImage();
-
-        }
-        if ("Femme".equals(identite.getSexe())) {
-            ima = new ImageIcon("images généalogie/femme4.JPG").getImage();
-        }
-
-        if (ima != null) {
-            Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
-            imagePersonne.setIcon(new ImageIcon(ima2));
-        }
-        
         setSize(dim);
         repaint();
     }
@@ -91,7 +74,6 @@ public class IconePersonne extends ModelIconePersonne {
         menuCliqueIcone = new javax.swing.JPopupMenu();
         selectionner = new javax.swing.JMenuItem();
         couleurSpeciale = new javax.swing.JMenuItem();
-        imagePersonne = new javax.swing.JButton();
         infoPersonne = new javax.swing.JTextPane();
 
         selectionner.setText("selectionner");
@@ -113,14 +95,6 @@ public class IconePersonne extends ModelIconePersonne {
         setForeground(couleurFontIcone);
         setLayout(null);
 
-        imagePersonne.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                imagePersonneMouseClicked(evt);
-            }
-        });
-        add(imagePersonne);
-        imagePersonne.setBounds(0, 0, 70, 70);
-
         infoPersonne.setEditable(false);
         infoPersonne.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -128,19 +102,8 @@ public class IconePersonne extends ModelIconePersonne {
             }
         });
         add(infoPersonne);
-        infoPersonne.setBounds(0, 70, 70, 30);
+        infoPersonne.setBounds(0, 0, 70, 30);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void imagePersonneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagePersonneMouseClicked
-        // cliqué sur l'image ou le text
-        if (evt.getButton() == 1) {
-            FenPrinc fen = (FenPrinc) getRootPane().getParent();
-            fen.getSplitPrincipal().regenerer(numeroID);
-        }
-        if (evt.getButton() == 3) {
-            menuCliqueIcone.show(evt.getComponent(), evt.getX(), evt.getY());
-        }
-    }//GEN-LAST:event_imagePersonneMouseClicked
 
     private void selectionnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectionnerActionPerformed
         // action sur selection
@@ -173,33 +136,19 @@ public class IconePersonne extends ModelIconePersonne {
         super.setSize(width, height);
         dim.width = width;
         dim.height = height;
-        if (imagePersonne != null) {
-            imagePersonne.setSize(width, height * 2 / 3);
-            if (ima != null) {
-                Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
-                imagePersonne.setIcon(new ImageIcon(ima2));
-            }
-        }
         if (infoPersonne != null) {
-            infoPersonne.setSize(width, height * 1 / 3);
-            infoPersonne.setLocation(0, (height * 2 / 3) + 1);
+            infoPersonne.setSize(width, height);
+            infoPersonne.setLocation(0, 0);
         }
     }
 
     @Override
     public void setSize(Dimension d) {
         super.setSize(d);
-        if (imagePersonne != null) {
-            imagePersonne.setSize(d.width, d.height * 2 / 3);
-
-            if (ima != null) {
-                Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
-                imagePersonne.setIcon(new ImageIcon(ima2));
-            }
-        }
+        
         if (infoPersonne != null) {
-            infoPersonne.setSize(d.width, d.height * 1 / 3);
-            infoPersonne.setLocation(0, (d.height * 2 / 3) + 1);
+            infoPersonne.setSize(d.width, d.height);
+            infoPersonne.setLocation(0, 0);
         }
     }
 
@@ -262,19 +211,17 @@ public class IconePersonne extends ModelIconePersonne {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem couleurSpeciale;
-    private javax.swing.JButton imagePersonne;
     private javax.swing.JTextPane infoPersonne;
     private javax.swing.JPopupMenu menuCliqueIcone;
     private javax.swing.JMenuItem selectionner;
     // End of variables declaration//GEN-END:variables
     //variables locales
-    private Dimension dim = new Dimension(85, 120);
+    private Dimension dim = new Dimension(90, 40);
     private String nomText = "Dialog";
     private int styleText = Font.PLAIN;
     private Color couleurFontIcone = new Color(238, 238, 238);
     private FontMetrics maMetrics = null;
     private String textMax = null;
     private Integer numeroID;
-    private Image ima = null;
     private int nbLigne = 1;
 }

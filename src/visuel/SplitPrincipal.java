@@ -119,8 +119,6 @@ public class SplitPrincipal extends JSplitPane {
         panArbre.setName(java.util.ResourceBundle.getBundle(strBundle).getString("NOUVEAU"));
         ongletArbre.add(panArbre);
         ongletArbre.setSelectedComponent(panArbre);
-        //panArbre.remplissageData(fenSelect.getMod());
-        //fenSelect.afficherTableau();
 	}
 
     protected void nouvelOnglet(Arbre arbre, String ongletNom) {
@@ -130,8 +128,6 @@ public class SplitPrincipal extends JSplitPane {
         panArbre.setName(ongletNom);
         ongletArbre.add(panArbre);
         ongletArbre.setSelectedComponent(panArbre);
-        //panArbre.remplissageData(fenSelect.getMod());
-        //fenSelect.afficherTableau();
     }
 
     public void regenerer(Integer numeroID) {

@@ -24,8 +24,8 @@ public class PanneauDessin extends javax.swing.JPanel {
      */
     public PanneauDessin() {
         initComponents();
-        timer = new Timer();
-        maTacheDiff = new RemindTask();
+        initPerso();
+        
     }
     
     /**
@@ -34,8 +34,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     public PanneauDessin(Arbre arbre) {
         initComponents();
         this.arbre = arbre;
-        timer = new Timer();
-        maTacheDiff = new RemindTask();
+        initPerso();
     }
     
     /**
@@ -50,10 +49,18 @@ public class PanneauDessin extends javax.swing.JPanel {
         menuClickDroit = new javax.swing.JPopupMenu();
         fondEcrant = new javax.swing.JMenuItem();
         trait = new javax.swing.JMenuItem();
-        typeAffich = new javax.swing.JMenuItem();
+        typeAffichArbre = new javax.swing.JMenu();
+        typeAffichArbreBouton1 = new javax.swing.JRadioButtonMenuItem();
+        typeAffichArbreBouton2 = new javax.swing.JRadioButtonMenuItem();
+        typeAffichArbreBouton3 = new javax.swing.JRadioButtonMenuItem();
         typeAffichHori = new javax.swing.JMenuItem();
+        typeIconeMenu = new javax.swing.JMenu();
+        typeIconeBouton1 = new javax.swing.JRadioButtonMenuItem();
+        typeIconeBouton2 = new javax.swing.JRadioButtonMenuItem();
         sauvGED = new javax.swing.JMenuItem();
         resetCouleurSpecial = new javax.swing.JMenuItem();
+        groupeTypeAffichArbre = new javax.swing.ButtonGroup();
+        groupeTypeIcone = new javax.swing.ButtonGroup();
 
         fondEcrant.setText("Changer background");
         fondEcrant.addActionListener(new java.awt.event.ActionListener() {
@@ -71,13 +78,38 @@ public class PanneauDessin extends javax.swing.JPanel {
         });
         menuClickDroit.add(trait);
 
-        typeAffich.setText("Changer d'affichage");
-        typeAffich.addActionListener(new java.awt.event.ActionListener() {
+        typeAffichArbre.setText("Changer d'affichage");
+
+        groupeTypeAffichArbre.add(typeAffichArbreBouton1);
+        typeAffichArbreBouton1.setSelected(true);
+        typeAffichArbreBouton1.setText("Ancêtres");
+        typeAffichArbreBouton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                typeAffichActionPerformed(evt);
+                typeAffichArbreBouton1ActionPerformed(evt);
             }
         });
-        menuClickDroit.add(typeAffich);
+        typeAffichArbre.add(typeAffichArbreBouton1);
+
+        groupeTypeAffichArbre.add(typeAffichArbreBouton2);
+        typeAffichArbreBouton2.setText("Descendents");
+        typeAffichArbreBouton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeAffichArbreBouton2ActionPerformed(evt);
+            }
+        });
+        typeAffichArbre.add(typeAffichArbreBouton2);
+
+        groupeTypeAffichArbre.add(typeAffichArbreBouton3);
+        typeAffichArbreBouton3.setText("Descendents + époux");
+        typeAffichArbreBouton3.setActionCommand("Descandants + époux");
+        typeAffichArbreBouton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeAffichArbreBouton3ActionPerformed(evt);
+            }
+        });
+        typeAffichArbre.add(typeAffichArbreBouton3);
+
+        menuClickDroit.add(typeAffichArbre);
 
         typeAffichHori.setText("Changer d'oriantation");
         typeAffichHori.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +118,29 @@ public class PanneauDessin extends javax.swing.JPanel {
             }
         });
         menuClickDroit.add(typeAffichHori);
+
+        typeIconeMenu.setText("Changer d'icone");
+
+        groupeTypeIcone.add(typeIconeBouton1);
+        typeIconeBouton1.setSelected(true);
+        typeIconeBouton1.setText("Image + text");
+        typeIconeBouton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeIconeBouton1ActionPerformed(evt);
+            }
+        });
+        typeIconeMenu.add(typeIconeBouton1);
+
+        groupeTypeIcone.add(typeIconeBouton2);
+        typeIconeBouton2.setText("Texte uniquement");
+        typeIconeBouton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeIconeBouton2ActionPerformed(evt);
+            }
+        });
+        typeIconeMenu.add(typeIconeBouton2);
+
+        menuClickDroit.add(typeIconeMenu);
 
         sauvGED.setText("Sauver format GED");
         sauvGED.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +171,43 @@ public class PanneauDessin extends javax.swing.JPanel {
         });
         setLayout(new java.awt.GridBagLayout());
     }// </editor-fold>//GEN-END:initComponents
+    
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * (initialisation des variables personnels)
+     */
+    private void initPerso()
+    {
+        timer = new Timer();
+        maTacheDiff = new RemindTask();
+        switch (typeAffichage) 
+        {
+            case 1:
+                typeAffichArbreBouton1.setSelected(true);
+                break;
+            case 2:
+                typeAffichArbreBouton2.setSelected(true);
+                break;
+            case 3:
+                typeAffichArbreBouton3.setSelected(true);
+                break;
+            default:
+                typeAffichArbreBouton1.setSelected(true);
+                break;
+        }
+        switch (typeIcone) 
+        {
+            case 1:
+                typeIconeBouton1.setSelected(true);
+                break;
+            case 2:
+                typeIconeBouton2.setSelected(true);
+                break;
+            default:
+                typeIconeBouton1.setSelected(true);
+                break;
+        }
+    }
     
     class RemindTask extends TimerTask {
 
@@ -154,21 +246,26 @@ public class PanneauDessin extends javax.swing.JPanel {
         
         Component[] mesComposants = getComponents();
 
-        //calcul taille du text a metre en place
         int nouvelleTaillePolice;
         int taillePoliceTemporaire;
         int y1 = dimIconePersonne.height;
         int y2 = y1 * zoom / 100;
         int x1 = dimIconePersonne.width;
         int x2 = x1 * zoom / 100;
-        nouvelleTaillePolice = (int) (rapportPoliceText * x2);
-        taillePoliceTemporaire = (int) (rapportPoliceTextHauteur * (y2 / 3));
+        
+        int y1t = dimTextIcone.height;
+        int x1t = dimTextIcone.width;
+        int y2t = y1t * zoom / 100;
+        int x2t = x1t * zoom / 100;
+        
+        nouvelleTaillePolice = (int) (rapportPoliceText * x2t);
+        taillePoliceTemporaire = (int) (rapportPoliceTextHauteur * y2t);
         if (taillePoliceTemporaire < nouvelleTaillePolice) {
             nouvelleTaillePolice = taillePoliceTemporaire;
         }
 
         for (int iCpt = 0; iCpt < mesComposants.length; iCpt++) {
-            IconePersonne monIcone = (IconePersonne) mesComposants[iCpt];
+            ModelIconePersonne monIcone = (ModelIconePersonne) mesComposants[iCpt];
             GridBagConstraints gridBagConstraints = grille.getConstraints(monIcone);
 
             gridBagConstraints.fill = GridBagConstraints.NONE;
@@ -190,7 +287,7 @@ public class PanneauDessin extends javax.swing.JPanel {
 
         getParent().getParent().getParent().repaint();
         repaint();
-        maTacheDiff = new RemindTask();
+        maTacheDiff = new RemindTask(); //réinitialisation du TimerTask car utilisable qu'une fois.
     }
     
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
@@ -224,17 +321,6 @@ public class PanneauDessin extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_traitActionPerformed
-
-    private void typeAffichActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichActionPerformed
-        // action type d'affichage
-        //TODO 0 remplacer par un radio bouton
-        typeAffichage ++;
-        if(typeAffichage > 3)
-        {
-            typeAffichage = 1;
-        }
-        peupler();
-    }//GEN-LAST:event_typeAffichActionPerformed
     
     private void sauvGEDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sauvGEDActionPerformed
         // action sur sauver GED
@@ -259,6 +345,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private void resetCouleurSpecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetCouleurSpecialActionPerformed
         // action sur reset des couleurs spéciales
         resetCouleurSpecial();
+        couleurTrai = new Color(0,0,0);
         repaint();
     }//GEN-LAST:event_resetCouleurSpecialActionPerformed
 
@@ -273,6 +360,31 @@ public class PanneauDessin extends javax.swing.JPanel {
         }
         peupler();
     }//GEN-LAST:event_typeAffichHoriActionPerformed
+
+    private void typeAffichArbreBouton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichArbreBouton2ActionPerformed
+        typeAffichage = 2;
+        peupler();
+    }//GEN-LAST:event_typeAffichArbreBouton2ActionPerformed
+
+    private void typeAffichArbreBouton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichArbreBouton1ActionPerformed
+        typeAffichage = 1;
+        peupler();
+    }//GEN-LAST:event_typeAffichArbreBouton1ActionPerformed
+
+    private void typeAffichArbreBouton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichArbreBouton3ActionPerformed
+        typeAffichage = 3;
+        peupler();
+    }//GEN-LAST:event_typeAffichArbreBouton3ActionPerformed
+
+    private void typeIconeBouton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeIconeBouton1ActionPerformed
+        typeIcone = 1;
+        peuplerGrille();
+    }//GEN-LAST:event_typeIconeBouton1ActionPerformed
+
+    private void typeIconeBouton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeIconeBouton2ActionPerformed
+        typeIcone = 2;
+        peuplerGrille();
+    }//GEN-LAST:event_typeIconeBouton2ActionPerformed
     
     private void resetCouleurSpecial() {
         if( mapCouleurSpecial != null) {
@@ -305,12 +417,12 @@ public class PanneauDessin extends javax.swing.JPanel {
 
         Rectangle rec;
         Rectangle rec2;
-        IconePersonne ico;
+        ModelIconePersonne ico;
         Integer id;
 
         for (int i = 0; i < mesIcones.length; i++) {
             rec = mesIcones[i].getBounds();
-            ico = (IconePersonne)mesIcones[i];
+            ico = (ModelIconePersonne)mesIcones[i];
             id = ico.getNumeroID();
             mapIcones.put(id,rec);
         }
@@ -348,10 +460,10 @@ public class PanneauDessin extends javax.swing.JPanel {
                             cdc.setColor(couleurTraiID);
                             if (verticalAffichage)
                             {
-                            cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
+                                cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
                                 cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y + rec.height - 6   );
                                 cdc.drawLine(rec.x + rec.width / 2   ,rec.y + rec.height - 6    ,rec.x + rec.width / 2    ,rec.y + rec.height - 10  );
-                        }
+                            }
                             else
                             {
                                 cdc.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 );
@@ -498,7 +610,10 @@ public class PanneauDessin extends javax.swing.JPanel {
                 arbre.calculAncetre(idCourant);
                 break;
         }
-
+        peuplerGrille();
+    }
+    
+    protected void peuplerGrille() {
         //création grille pour affichage
         grille = new GridBagLayout();
         this.setLayout(grille);
@@ -512,21 +627,32 @@ public class PanneauDessin extends javax.swing.JPanel {
         rapportPoliceTextHauteur = 1;
 
         //mise en place des icones
-        IconePersonne nouvelleIcone = null;
+        ModelIconePersonne nouvelleIcone = null;
         Set<Integer> listeCle = arbre.getListeCle();
         for (Iterator<Integer> it = listeCle.iterator(); it.hasNext(); ) {
             Integer ident = it.next();
             Point pp = arbre.getListeGen().get(ident);
-            nouvelleIcone = new IconePersonne(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+            switch (typeIcone) {
+                case 1 :
+                    nouvelleIcone = new IconePersonne(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+                    break;
+                case 2 :
+                    nouvelleIcone = new IconePersonneType2(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+                    break;
+                default:
+                    nouvelleIcone = new IconePersonne(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+                    break;
+            }
+            
             textLePlusLong =  nouvelleIcone.estTextLePusLong(textLePlusLong);//A la création sauvegarde du texte le plus long
             GridBagConstraints gridBagConstraints = new GridBagConstraints();
             gridBagConstraints.fill = GridBagConstraints.NONE;
             if (verticalAffichage)
             {
-            gridBagConstraints.gridx = pp.y;
-            gridBagConstraints.gridy = pp.x;
-            gridBagConstraints.ipadx = nouvelleIcone.getSize().width;
-            gridBagConstraints.ipady = nouvelleIcone.getSize().height + 10;
+                gridBagConstraints.gridx = pp.y;
+                gridBagConstraints.gridy = pp.x;
+                gridBagConstraints.ipadx = nouvelleIcone.getSize().width;
+                gridBagConstraints.ipady = nouvelleIcone.getSize().height + 10;
                 
             }
             else
@@ -542,23 +668,24 @@ public class PanneauDessin extends javax.swing.JPanel {
             this.add(nouvelleIcone, gridBagConstraints);
         }
         dimIconePersonne = nouvelleIcone.getSize();
+        dimTextIcone =  nouvelleIcone.getSizeText();
         rapportPoliceText = nouvelleIcone.getTaillePolice() / nouvelleIcone.calculelongueurTexte("_" + textLePlusLong + "_");
-        rapportPoliceTextHauteur = nouvelleIcone.getTaillePolice() / (4 * nouvelleIcone.calculehauteurTexte() + 2);
+        rapportPoliceTextHauteur = nouvelleIcone.getTaillePolice() / (nouvelleIcone.getNbLigne() * nouvelleIcone.calculehauteurTexte() + 2);
 
         Component []mesComposants = getComponents();
 
         //calcul taille du text a metre en place
         int nouvelleTaillePolice;
         int taillePoliceTemporaire;
-        nouvelleTaillePolice = (int) (rapportPoliceText * dimIconePersonne.width);
-        taillePoliceTemporaire = (int) (rapportPoliceTextHauteur * (dimIconePersonne.height / 3));
+        nouvelleTaillePolice = (int) (rapportPoliceText * dimTextIcone.width);
+        taillePoliceTemporaire = (int) (rapportPoliceTextHauteur * dimTextIcone.height );
         if (taillePoliceTemporaire < nouvelleTaillePolice)
         {
             nouvelleTaillePolice = taillePoliceTemporaire;
         }
         for (int iCpt = 0; iCpt <  mesComposants.length; iCpt ++)
         {
-            IconePersonne monIcone = (IconePersonne)mesComposants[iCpt];
+            ModelIconePersonne monIcone = (ModelIconePersonne)mesComposants[iCpt];
             monIcone.setTaillePolice(nouvelleTaillePolice);
         }
 
@@ -590,7 +717,6 @@ public class PanneauDessin extends javax.swing.JPanel {
             }
         }
         
-        
         if(couleur == null)
         {
             if (mere !=null)
@@ -611,23 +737,33 @@ public class PanneauDessin extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem fondEcrant;
+    private javax.swing.ButtonGroup groupeTypeAffichArbre;
+    private javax.swing.ButtonGroup groupeTypeIcone;
     private javax.swing.JPopupMenu menuClickDroit;
     private javax.swing.JMenuItem resetCouleurSpecial;
     private javax.swing.JMenuItem sauvGED;
     private javax.swing.JMenuItem trait;
-    private javax.swing.JMenuItem typeAffich;
+    private javax.swing.JMenu typeAffichArbre;
+    private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton1;
+    private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton2;
+    private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton3;
     private javax.swing.JMenuItem typeAffichHori;
+    private javax.swing.JRadioButtonMenuItem typeIconeBouton1;
+    private javax.swing.JRadioButtonMenuItem typeIconeBouton2;
+    private javax.swing.JMenu typeIconeMenu;
     // End of variables declaration//GEN-END:variables
     // variable
     private int zoom = 100;
     private Dimension dimIconePersonne = null;
+    private Dimension dimTextIcone = null;
     private float rapportPoliceText;
     private float rapportPoliceTextHauteur;
     private GridBagLayout grille = null;
     private Color couleurFont = new Color(238,238,238); // couleur de 0 à 255
     private Integer idCourant = -1;
-    private int typeAffichage = 1; //MAIN CHANGE TYPE AFFICHAGE 
-    private Boolean verticalAffichage= true; //TODO a définir dans les instances + hautes (voir typeAffichage)
+    private int typeAffichage = 1;
+    private int typeIcone = 1;
+    private Boolean verticalAffichage= true;
     private Arbre arbre = null;
     private StyledDocument typeEcriture = null;
     private HashMap <Integer, Color> mapCouleurSpecial = new HashMap <Integer, Color>();
@@ -635,4 +771,5 @@ public class PanneauDessin extends javax.swing.JPanel {
     private Timer timer;
     private TimerTask maTacheDiff;
     private final long TIMEDIFF = 200;
+    //TODO variables a définir dans les instances + hautes (class paramètres?)
 }

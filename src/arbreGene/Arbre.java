@@ -1,7 +1,6 @@
 package arbreGene;
 
 import java.awt.Point;
-import java.io.PrintWriter;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -92,8 +91,6 @@ public class Arbre implements Serializable{
 
     private int nbAncetre(Integer id, int nb) {
         nombrePersonne ++;
-        //int nbAncPere = nb;
-        //int nbAncMere = nb;
         int nbAncMax = nb;
         int nbAncTemp;
         if (get(id).getListeTypeLiens() != null) {
@@ -110,14 +107,6 @@ public class Arbre implements Serializable{
             }
         }
         
-//        if (get(id).getClePere() != null) {
-//            nbAncPere = nbAncetre(get(id).getClePere(), nb + 1);
-//        }
-//
-//        if (get(id).getCleMere() != null) {
-//            nbAncMere = nbAncetre(get(id).getCleMere(), nb + 1);
-//        }
-//        return nbAncPere > nbAncMere ? nbAncPere:nbAncMere;
         return nbAncMax;
     }
 
@@ -133,12 +122,7 @@ public class Arbre implements Serializable{
                 }
             }
         }
-//        if (get(id).getListeCleEnfants() != null) {
-//            for (int ind = 0; ind < get(id).getListeCleEnfants().size(); ind++)
-//            {
-//                nbEnfant(get(id).getListeCleEnfants().get(ind));
-//            }
-//        }
+
     }
 
     private void nbEnfant2(Integer id) {
@@ -157,19 +141,6 @@ public class Arbre implements Serializable{
                 }
             }
         }
-//        if (get(id).getListeCleEnfants() != null) {
-//            for (int ind = 0; ind < get(id).getListeCleEnfants().size(); ind++)
-//            {
-//                nbEnfant2(get(id).getListeCleEnfants().get(ind));
-//            }
-//        }
-//        
-//        if (get(id).getListeCleEpoux() != null) {
-//            for (int ind = 0; ind < get(id).getListeCleEpoux().size(); ind++)
-//            {
-//                nombrePersonne ++;
-//            }
-//        }
     }
 
     private void fabriquerArbreAncetre(Integer id, int ligne, int gauche, int droite){
@@ -193,12 +164,6 @@ public class Arbre implements Serializable{
             }
         }
         
-//        if (get(id).getClePere() != null) {
-//            fabriquerArbreAncetre(get(id).getClePere(), ligne - 1, gauche, (droite + gauche) / 2 - 1);
-//        }
-//        if (get(id).getCleMere() != null) {
-//            fabriquerArbreAncetre(get(id).getCleMere(), ligne - 1, (droite + gauche) / 2 + 1, droite);
-//        }
     }
 
     private int fabriquerArbreEnfant(Integer id, int ligne, int gauche) {
@@ -214,13 +179,6 @@ public class Arbre implements Serializable{
             }
         }
         
-//        if (get(id).getListeCleEnfants() != null)
-//        {
-//            for (int ind = 0; ind < get(id).getListeCleEnfants().size(); ind++)
-//            {
-//                droite = fabriquerArbreEnfant(get(id).getListeCleEnfants().get(ind), ligne + 1, droite) + 1;
-//            }
-//        }
         Point ptCourant = new Point(ligne, (droite + gauche) / 2);
         if (listeGen.get(id) == null || listeGen.get(id).getX() > ptCourant.getX()) {
             listeGen.put(id, ptCourant);
@@ -252,14 +210,6 @@ public class Arbre implements Serializable{
             }
         }
         
-//        if (get(id).getListeCleEnfants() != null)
-//        {
-//            for (int ind = 0; ind < get(id).getListeCleEnfants().size(); ind++)
-//            {
-//                droite = fabriquerArbreEnfant2(get(id).getListeCleEnfants().get(ind), ligne + 1, droite) + 1;
-//            }
-//        }
-        
         Point ptCourant = new Point(ligne, (int)((droite + gauche) / 2));
         if (listeGen.get(id) == null || listeGen.get(id).getX() > ptCourant.getX())
         {
@@ -286,24 +236,6 @@ public class Arbre implements Serializable{
                 }
             }
         }
-        
-//        if (get(id).getListeCleEpoux() != null)
-//        {
-//            for (int ind = 0; ind < get(id).getListeCleEpoux().size(); ind++)
-//            {
-//                Point ptCourant2 = new Point(ptCourant);
-//                Integer epoux = get(id).getListeCleEpoux().get(ind);
-//                if (listeGen.get(epoux) == null || listeGen.get(epoux).getX() > ptCourant.getX())
-//                {
-//                    ptCourant2.y ++;
-//                    if (droite < ptCourant2.y)
-//                    {
-//                        droite = ptCourant2.y;
-//                    }
-//                    listeGen.put(epoux, ptCourant2);
-//                }
-//            }
-//        }
 
         if (nbLigne < ligne)
         {
@@ -331,8 +263,8 @@ public class Arbre implements Serializable{
     }
 
     /**
-        * @return listeCle
-        */
+    * @return listeCle
+    */
     public Set<Integer> getListeCle() {
         return listeGen.keySet();
     }

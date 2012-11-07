@@ -11,7 +11,7 @@ public class Outils {
 
                 break;
             case 2:
-                //1ere lettre en maj, le reste en min
+                //1ère lettre en maj, le reste en min
 
                 break;
             case 3:

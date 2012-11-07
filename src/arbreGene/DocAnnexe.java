@@ -18,8 +18,8 @@ public class DocAnnexe {
 
     // zone constructeur
     /**
-        * constructeur paramétré
-        */
+    * constructeur paramétré
+    */
     public DocAnnexe(String titreDocAnnexe, String nomFichierDocAnnexe) {
         super();
         this.titreDocAnnexe = titreDocAnnexe;
@@ -27,15 +27,15 @@ public class DocAnnexe {
     }
 
     /**
-        * constructeur par défaut
-        */
+    * constructeur par défaut
+    */
     public DocAnnexe() {
         super();
     }
 
     /**
-        * constructeur copie
-        */
+    * constructeur copie
+    */
     public DocAnnexe(DocAnnexe maDoc) {
         super();
         this.titreDocAnnexe = maDoc.titreDocAnnexe;

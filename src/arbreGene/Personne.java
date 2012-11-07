@@ -3,14 +3,13 @@
  */
 package arbreGene;
 
-import java.io.PrintWriter;
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 
 /**
  * @author YOHAN
  * V1 créé le 15/02/2010
- * Cette classe contient les donn�es d'une personne:
+ * Cette classe contient les données d'une personne:
  * son nom
  * son prénom
  * sa date de naissance,
@@ -144,7 +143,8 @@ public class Personne implements Serializable{
                     age = dateNaissance.nbAnnees(dateDeces);
                 } else
                 {
-                    //TODO ?
+                    //TODO que metre dans l'age quand mort et sans date de déces?
+                    age = "Décès inconnu";
                 }
 
             }

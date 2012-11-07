@@ -39,8 +39,8 @@ public class DateUtil implements Serializable{
 
     // zone constructeur
     /**
-        * constructeur paramétré
-        */
+    * constructeur paramétré
+    */
     public DateUtil(boolean connus, Date dateSimple, Date dateDebut,
                     Date dateFin, Map<Date, Integer> indiceRechercheDate) {
         super();
@@ -52,8 +52,8 @@ public class DateUtil implements Serializable{
     }
 
     /**
-        * constructeur par défaut
-        */
+    * constructeur par défaut
+    */
     public DateUtil() {
         super();
     }
@@ -298,7 +298,6 @@ public class DateUtil implements Serializable{
             {
                 nbAnn = "inconnu";
             }
-
         }
 
         return nbAnn;

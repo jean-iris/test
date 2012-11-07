@@ -10,9 +10,9 @@ public class Liens {
 
     //	 zone constructeur
     /**
-        * constructeur paramétré
-        * @return
-        */
+    * constructeur paramétré
+    * @return
+    */
     public Liens(Integer parent1, Integer parent2) 
     {
         super();
@@ -61,22 +61,22 @@ public class Liens {
     }
 
     /**
-        * @return enfants
-        */
+    * @return enfants
+    */
     public ArrayList<Integer> getEnfants() {
         return enfants;
     }
 
     /**
-        * @return listeTypeLien
-        */
+    * @return listeTypeLien
+    */
     public ArrayList<TypeLien> getListeTypeLien() {
         return listeTypeLien;
     }
 
     /**
-        * @return parents
-        */
+    * @return parents
+    */
     public ArrayList<Integer> getParents() {
         return parents;
     }

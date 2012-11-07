@@ -25,8 +25,8 @@ public class FPersonne implements Serializable{
 
     // zone constructeur
     /**
-        * constructeur paramétré
-        */
+    * constructeur paramétré
+    */
     public FPersonne(Integer clePersonne, Personne identite, Integer clePere, Integer cleMere,
     ArrayList <Integer> listeCleEpoux, ArrayList <Integer> listeCleEnfants) {
         super();
@@ -50,15 +50,15 @@ public class FPersonne implements Serializable{
     }
 
     /**
-        * constructeur par défaut
-        */
+    * constructeur par défaut
+    */
     public FPersonne() {
         super();
     }
 
     /**
-        * constructeur copie
-        */
+    * constructeur copie
+    */
     public FPersonne(FPersonne unePersonne){
         super();
         this.identite = unePersonne.identite;
@@ -81,15 +81,15 @@ public class FPersonne implements Serializable{
     }
 
     /**
-        * @return clePersonne
-        */
+    * @return clePersonne
+    */
     public Integer getClePersonne() {
         return clePersonne;
     }
 
     /**
-        * @return listeLiens
-        */
+    * @return listeLiens
+    */
     public ArrayList<TypeLien> getListeTypeLiens() {
         return listeTypeLiens;
     }
