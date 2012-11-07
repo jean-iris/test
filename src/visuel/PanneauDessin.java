@@ -564,14 +564,13 @@ public class PanneauDessin extends javax.swing.JPanel {
                 cdc.setColor(couleurTraiID);
                 if (verticalAffichage)
                 {
-                cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x + rec.width, rec.y - 1              );
-                cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x - 1        , rec.y + rec.height - 10);
-                cdc.drawLine(rec.x + rec.width, rec.y - 1              , rec.x + rec.width, rec.y + rec.height - 10);
-                cdc.drawLine(rec.x - 1        , rec.y + rec.height - 10, rec.x + rec.width, rec.y + rec.height - 10);
-            }
+                    cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x + rec.width, rec.y - 1              );
+                    cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x - 1        , rec.y + rec.height - 10);
+                    cdc.drawLine(rec.x + rec.width, rec.y - 1              , rec.x + rec.width, rec.y + rec.height - 10);
+                    cdc.drawLine(rec.x - 1        , rec.y + rec.height - 10, rec.x + rec.width, rec.y + rec.height - 10);
+                }
                 else
                 {
-                    //TODO: a tester
                     cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x + rec.width - 10, rec.y - 1         );
                     cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x - 1             , rec.y + rec.height);
                     cdc.drawLine(rec.x + rec.width - 10, rec.y - 1         , rec.x + rec.width - 10, rec.y + rec.height);

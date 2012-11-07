@@ -7,6 +7,7 @@ package visuel;
 import arbreGene.FPersonne;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import utilitaire.Outils;
 
 /**
  *
@@ -470,7 +471,7 @@ public class FenInf extends javax.swing.JPanel {
             //TODO metre a null le lieu de deces et date de deces ?
         }
 
-        laPersonne.getIdentite().remplacer(zoneNom.getText(), zonePrenom.getText(), zoneAutrePrenom.getText(), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
+        laPersonne.getIdentite().remplacer(outil.formater(zoneNom.getText(), 1), outil.formater(zonePrenom.getText(),2), outil.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
                 checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), null); //TODO 4 rajouter le chemin de l'image
         //mise a jours arbre affiché
         modifie = false;
@@ -570,6 +571,7 @@ public class FenInf extends javax.swing.JPanel {
     private FPersonne maPersonne;
     private Image ima = null;
     private boolean modifie;
+    private Outils outil = new Outils();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boutonDateDec;
     private javax.swing.JButton boutonDateNais;
