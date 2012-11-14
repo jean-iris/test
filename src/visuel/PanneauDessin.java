@@ -7,8 +7,11 @@ package visuel;
 import arbreGene.Arbre;
 import arbreGene.TypeLien;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.JColorChooser;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.text.StyledDocument;
 import utilitaire.GestionFichierGed;
@@ -59,6 +62,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         typeIconeBouton2 = new javax.swing.JRadioButtonMenuItem();
         sauvGED = new javax.swing.JMenuItem();
         resetCouleurSpecial = new javax.swing.JMenuItem();
+        impression = new javax.swing.JMenuItem();
         groupeTypeAffichArbre = new javax.swing.ButtonGroup();
         groupeTypeIcone = new javax.swing.ButtonGroup();
 
@@ -158,6 +162,9 @@ public class PanneauDessin extends javax.swing.JPanel {
         });
         menuClickDroit.add(resetCouleurSpecial);
 
+        impression.setText("Imprimer");
+        menuClickDroit.add(impression);
+
         setBackground(couleurFont);
         addMouseWheelListener(new java.awt.event.MouseWheelListener() {
             public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
@@ -178,6 +185,8 @@ public class PanneauDessin extends javax.swing.JPanel {
      */
     private void initPerso()
     {
+        impression.addActionListener(new Imprimer());
+        
         timer = new Timer();
         maTacheDiff = new RemindTask();
         switch (typeAffichage) 
@@ -592,15 +601,12 @@ public class PanneauDessin extends javax.swing.JPanel {
         //destruction arbre existant
         this.removeAll();
         this.repaint();
-        System.out.println("Test panneauDessin " + typeAffichage + "/" + idCourant);
 
         //création nouvel arbre
         switch (typeAffichage)
         {
             case 1 :
-                System.out.println("Test panneauDessin 2");
                 arbre.calculAncetre(idCourant);
-                System.out.println("Test panneauDessin 3");
                 break;
             case 2 :
                 arbre.calculEnfant(idCourant);
@@ -737,10 +743,32 @@ public class PanneauDessin extends javax.swing.JPanel {
         return couleur;
     }
     
+    public class Imprimer extends JFrame implements  ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Properties props = new Properties();
+	
+            props.setProperty("awt.print.paperSize", "a4");
+            props.setProperty("awt.print.destination", "printer");
+            
+            PrintJob demandeDImpression = getToolkit().getPrintJob(this, "Impression", props);
+            if (demandeDImpression != null) {
+                Graphics gImpr = demandeDImpression.getGraphics();
+                PanneauDessin.this.printAll(gImpr);
+                gImpr.dispose();
+                demandeDImpression.end();
+
+            }
+        }
+    
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem fondEcrant;
     private javax.swing.ButtonGroup groupeTypeAffichArbre;
     private javax.swing.ButtonGroup groupeTypeIcone;
+    private javax.swing.JMenuItem impression;
     private javax.swing.JPopupMenu menuClickDroit;
     private javax.swing.JMenuItem resetCouleurSpecial;
     private javax.swing.JMenuItem sauvGED;
@@ -775,3 +803,5 @@ public class PanneauDessin extends javax.swing.JPanel {
     private final long TIMEDIFF = 200;
     //TODO variables a définir dans les instances + hautes (class paramètres?)
 }
+
+

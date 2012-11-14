@@ -36,9 +36,7 @@ public class Arbre implements Serializable{
         nbColonne = 0;
         nombrePersonne = 0;
         
-        System.out.println("Test Arbre 1 " );
         nbLigne = nbAncetre(id, 1);
-        System.out.println("Test Arbre 2 " + nbLigne);
         nbColonne = (1 << nbLigne) - 1;
 
 
@@ -47,7 +45,6 @@ public class Arbre implements Serializable{
             listeGen.clear();
             listeGen = null;
         }
-        System.out.println("Test Arbre 3 : " + nombrePersonne + "/" + nbLigne + "/" + nbColonne);
         listeGen = new LinkedHashMap<Integer, Point>(nombrePersonne);
         fabriquerArbreAncetre(id, nbLigne - 1, 0, nbColonne - 1);
     }
