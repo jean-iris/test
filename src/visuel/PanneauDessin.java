@@ -414,8 +414,9 @@ public class PanneauDessin extends javax.swing.JPanel {
     
     @Override
     public void paint(Graphics g) {
-        Graphics2D cdc = (Graphics2D) g;
-
+        //Graphics2D cdc = (Graphics2D) g; //FIXME pourquoi j'ai changé Graphics en Graphics2D?????????
+        Graphics cdc = g;
+        
         cdc.drawLine(0,0,10,10);
 
         HashMap <Integer, Rectangle> mapIcones = new HashMap <Integer, Rectangle>();
@@ -598,10 +599,6 @@ public class PanneauDessin extends javax.swing.JPanel {
             return;
         }
 
-        //destruction arbre existant
-        this.removeAll();
-        this.repaint();
-
         //création nouvel arbre
         switch (typeAffichage)
         {
@@ -622,6 +619,10 @@ public class PanneauDessin extends javax.swing.JPanel {
     }
     
     protected void peuplerGrille() {
+        //destruction arbre affiché existant
+        this.removeAll();
+        this.repaint();
+        
         //création grille pour affichage
         grille = new GridBagLayout();
         this.setLayout(grille);
