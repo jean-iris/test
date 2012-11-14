@@ -7,13 +7,6 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 public class Arbre implements Serializable{
-    HashMap <Integer, FPersonne> mapPersonne;
-    Integer racine;
-    int nbColonne;
-    int nbLigne; // nombre niveau ancetres et descendants
-    int nombrePersonne = 0;
-    LinkedHashMap<Integer, Point> listeGen = null;
-
 
 
     public Arbre() {
@@ -42,8 +35,10 @@ public class Arbre implements Serializable{
         nbLigne = 0;
         nbColonne = 0;
         nombrePersonne = 0;
-
+        
+        System.out.println("Test Arbre 1 " );
         nbLigne = nbAncetre(id, 1);
+        System.out.println("Test Arbre 2 " + nbLigne);
         nbColonne = (1 << nbLigne) - 1;
 
 
@@ -52,6 +47,7 @@ public class Arbre implements Serializable{
             listeGen.clear();
             listeGen = null;
         }
+        System.out.println("Test Arbre 3 : " + nombrePersonne + "/" + nbLigne + "/" + nbColonne);
         listeGen = new LinkedHashMap<Integer, Point>(nombrePersonne);
         fabriquerArbreAncetre(id, nbLigne - 1, 0, nbColonne - 1);
     }
@@ -272,4 +268,12 @@ public class Arbre implements Serializable{
     public Set<Integer> getListeCleTout() {
         return mapPersonne.keySet();
     }
+    
+    //déclaration
+    HashMap <Integer, FPersonne> mapPersonne;
+    Integer racine;
+    int nbColonne;
+    int nbLigne; // nombre niveau ancetres et descendants
+    int nombrePersonne = 0;
+    LinkedHashMap<Integer, Point> listeGen = null;
 }

@@ -14,12 +14,12 @@ import javax.swing.text.StyledDocument;
  *
  * @author Guillet
  */
-public class IconePersonne extends ModelIconePersonne {
+public class IconePersonneType1 extends ModelIconePersonne {
 
     /**
-     * Creates new form IconePersonne
+     * Creates new form IconePersonneType1
      */
-    public IconePersonne() {
+    public IconePersonneType1() {
         initComponents();
         setSize(dim);
         imagePersonne.setBounds(new Rectangle(0, 0, this.getSize().width, this.getSize().height * 2 / 3));
@@ -30,9 +30,9 @@ public class IconePersonne extends ModelIconePersonne {
     }
 
     /**
-     * Creates new form IconePersonne
+     * Creates new form IconePersonneType1
      */
-    public IconePersonne(Personne identite, Integer ind, Color couleurFontIcone, StyledDocument StyledDocument) {
+    public IconePersonneType1(Personne identite, Integer ind, Color couleurFontIcone, StyledDocument StyledDocument) {
         this.couleurFontIcone = couleurFontIcone;
         initComponents();
         setSize(dim);

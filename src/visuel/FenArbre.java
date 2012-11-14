@@ -13,6 +13,7 @@ package visuel;
 import arbreGene.Arbre;
 import arbreGene.FPersonne;
 import arbreGene.ModelTabPersonne;
+import arbreGene.Personne;
 import java.awt.Point;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
@@ -30,8 +31,21 @@ public class FenArbre extends JScrollPane {
      * Créé nouvel arbre par défaut
      */
     public FenArbre() {
-
+        //création 1 personne vide
+        super();
+        arbre = new Arbre();
+        Personne pers = new Personne();
+        FPersonne fpers = new FPersonne(1, pers);
+        arbre.maj(1, fpers);
+        arbre.setRacine(1);
+        this.idCourant = arbre.getRacine();
+        
         initComponents();
+        
+        AdjustmentListener listener = new ModifScroll();
+        this.getHorizontalScrollBar().addAdjustmentListener(listener);
+        this.getVerticalScrollBar().addAdjustmentListener(listener);
+        setIdCourant(idCourant);
     }
 
     /**
@@ -41,6 +55,7 @@ public class FenArbre extends JScrollPane {
         super();
         this.arbre = arbre;
         this.idCourant = arbre.getRacine();
+        
         initComponents();
 
         AdjustmentListener listener = new ModifScroll();

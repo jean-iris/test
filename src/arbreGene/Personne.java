@@ -59,6 +59,9 @@ public class Personne implements Serializable{
     */
     public Personne() {
         super();
+        this.nom = "INCONNUE";
+        this.prenom = "Inconnue";
+        this.sexe = "Homme";
     }
 
     /**

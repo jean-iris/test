@@ -592,12 +592,15 @@ public class PanneauDessin extends javax.swing.JPanel {
         //destruction arbre existant
         this.removeAll();
         this.repaint();
+        System.out.println("Test panneauDessin " + typeAffichage + "/" + idCourant);
 
         //création nouvel arbre
         switch (typeAffichage)
         {
             case 1 :
+                System.out.println("Test panneauDessin 2");
                 arbre.calculAncetre(idCourant);
+                System.out.println("Test panneauDessin 3");
                 break;
             case 2 :
                 arbre.calculEnfant(idCourant);
@@ -633,13 +636,13 @@ public class PanneauDessin extends javax.swing.JPanel {
             Point pp = arbre.getListeGen().get(ident);
             switch (typeIcone) {
                 case 1 :
-                    nouvelleIcone = new IconePersonne(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+                    nouvelleIcone = new IconePersonneType1(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
                     break;
                 case 2 :
                     nouvelleIcone = new IconePersonneType2(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
                     break;
                 default:
-                    nouvelleIcone = new IconePersonne(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
+                    nouvelleIcone = new IconePersonneType1(arbre.get(ident).getIdentite(), ident, couleurFont, typeEcriture);
                     break;
             }
             
