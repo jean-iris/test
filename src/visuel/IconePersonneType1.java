@@ -59,19 +59,22 @@ public class IconePersonneType1 extends ModelIconePersonne {
         }
 
         this.numeroID = ind;
+        
+        
+        ima = identite.getImagePersonne();
+        if (ima == null)
+        {
+            if ("Homme".equals(identite.getSexe())) {
+                ima = new ImageIcon("images généalogie/homme4.JPG");
 
-        ima = null;
-        //TODO 4 si image existe dans base de données, on la prend, sinon on prend les icones standards
-        if ("Homme".equals(identite.getSexe())) {
-            ima = new ImageIcon("images généalogie/homme4.JPG").getImage();
-
-        }
-        if ("Femme".equals(identite.getSexe())) {
-            ima = new ImageIcon("images généalogie/femme4.JPG").getImage();
+            }
+            if ("Femme".equals(identite.getSexe())) {
+                ima = new ImageIcon("images généalogie/femme4.JPG");
+            }
         }
 
         if (ima != null) {
-            Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+            Image ima2 = ima.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
             imagePersonne.setIcon(new ImageIcon(ima2));
         }
         
@@ -176,7 +179,7 @@ public class IconePersonneType1 extends ModelIconePersonne {
         if (imagePersonne != null) {
             imagePersonne.setSize(width, height * 2 / 3);
             if (ima != null) {
-                Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+                Image ima2 = ima.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
                 imagePersonne.setIcon(new ImageIcon(ima2));
             }
         }
@@ -193,7 +196,7 @@ public class IconePersonneType1 extends ModelIconePersonne {
             imagePersonne.setSize(d.width, d.height * 2 / 3);
 
             if (ima != null) {
-                Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+                Image ima2 = ima.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
                 imagePersonne.setIcon(new ImageIcon(ima2));
             }
         }
@@ -275,6 +278,6 @@ public class IconePersonneType1 extends ModelIconePersonne {
     private FontMetrics maMetrics = null;
     private String textMax = null;
     private Integer numeroID;
-    private Image ima = null;
+    private ImageIcon ima = null;
     private int nbLigne = 1;
 }

@@ -3,6 +3,7 @@
  */
 package arbreGene;
 
+import java.awt.Image;
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 
@@ -31,7 +32,7 @@ public class Personne implements Serializable{
     String sexe;
     DateUtil dateDeces;
     String lieuDeces;
-    ImageIcon imagePersonne;//TODO 4 lien vers icone
+    ImageIcon imagePersonne;//FIXME 1 icone non sérialisable??? => mauvaise sauvegarde si icone existe!!!!!!
     
     //</editor-fold>
     // zone constructeur

@@ -6,7 +6,10 @@ package visuel;
 
 import arbreGene.FPersonne;
 import java.awt.Image;
+import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import utilitaire.Outils;
 
 /**
@@ -86,6 +89,11 @@ public class FenInf extends javax.swing.JPanel {
 
         imagePersonne.setBorder(null);
         imagePersonne.setName(bundle.getString("FenInf.imagePersonne.name")); // NOI18N
+        imagePersonne.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imagePersonneActionPerformed(evt);
+            }
+        });
 
         etiSecondPrenom.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         etiSecondPrenom.setText(bundle.getString("FenInf.etiSecondPrenom.text")); // NOI18N
@@ -358,16 +366,17 @@ public class FenInf extends javax.swing.JPanel {
 
     private void listeSexeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_listeSexeItemStateChanged
         // homme ou femme
+        Image ima1 = null;
         if (listeSexe.getSelectedItem().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("HOMME"))) {
-            ima = new ImageIcon("images généalogie/homme4.JPG").getImage(); //NOI18N
+            ima1 = new ImageIcon("images généalogie/homme4.JPG").getImage(); //NOI18N
 
         }
         if (listeSexe.getSelectedItem().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FEMME"))) {
-            ima = new ImageIcon("images généalogie/femme4.JPG").getImage(); //NOI18N
+            ima1 = new ImageIcon("images généalogie/femme4.JPG").getImage(); //NOI18N
         }
 
-        if (ima != null) {
-            Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+        if (ima1 != null) {
+            Image ima2 = ima1.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
             imagePersonne.setIcon(new ImageIcon(ima2));
         }
         modifie = true;
@@ -377,6 +386,35 @@ public class FenInf extends javax.swing.JPanel {
         // modification des informations de la personne
         modifie = true;
     }//GEN-LAST:event_evtKeyTyped
+
+    private void imagePersonneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagePersonneActionPerformed
+        // TODO add your handling code here:
+        
+        
+        //ouverture boite de dialogue recherche fichier
+        final JFileChooser fc = new JFileChooser();
+        fc.setCurrentDirectory(new File(".")); //NOI18N
+        //In response to a button click:
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "FICHIER IMAGE", "jgp", "JPG"); //NOI18N
+        fc.setFileFilter(filter);
+
+        int returnVal = fc.showOpenDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            String fichierIma = fc.getSelectedFile().getPath();
+            imaTemp = new ImageIcon(fichierIma);
+            Image ima2 = imaTemp.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+            imagePersonne.setIcon(new ImageIcon(ima2));
+            repaint();
+            modifie = true;
+        } else {
+            System.out.println(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FICHIER NON SELECTIONNE"));
+        }
+        
+        
+        
+    }//GEN-LAST:event_imagePersonneActionPerformed
 
     private class EvtDateNai extends java.awt.event.WindowAdapter {
 
@@ -425,21 +463,31 @@ public class FenInf extends javax.swing.JPanel {
             textLieuDeces.setVisible(false);
             boutonDateDec.setVisible(false);
         }
+        
+        imaTemp = maPersonne.getIdentite().getImagePersonne();
+        if (imaTemp == null)
+        {
+            Image ima1 = null;
+            if (maPersonne.getIdentite().getSexe().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("HOMME"))) {
+                ima1 = new ImageIcon("images généalogie/homme4.JPG").getImage(); //NOI18N
 
-        ima = null;
-        //TODO 4 si image existe dans base de données, on la prend, sinon on prend les icones standards
-        if (maPersonne.getIdentite().getSexe().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("HOMME"))) {
-            ima = new ImageIcon("images généalogie/homme4.JPG").getImage(); //NOI18N
+            }
+            if (maPersonne.getIdentite().getSexe().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FEMME"))) {
+                ima1 = new ImageIcon("images généalogie/femme4.JPG").getImage(); //NOI18N
+            }
 
+            if (ima1 != null) {
+                Image ima2 = ima1.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+                imagePersonne.setIcon(new ImageIcon(ima2));
+            }
+            
         }
-        if (maPersonne.getIdentite().getSexe().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FEMME"))) {
-            ima = new ImageIcon("images généalogie/femme4.JPG").getImage(); //NOI18N
-        }
-
-        if (ima != null) {
-            Image ima2 = ima.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
+        else
+        {
+            Image ima2 = imaTemp.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
             imagePersonne.setIcon(new ImageIcon(ima2));
         }
+        
         repaint();
         modifie = false;
     }
@@ -464,6 +512,7 @@ public class FenInf extends javax.swing.JPanel {
         this.setVisible(false);
         this.repaint();
         modifie = false;
+        imaTemp = null;
     }
 
     public void sauvegarde() {
@@ -472,7 +521,7 @@ public class FenInf extends javax.swing.JPanel {
         }
 
         laPersonne.getIdentite().remplacer(outil.formater(zoneNom.getText(), 1), outil.formater(zonePrenom.getText(),2), outil.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
-                checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), null); //TODO 4 rajouter le chemin de l'image
+                checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), imaTemp); 
         //mise a jours arbre affiché
         modifie = false;
     }
@@ -569,7 +618,7 @@ public class FenInf extends javax.swing.JPanel {
 //    zone des attributs
     private FPersonne laPersonne;
     private FPersonne maPersonne;
-    private Image ima = null;
+    private ImageIcon imaTemp = null;
     private boolean modifie;
     private Outils outil = new Outils();
     // Variables declaration - do not modify//GEN-BEGIN:variables
