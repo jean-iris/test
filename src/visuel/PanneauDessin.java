@@ -56,6 +56,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         typeAffichArbreBouton1 = new javax.swing.JRadioButtonMenuItem();
         typeAffichArbreBouton2 = new javax.swing.JRadioButtonMenuItem();
         typeAffichArbreBouton3 = new javax.swing.JRadioButtonMenuItem();
+        typeAffichArbreBouton4 = new javax.swing.JRadioButtonMenuItem();
         typeAffichHori = new javax.swing.JMenuItem();
         typeIconeMenu = new javax.swing.JMenu();
         typeIconeBouton1 = new javax.swing.JRadioButtonMenuItem();
@@ -112,6 +113,16 @@ public class PanneauDessin extends javax.swing.JPanel {
             }
         });
         typeAffichArbre.add(typeAffichArbreBouton3);
+
+        groupeTypeAffichArbre.add(typeAffichArbreBouton4);
+        typeAffichArbreBouton4.setText("Ancêtres + Descendents");
+        typeAffichArbreBouton4.setActionCommand("Descandants + époux");
+        typeAffichArbreBouton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeAffichArbreBouton4ActionPerformed(evt);
+            }
+        });
+        typeAffichArbre.add(typeAffichArbreBouton4);
 
         menuClickDroit.add(typeAffichArbre);
 
@@ -394,6 +405,11 @@ public class PanneauDessin extends javax.swing.JPanel {
         typeIcone = 2;
         peuplerGrille();
     }//GEN-LAST:event_typeIconeBouton2ActionPerformed
+
+    private void typeAffichArbreBouton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeAffichArbreBouton4ActionPerformed
+        typeAffichage = 4;
+        peupler();
+    }//GEN-LAST:event_typeAffichArbreBouton4ActionPerformed
     
     private void resetCouleurSpecial() {
         if( mapCouleurSpecial != null) {
@@ -609,6 +625,9 @@ public class PanneauDessin extends javax.swing.JPanel {
             case 3 :
                 arbre.calculEnfant2(idCourant);
                 break;
+            case 4 :
+                arbre.calculAncetreEtEnfant(idCourant);
+                break;
             default:
                 arbre.calculAncetre(idCourant);
                 break;
@@ -776,6 +795,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton1;
     private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton2;
     private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton3;
+    private javax.swing.JRadioButtonMenuItem typeAffichArbreBouton4;
     private javax.swing.JMenuItem typeAffichHori;
     private javax.swing.JRadioButtonMenuItem typeIconeBouton1;
     private javax.swing.JRadioButtonMenuItem typeIconeBouton2;

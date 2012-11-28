@@ -3,7 +3,6 @@ Prioritaire:
 - Si changement de personne/onglet demander la sauvegarde si les informations de la personnes ont été modifié (TODO 1) (TODO 5)
 - Implementer les paramètres std (couleur, police,...) (TODO 2)
 - Finir implementer le format date et popup pour modifier ces dates (TODO 3)
-- Image icone des personnes à metre en place (TODO 4)
 - plus de mere, pere que des typeLien dans FPersonne (TODO 6)
 
 Taches restantes:
@@ -21,6 +20,3 @@ Taches restantes:
 - Pouvoir imprimer
 - Formater (nom en majuscule/ prénom commence majuscule puis minuscules...)
 - Calendrier avec les dates d'anniversaire.
-
-- affichage arbre en horizontal
-- affichage arbre sans icones

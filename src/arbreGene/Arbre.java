@@ -80,6 +80,29 @@ public class Arbre implements Serializable{
         listeGen = new LinkedHashMap<Integer, Point>(nombrePersonne);
         fabriquerArbreEnfant2(id, 0, 0);
     }
+    
+    public void calculAncetreEtEnfant (Integer id) {
+        nbLigne = 0; //calcul lors de la fabrication de l'arbre
+        nbColonne = 0; //calcul lors de la fabrication de l'arbre
+        nombrePersonne = 0;
+        nbEnfant2(id); //calcul le nombre d'enfants
+        int nbEnf = nombrePersonne;  //sauvegarde du nombre d'enfants
+        nbLigne = nbAncetre(id, 1);
+        nbColonne = (1 << nbLigne) - 1;
+        nombrePersonne = nombrePersonne + nbEnf - 1;
+        
+        
+        //calcul coordonnée de chaque personne a afficher
+        if( listeGen != null) {
+            listeGen.clear();
+            listeGen = null;
+        }
+        listeGen = new LinkedHashMap<Integer, Point>(nombrePersonne);
+        
+        fabriquerArbreAncetre(id, nbLigne - 1, 0, nbColonne - 1);
+        fabriquerArbreEnfant2(id, (int) listeGen.get(id).getX(), (int) listeGen.get(id).getY());
+        
+    }
 
 
     private int nbAncetre(Integer id, int nb) {
