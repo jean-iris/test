@@ -92,6 +92,7 @@ public class IconePersonneType2 extends ModelIconePersonne {
         });
         menuCliqueIcone.add(couleurSpeciale);
 
+        setBackground(couleurFontIcone);
         setForeground(couleurFontIcone);
         setLayout(null);
 

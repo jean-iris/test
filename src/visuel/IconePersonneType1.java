@@ -113,6 +113,7 @@ public class IconePersonneType1 extends ModelIconePersonne {
         });
         menuCliqueIcone.add(couleurSpeciale);
 
+        setBackground(couleurFontIcone);
         setForeground(couleurFontIcone);
         setLayout(null);
 

@@ -32,7 +32,7 @@ public class Personne implements Serializable{
     String sexe;
     DateUtil dateDeces;
     String lieuDeces;
-    ImageIcon imagePersonne;//FIXME 1 icone non sérialisable??? => mauvaise sauvegarde si icone existe!!!!!!
+    ImageIcon imagePersonne;
     
     //</editor-fold>
     // zone constructeur

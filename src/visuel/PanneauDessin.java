@@ -414,14 +414,12 @@ public class PanneauDessin extends javax.swing.JPanel {
     
     @Override
     public void paint(Graphics g) {
-        //Graphics2D cdc = (Graphics2D) g; //FIXME pourquoi j'ai changé Graphics en Graphics2D?????????
-        Graphics cdc = g;
-        
-        cdc.drawLine(0,0,10,10);
+
+        g.drawLine(0,0,10,10);
 
         HashMap <Integer, Rectangle> mapIcones = new HashMap <Integer, Rectangle>();
 
-        super.paint(cdc);
+        super.paint(g);
         
         Component[] mesIcones = getComponents();
 
@@ -467,18 +465,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                         rec2 = mapIcones.get(arbre.get(id).getListeTypeLiens().get(ind).getAvecPersonne());
                         if (rec2 != null)
                         {
-                            cdc.setColor(couleurTraiID);
+                            g.setColor(couleurTraiID);
                             if (verticalAffichage)
                             {
-                                cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
-                                cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y + rec.height - 6   );
-                                cdc.drawLine(rec.x + rec.width / 2   ,rec.y + rec.height - 6    ,rec.x + rec.width / 2    ,rec.y + rec.height - 10  );
+                                g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
+                                g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y + rec.height - 6   );
+                                g.drawLine(rec.x + rec.width / 2   ,rec.y + rec.height - 6    ,rec.x + rec.width / 2    ,rec.y + rec.height - 10  );
                             }
                             else
                             {
-                                cdc.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 );
-                                cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec.x + rec.width - 6   ,rec.y + rec.height / 2   );
-                                cdc.drawLine(rec.x + rec.width - 6   ,rec.y + rec.height / 2   ,rec.x + rec.width - 10  ,rec.y + rec.height / 2   );
+                                g.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 );
+                                g.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec.x + rec.width - 6   ,rec.y + rec.height / 2   );
+                                g.drawLine(rec.x + rec.width - 6   ,rec.y + rec.height / 2   ,rec.x + rec.width - 10  ,rec.y + rec.height / 2   );
                             }
                         }
                     }
@@ -527,18 +525,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                 rec2 = mapIcones.get(pere);
                 if (rec2 != null)
                 {
-                    cdc.setColor(couleurTraiID);
+                    g.setColor(couleurTraiID);
                     if (verticalAffichage)
                     {
-                    cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6);
-                    cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec2.y + rec2.height - 6);
-                    cdc.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec.y                   );
+                    g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6);
+                    g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec2.y + rec2.height - 6);
+                    g.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2   ,rec.y                   );
                 }
                     else
                     {
-                        cdc.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2);
-                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec.y + rec.height / 2  );
-                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2   ,rec.x                   ,rec.y  + rec.height / 2 );
+                        g.drawLine(rec2.x + rec2.width - 10,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2);
+                        g.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6 ,rec.y + rec.height / 2  );
+                        g.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2   ,rec.x                   ,rec.y  + rec.height / 2 );
                     }
                 }
             }
@@ -549,18 +547,18 @@ public class PanneauDessin extends javax.swing.JPanel {
                 rec2 = mapIcones.get(mere);
                 if (rec2 != null)
                 {
-                    cdc.setColor(couleurTraiID);
+                    g.setColor(couleurTraiID);
                     if (verticalAffichage)
                     {
-                    cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
-                    cdc.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec2.y + rec2.height - 6 );
-                    cdc.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y                    );
+                    g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 10 ,rec2.x + rec2.width / 2  ,rec2.y + rec2.height - 6 );
+                    g.drawLine(rec2.x + rec2.width / 2 ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec2.y + rec2.height - 6 );
+                    g.drawLine(rec.x + rec.width / 2   ,rec2.y + rec2.height - 6  ,rec.x + rec.width / 2    ,rec.y                    );
                 }
                     else
                     {
-                        cdc.drawLine(rec2.x + rec2.width - 10 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6  ,rec2.y + rec2.height / 2 );
-                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2  ,rec2.x + rec2.width - 6  ,rec.y + rec.height / 2   );
-                        cdc.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2    ,rec.x                    ,rec.y + rec.height / 2   );
+                        g.drawLine(rec2.x + rec2.width - 10 ,rec2.y + rec2.height / 2 ,rec2.x + rec2.width - 6  ,rec2.y + rec2.height / 2 );
+                        g.drawLine(rec2.x + rec2.width - 6 ,rec2.y + rec2.height / 2  ,rec2.x + rec2.width - 6  ,rec.y + rec.height / 2   );
+                        g.drawLine(rec2.x + rec2.width - 6 ,rec.y + rec.height / 2    ,rec.x                    ,rec.y + rec.height / 2   );
                     }
                 }
             }
@@ -571,20 +569,20 @@ public class PanneauDessin extends javax.swing.JPanel {
             if (couleurTraiID != null)
             {
                 couleurTraiID = mapCouleurSpecial.get(id);
-                cdc.setColor(couleurTraiID);
+                g.setColor(couleurTraiID);
                 if (verticalAffichage)
                 {
-                    cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x + rec.width, rec.y - 1              );
-                    cdc.drawLine(rec.x - 1        , rec.y - 1              , rec.x - 1        , rec.y + rec.height - 10);
-                    cdc.drawLine(rec.x + rec.width, rec.y - 1              , rec.x + rec.width, rec.y + rec.height - 10);
-                    cdc.drawLine(rec.x - 1        , rec.y + rec.height - 10, rec.x + rec.width, rec.y + rec.height - 10);
+                    g.drawLine(rec.x - 1        , rec.y - 1              , rec.x + rec.width, rec.y - 1              );
+                    g.drawLine(rec.x - 1        , rec.y - 1              , rec.x - 1        , rec.y + rec.height - 10);
+                    g.drawLine(rec.x + rec.width, rec.y - 1              , rec.x + rec.width, rec.y + rec.height - 10);
+                    g.drawLine(rec.x - 1        , rec.y + rec.height - 10, rec.x + rec.width, rec.y + rec.height - 10);
                 }
                 else
                 {
-                    cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x + rec.width - 10, rec.y - 1         );
-                    cdc.drawLine(rec.x - 1             , rec.y - 1         , rec.x - 1             , rec.y + rec.height);
-                    cdc.drawLine(rec.x + rec.width - 10, rec.y - 1         , rec.x + rec.width - 10, rec.y + rec.height);
-                    cdc.drawLine(rec.x - 1             , rec.y + rec.height, rec.x + rec.width - 10, rec.y + rec.height);
+                    g.drawLine(rec.x - 1             , rec.y - 1         , rec.x + rec.width - 10, rec.y - 1         );
+                    g.drawLine(rec.x - 1             , rec.y - 1         , rec.x - 1             , rec.y + rec.height);
+                    g.drawLine(rec.x + rec.width - 10, rec.y - 1         , rec.x + rec.width - 10, rec.y + rec.height);
+                    g.drawLine(rec.x - 1             , rec.y + rec.height, rec.x + rec.width - 10, rec.y + rec.height);
                 }
             }
         }
@@ -653,7 +651,7 @@ public class PanneauDessin extends javax.swing.JPanel {
                     break;
             }
             
-            textLePlusLong =  nouvelleIcone.estTextLePusLong(textLePlusLong);//A la création sauvegarde du texte le plus long
+            textLePlusLong =  nouvelleIcone.estTextLePusLong(textLePlusLong);//A la création, sauvegarde du texte le plus long
             GridBagConstraints gridBagConstraints = new GridBagConstraints();
             gridBagConstraints.fill = GridBagConstraints.NONE;
             if (verticalAffichage)
