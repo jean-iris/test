@@ -233,12 +233,13 @@ public class Arbre implements Serializable{
         }
         
         if (get(id).getListeTypeLiens() != null) {
+            
+            Point ptCourant2 = new Point(listeGen.get(id));
             for (int ind = 0; ind < get(id).getListeTypeLiens().size(); ind++)
             {
                 TypeLien lien = get(id).getListeTypeLiens().get(ind);
                 if (lien.getType() == 2)
                 {
-                    Point ptCourant2 = new Point(ptCourant);
                     Integer epoux = lien.getAvecPersonne();
                     if (listeGen.get(epoux) == null || listeGen.get(epoux).getX() > ptCourant.getX())
                     {
