@@ -211,6 +211,9 @@ public class PanneauDessin extends javax.swing.JPanel {
             case 3:
                 typeAffichArbreBouton3.setSelected(true);
                 break;
+            case 4:
+                typeAffichArbreBouton4.setSelected(true);
+                break;
             default:
                 typeAffichArbreBouton1.setSelected(true);
                 break;
@@ -291,15 +294,18 @@ public class PanneauDessin extends javax.swing.JPanel {
             gridBagConstraints.fill = GridBagConstraints.NONE;
             monIcone.setSize(x2, y2);
             monIcone.setTaillePolice(nouvelleTaillePolice);
-            if (verticalAffichage)
+            if (monIcone.getNumeroID() != null)
             {
-            gridBagConstraints.ipadx = x2;
-            gridBagConstraints.ipady = y2 + 10;
-            }
-            else
-            {
-                gridBagConstraints.ipadx = x2 + 10;
-                gridBagConstraints.ipady = y2;
+                if (verticalAffichage)
+                {
+                    gridBagConstraints.ipadx = x2;
+                    gridBagConstraints.ipady = y2 + 10;
+                }
+                else
+                {
+                    gridBagConstraints.ipadx = x2 + 10;
+                    gridBagConstraints.ipady = y2;
+                }
             }
             
             grille.setConstraints(monIcone, gridBagConstraints);
@@ -448,7 +454,10 @@ public class PanneauDessin extends javax.swing.JPanel {
             rec = mesIcones[i].getBounds();
             ico = (ModelIconePersonne)mesIcones[i];
             id = ico.getNumeroID();
-            mapIcones.put(id,rec);
+            if (id != null)
+            {
+                mapIcones.put(id,rec);
+            }
         }
 
         Set<Integer> listeID = mapIcones.keySet();
@@ -651,6 +660,8 @@ public class PanneauDessin extends javax.swing.JPanel {
         String textLePlusLong = "";
         rapportPoliceText = 1;
         rapportPoliceTextHauteur = 1;
+        int maxY = 0;
+        int maxX = 0;
 
         //mise en place des icones
         ModelIconePersonne nouvelleIcone = null;
@@ -675,16 +686,16 @@ public class PanneauDessin extends javax.swing.JPanel {
             gridBagConstraints.fill = GridBagConstraints.NONE;
             if (verticalAffichage)
             {
-                gridBagConstraints.gridx = pp.y;
-                gridBagConstraints.gridy = pp.x;
+                gridBagConstraints.gridx = pp.y + 1;
+                gridBagConstraints.gridy = pp.x + 1;
                 gridBagConstraints.ipadx = nouvelleIcone.getSize().width;
                 gridBagConstraints.ipady = nouvelleIcone.getSize().height + 10;
                 
             }
             else
             {
-                gridBagConstraints.gridx = pp.x;
-                gridBagConstraints.gridy = pp.y;
+                gridBagConstraints.gridx = pp.x + 1;
+                gridBagConstraints.gridy = pp.y + 1;
                 gridBagConstraints.ipadx = nouvelleIcone.getSize().width + 10;
                 gridBagConstraints.ipady = nouvelleIcone.getSize().height;
             }
@@ -692,15 +703,19 @@ public class PanneauDessin extends javax.swing.JPanel {
             gridBagConstraints.weightx = 1.0;
             gridBagConstraints.weighty = 1.0;
             this.add(nouvelleIcone, gridBagConstraints);
+            
+            if (maxX < gridBagConstraints.gridx) { maxX = gridBagConstraints.gridx;}
+            if (maxY < gridBagConstraints.gridy) { maxY = gridBagConstraints.gridy;}
+            
         }
         dimIconePersonne = nouvelleIcone.getSize();
         dimTextIcone =  nouvelleIcone.getSizeText();
         rapportPoliceText = nouvelleIcone.getTaillePolice() / nouvelleIcone.calculelongueurTexte("_" + textLePlusLong + "_");
         rapportPoliceTextHauteur = nouvelleIcone.getTaillePolice() / (nouvelleIcone.getNbLigne() * nouvelleIcone.calculehauteurTexte() + 2);
-
+        
         Component []mesComposants = getComponents();
 
-        //calcul taille du text a metre en place
+        //calcul taille du texte à metre en place
         int nouvelleTaillePolice;
         int taillePoliceTemporaire;
         nouvelleTaillePolice = (int) (rapportPoliceText * dimTextIcone.width);
@@ -714,6 +729,27 @@ public class PanneauDessin extends javax.swing.JPanel {
             ModelIconePersonne monIcone = (ModelIconePersonne)mesComposants[iCpt];
             monIcone.setTaillePolice(nouvelleTaillePolice);
         }
+        //rajout tour
+        //première case
+        ModelIconePersonne nouvelleIcone1 = new IconePersonneVide(bordure);
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = nouvelleIcone1.getSize().width ;
+        gridBagConstraints.ipady = nouvelleIcone1.getSize().height;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        this.add(nouvelleIcone1, gridBagConstraints);
+        //dernière case
+        ModelIconePersonne nouvelleIcone2 = new IconePersonneVide(bordure);
+        GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
+        gridBagConstraints2.gridx = maxX + 1;
+        gridBagConstraints2.gridy = maxY + 1;
+        gridBagConstraints2.ipadx = nouvelleIcone2.getSize().width;
+        gridBagConstraints2.ipady = nouvelleIcone2.getSize().height;
+        gridBagConstraints2.weightx = 1.0;
+        gridBagConstraints2.weighty = 1.0;
+        this.add(nouvelleIcone2, gridBagConstraints2);
 
         //mise en place des trais entre les icones: voir paint
         this.repaint();
@@ -810,7 +846,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private GridBagLayout grille = null;
     private Color couleurFont = new Color(238,238,238); // couleur de 0 à 255
     private Integer idCourant = -1;
-    private int typeAffichage = 1;
+    private int typeAffichage = 4;
     private int typeIcone = 1;
     private Boolean verticalAffichage= true;
     private Arbre arbre = null;
@@ -820,6 +856,7 @@ public class PanneauDessin extends javax.swing.JPanel {
     private Timer timer;
     private TimerTask maTacheDiff;
     private final long TIMEDIFF = 200;
+    private int bordure = 5;
     //TODO variables a définir dans les instances + hautes (class paramètres?)
 }
 

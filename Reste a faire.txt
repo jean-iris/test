@@ -6,6 +6,7 @@ Prioritaire:
 - plus de mere, pere que des typeLien dans FPersonne (TODO 6)
 
 Taches restantes:
+- Afficher panInf vide (sans bouton, texte, case) si rien de selectionné (pas d'onglet...) 
 - Ajout/Supression de personnes / de liens entre les personnes à implémenter
 - Sauvegarder les données (choix std, paramètres) xml?
 - Revu de code

@@ -6,7 +6,6 @@ package visuel;
 
 import arbreGene.Personne;
 import java.awt.*;
-import javax.swing.ImageIcon;
 import javax.swing.JColorChooser;
 import javax.swing.text.StyledDocument;
 
