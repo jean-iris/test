@@ -198,4 +198,12 @@ public class Personne implements Serializable{
     public void setImagePersonne(ImageIcon imagePersonne) {
         this.imagePersonne = imagePersonne;
     }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
 }

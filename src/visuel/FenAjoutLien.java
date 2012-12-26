@@ -10,6 +10,10 @@
  */
 package visuel;
 
+import arbreGene.FPersonne;
+import arbreGene.Personne;
+import arbreGene.TypeLien;
+
 /**
  *
  * @author jean
@@ -29,44 +33,144 @@ public class FenAjoutLien extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
+        choixAjout = new javax.swing.JComboBox();
+        ajoutPers = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setText("Ajouter : ");
-        add(jLabel1, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        add(jLabel1, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Epoux(se)", "Fils", "Fille", "Père", "Mère", "Nouvelle personne" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        choixAjout.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Epoux(se)", "Père", "Mère", "Fils", "Fille", "Nouvelle personne" }));
+        choixAjout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                choixAjoutActionPerformed(evt);
             }
         });
-        add(jComboBox1, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        add(choixAjout, gridBagConstraints);
 
-        jButton1.setText("OK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ajoutPers.setText("OK");
+        ajoutPers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ajoutPersActionPerformed(evt);
             }
         });
-        add(jButton1, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        add(ajoutPers, gridBagConstraints);
+
+        jButton2.setText("Visualiser la liste des liens");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        add(jButton2, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void choixAjoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choixAjoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_choixAjoutActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ajoutPersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajoutPersActionPerformed
+        FenPrinc fen = (FenPrinc)getRootPane().getParent();
+        FenArbre fenA = (FenArbre)fen.getSplitPrincipal().getOngletArbre().getSelectedComponent();
+        Integer idNouveau = fenA.getArbre().getMaxIndice() + 1;
+        Integer idCourent = fenA.getIdCourant();
+        
+        Personne pers = new Personne();
+        FPersonne fpers = new FPersonne(idNouveau, pers);
+        fenA.getArbre().maj(idNouveau, fpers);
+        
+        switch (choixAjout.getSelectedIndex()) 
+        {
+            case 0: //Epoux(se)
+                if (fenA.getArbre().get(idCourent).getIdentite().getSexe().equals("Homme"))
+                {
+                    pers.setSexe("Femme");
+                }
+                fenA.getArbre().get(idCourent).addTypeLiens(new TypeLien(idNouveau, "marrié", null, null, 2));
+                fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(idCourent, "marrié", null, null, 2));
+                break;
+            case 1: //Parent pere
+                pers.setNom(fenA.getArbre().get(idCourent).getIdentite().getNom());
+                fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(idCourent, "parent de", null, null, 3));
+                fenA.getArbre().get(idCourent).addTypeLiens(new TypeLien(idNouveau, "enfant de", null, null, 1));
+                break;
+            case 2: //Parent mere
+                pers.setSexe("Femme");
+                fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(idCourent, "parent de", null, null, 3));
+                fenA.getArbre().get(idCourent).addTypeLiens(new TypeLien(idNouveau, "enfant de", null, null, 1));
+                break;
+            case 3: //Enfant fils
+                if (fenA.getArbre().get(idCourent).getIdentite().getSexe().equals("Homme"))
+                {
+                    pers.setNom(fenA.getArbre().get(idCourent).getIdentite().getNom());
+                }
+                fenA.getArbre().get(idCourent).addTypeLiens(new TypeLien(idNouveau, "parent de", null, null, 3));
+                fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(idCourent, "enfant de", null, null, 1));
+                if (fenA.getArbre().get(idCourent).getListeTypeLiens() != null) {
+                    for (int ind = 0; ind < fenA.getArbre().get(idCourent).getListeTypeLiens().size(); ind++)
+                    {
+                        if (fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getType() == 2)
+                        {
+                            fenA.getArbre().get(fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getAvecPersonne()).addTypeLiens(new TypeLien(idNouveau, "parent de", null, null, 3));
+                            fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getAvecPersonne(), "enfant de", null, null, 1));
+                        }
+                    }
+                }
+                break;
+            case 4: //Enfant fille
+                pers.setSexe("Femme");
+                if (fenA.getArbre().get(idCourent).getIdentite().getSexe().equals("Homme"))
+                {
+                    pers.setNom(fenA.getArbre().get(idCourent).getIdentite().getNom());
+                }
+                fenA.getArbre().get(idCourent).addTypeLiens(new TypeLien(idNouveau, "parent de", null, null, 3));
+                fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(idCourent, "enfant de", null, null, 1));
+                if (fenA.getArbre().get(idCourent).getListeTypeLiens() != null) {
+                    for (int ind = 0; ind < fenA.getArbre().get(idCourent).getListeTypeLiens().size(); ind++)
+                    {
+                        if (fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getType() == 2)
+                        {
+                            fenA.getArbre().get(fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getAvecPersonne()).addTypeLiens(new TypeLien(idNouveau, "parent de", null, null, 3));
+                            fenA.getArbre().get(idNouveau).addTypeLiens(new TypeLien(fenA.getArbre().get(idCourent).getListeTypeLiens().get(ind).getAvecPersonne(), "enfant de", null, null, 1));
+                        }
+                    }
+                }
+                break;
+            case 5: //Nouvelle personne
+                //pas de lien à metre en place
+                break;
+            default: //impossible
+                break;
+        }
+        fen.getSplitPrincipal().regenerer(idNouveau);
+    }//GEN-LAST:event_ajoutPersActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton ajoutPers;
+    private javax.swing.JComboBox choixAjout;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -202,7 +202,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         maTacheDiff = new RemindTask();
         switch (typeAffichage) 
         {
-            case 1:
+            case 1: 
                 typeAffichArbreBouton1.setSelected(true);
                 break;
             case 2:

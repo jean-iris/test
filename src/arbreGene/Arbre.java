@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 public class Arbre implements Serializable{
-
+    //FIXME: problème si +ieurs époux
 
     public Arbre() {
         mapPersonne = new HashMap <Integer, FPersonne>();
@@ -15,6 +15,10 @@ public class Arbre implements Serializable{
 
     public void maj(Integer in, FPersonne fp){
         mapPersonne.put(in, fp);
+        if (maxIndice < in)
+        {
+            maxIndice = in;
+        }
     }
 
     public FPersonne get(Integer in) {
@@ -278,6 +282,10 @@ public class Arbre implements Serializable{
     public int getNbLigne() {
         return nbLigne;
     }
+    
+    public Integer getMaxIndice() {
+        return maxIndice;
+    }
 
     /**
     * @return listeCle
@@ -292,7 +300,8 @@ public class Arbre implements Serializable{
     
     //déclaration
     HashMap <Integer, FPersonne> mapPersonne;
-    Integer racine;
+    Integer racine = 0;
+    Integer maxIndice = 0;
     int nbColonne;
     int nbLigne; // nombre niveau ancetres et descendants
     int nombrePersonne = 0;
