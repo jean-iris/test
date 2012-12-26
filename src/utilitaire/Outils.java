@@ -14,11 +14,8 @@ public class Outils {
                     break;
                 case 2:
                     //1ère lettre en maj, le reste en min
-                    System.out.println("test maj 1 :" + obj);
                     obj=obj.toLowerCase();
-                    System.out.println("test maj 2 :" + obj);
                     obj=obj.replaceFirst(".",(obj.charAt(0)+"").toUpperCase());
-                    System.out.println("test maj 3 :" + obj);
                     break;
                 case 3:
                     //date

@@ -119,7 +119,7 @@ public class FenArbre extends JScrollPane {
     }//GEN-LAST:event_panneauArbreMousePressed
 
     private void selectFen(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_selectFen
-        // TODO add your handling code here:
+        // TODO selection fenetre ?
 //        Container frame = getRootPane().getParent();
 //        if (frame instanceof FenPrinc) {
 //            FenPrinc fen = (FenPrinc) getRootPane().getParent();

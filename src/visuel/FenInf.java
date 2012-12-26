@@ -388,9 +388,6 @@ public class FenInf extends javax.swing.JPanel {
     }//GEN-LAST:event_evtKeyTyped
 
     private void imagePersonneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagePersonneActionPerformed
-        // TODO add your handling code here:
-        
-        
         //ouverture boite de dialogue recherche fichier
         final JFileChooser fc = new JFileChooser();
         fc.setCurrentDirectory(new File(".")); //NOI18N

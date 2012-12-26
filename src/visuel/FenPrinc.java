@@ -232,7 +232,7 @@ public class FenPrinc extends javax.swing.JFrame {
     }//GEN-LAST:event_menuFrancaisActionPerformed
 
     private void menuAnglaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAnglaisActionPerformed
-        // TODO add your handling code here:
+        // cas menu langue anglaise
         modifInternational(new Locale("en", "GB"));
     }//GEN-LAST:event_menuAnglaisActionPerformed
 

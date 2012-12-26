@@ -53,11 +53,6 @@ public class FenSelect extends javax.swing.JPanel {
 
         add(scrollTable);
 
-        zoneFiltre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zoneFiltreActionPerformed(evt);
-            }
-        });
         zoneFiltre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 zoneFiltreKeyReleased(evt);
@@ -94,7 +89,7 @@ public class FenSelect extends javax.swing.JPanel {
     
     private void zoneFiltreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_zoneFiltreKeyReleased
         // nouvelle lettre entré dans zone filtre
-        //FIXME enlever distinction maj/min, si espace 2 filtre?
+        //FIXME: enlever distinction maj/min, si espace 2 filtre?
         String tabFiltre[] = zoneFiltre.getText().split(" ");
         ArrayList<RowFilter<Object, Object>> tabRowFilter = new ArrayList<RowFilter<Object,Object>>(tabFiltre.length);
         for (int i = 0; i < tabFiltre.length; i++) {
@@ -113,10 +108,6 @@ public class FenSelect extends javax.swing.JPanel {
             fen.getSplitPrincipal().regenerer(numeroID);
         }
     }//GEN-LAST:event_tableMouseClicked
-
-    private void zoneFiltreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoneFiltreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_zoneFiltreActionPerformed
     
     
     public ModelTabPersonne getMod() {

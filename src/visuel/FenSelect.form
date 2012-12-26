@@ -70,7 +70,6 @@
       <SubComponents>
         <Component class="java.awt.TextField" name="zoneFiltre">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zoneFiltreActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="zoneFiltreKeyReleased"/>
           </Events>
         </Component>

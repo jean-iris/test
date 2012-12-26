@@ -38,7 +38,7 @@ public class FenAjoutLien extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         choixAjout = new javax.swing.JComboBox();
         ajoutPers = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        visuLiens = new javax.swing.JButton();
 
         setLayout(new java.awt.GridBagLayout());
 
@@ -49,11 +49,6 @@ public class FenAjoutLien extends javax.swing.JPanel {
         add(jLabel1, gridBagConstraints);
 
         choixAjout.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Epoux(se)", "Père", "Mère", "Fils", "Fille", "Nouvelle personne" }));
-        choixAjout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                choixAjoutActionPerformed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -70,22 +65,18 @@ public class FenAjoutLien extends javax.swing.JPanel {
         gridBagConstraints.gridy = 1;
         add(ajoutPers, gridBagConstraints);
 
-        jButton2.setText("Visualiser la liste des liens");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        visuLiens.setText("Visualiser la liste des liens");
+        visuLiens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                visuLiensActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
-        add(jButton2, gridBagConstraints);
+        add(visuLiens, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void choixAjoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choixAjoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_choixAjoutActionPerformed
 
     private void ajoutPersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajoutPersActionPerformed
         FenPrinc fen = (FenPrinc)getRootPane().getParent();
@@ -163,14 +154,14 @@ public class FenAjoutLien extends javax.swing.JPanel {
         fen.getSplitPrincipal().regenerer(idNouveau);
     }//GEN-LAST:event_ajoutPersActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void visuLiensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visuLiensActionPerformed
+        // TODO créer la popup liste liens
+    }//GEN-LAST:event_visuLiensActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ajoutPers;
     private javax.swing.JComboBox choixAjout;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton visuLiens;
     // End of variables declaration//GEN-END:variables
 }
