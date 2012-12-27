@@ -156,6 +156,10 @@ public class FenAjoutLien extends javax.swing.JPanel {
 
     private void visuLiensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visuLiensActionPerformed
         // TODO créer la popup liste liens
+        FenPrinc fen = (FenPrinc)getRootPane().getParent();
+        FenArbre fenA = (FenArbre)fen.getSplitPrincipal().getOngletArbre().getSelectedComponent();
+        popupListeLiens popup = new popupListeLiens(fenA.getArbre().get(fenA.getIdCourant()), fenA.getArbre());
+        popup.setVisible(true);
     }//GEN-LAST:event_visuLiensActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
