@@ -18,11 +18,6 @@ import java.util.ArrayList;
  */
 public class FPersonne implements Serializable{
 
-    // zone attribus
-    Personne identite = null;
-    Integer clePersonne;
-    ArrayList <TypeLien> listeTypeLiens;
-
     // zone constructeur
     /**
     * constructeur paramétré
@@ -93,4 +88,9 @@ public class FPersonne implements Serializable{
     public ArrayList<TypeLien> getListeTypeLiens() {
         return listeTypeLiens;
     }
+    
+    // zone attribus
+    Personne identite = null;
+    Integer clePersonne;
+    ArrayList <TypeLien> listeTypeLiens;
 }

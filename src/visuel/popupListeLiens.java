@@ -12,22 +12,22 @@ import arbreGene.ModelTabLien;
  *
  * @author Guillet
  */
-public class popupListeLiens extends javax.swing.JDialog {
+public class PopupListeLiens extends javax.swing.JDialog {
 
-    public popupListeLiens() {
+    public PopupListeLiens() {
         super();
         initComponents();
     }
 
     /**
-     * Creates new form popupListeLiens
+     * Creates new form PopupListeLiens
      */
-    public popupListeLiens(java.awt.Frame parent, boolean modal) {
+    public PopupListeLiens(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
     
-    public popupListeLiens(FPersonne fp, Arbre ar) {
+    public PopupListeLiens(FPersonne fp, Arbre ar) {
         super();
         initComponents();
         fPersSauv = fp;
@@ -52,27 +52,25 @@ public class popupListeLiens extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tableLien = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
         boutonOK = new javax.swing.JButton();
         boutonAnnu = new javax.swing.JButton();
+        boutonAjout = new javax.swing.JButton();
+        boutonModif = new javax.swing.JButton();
+        boutonSupp = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
+        setMinimumSize(new java.awt.Dimension(500, 200));
 
         tableLien.setModel(mod);
         jScrollPane1.setViewportView(tableLien);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 2;
-        gridBagConstraints.ipady = 1;
-        getContentPane().add(jScrollPane1, gridBagConstraints);
+        jPanel1.setMaximumSize(new java.awt.Dimension(32767, 70));
+        jPanel1.setMinimumSize(new java.awt.Dimension(0, 70));
+        jPanel1.setPreferredSize(new java.awt.Dimension(380, 70));
 
         boutonOK.setText("Ok");
         boutonOK.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +78,6 @@ public class popupListeLiens extends javax.swing.JDialog {
                 boutonOKActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
-        getContentPane().add(boutonOK, gridBagConstraints);
 
         boutonAnnu.setText("Annuler");
         boutonAnnu.addActionListener(new java.awt.event.ActionListener() {
@@ -93,12 +85,76 @@ public class popupListeLiens extends javax.swing.JDialog {
                 boutonAnnuActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
-        getContentPane().add(boutonAnnu, gridBagConstraints);
+
+        boutonAjout.setText("Ajouter Lien");
+        boutonAjout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonAjoutActionPerformed(evt);
+            }
+        });
+
+        boutonModif.setText("Modifier Lien");
+        boutonModif.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonModifActionPerformed(evt);
+            }
+        });
+
+        boutonSupp.setText("Supprimer Lien");
+        boutonSupp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonSuppActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(boutonOK, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97)
+                        .addComponent(boutonAnnu))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(boutonAjout)
+                        .addGap(69, 69, 69)
+                        .addComponent(boutonModif)
+                        .addGap(66, 66, 66)
+                        .addComponent(boutonSupp)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boutonAjout)
+                    .addComponent(boutonModif)
+                    .addComponent(boutonSupp))
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boutonAnnu)
+                    .addComponent(boutonOK))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,6 +167,18 @@ public class popupListeLiens extends javax.swing.JDialog {
     private void boutonAnnuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAnnuActionPerformed
         dispose();
     }//GEN-LAST:event_boutonAnnuActionPerformed
+
+    private void boutonAjoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAjoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boutonAjoutActionPerformed
+
+    private void boutonModifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonModifActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boutonModifActionPerformed
+
+    private void boutonSuppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonSuppActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boutonSuppActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,13 +201,13 @@ public class popupListeLiens extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(popupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(popupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(popupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(popupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -149,7 +217,7 @@ public class popupListeLiens extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                popupListeLiens dialog = new popupListeLiens(new javax.swing.JFrame(), true);
+                PopupListeLiens dialog = new PopupListeLiens(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
 
                     @Override
@@ -162,8 +230,12 @@ public class popupListeLiens extends javax.swing.JDialog {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boutonAjout;
     private javax.swing.JButton boutonAnnu;
+    private javax.swing.JButton boutonModif;
     private javax.swing.JButton boutonOK;
+    private javax.swing.JButton boutonSupp;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableLien;
     // End of variables declaration//GEN-END:variables

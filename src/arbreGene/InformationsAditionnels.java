@@ -3,7 +3,7 @@
  */
 package arbreGene;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
 
 /**
@@ -14,23 +14,23 @@ import java.util.ArrayList;
  * commentaire sur la personne
  * liste de documents annexes avec titre
  */
-public class InformationsAditionnels {
+public class InformationsAditionnels implements Serializable {
 
     // zone attribus
-    String nomFichierPhoto;
-    String commantaire;
-    ArrayList <DocAnnexe> documentAnnexe;
+    String titreInfo;
+    String type;
+    Object document;
 
     // zone constructeur
     /**
     * constructeur paramétré
     */
-    public InformationsAditionnels(String nomFichierPhoto, String commantaire,
-        ArrayList<DocAnnexe> documentAnnexe) {
+    public InformationsAditionnels(String titreInfo, String type,
+        Object document) {
         super();
-        this.nomFichierPhoto = nomFichierPhoto;
-        this.commantaire = commantaire;
-        this.documentAnnexe = documentAnnexe;
+        this.titreInfo = titreInfo;
+        this.type = type;
+        this.document = document;
     }
 
     /**
@@ -45,9 +45,9 @@ public class InformationsAditionnels {
     */
     public InformationsAditionnels(InformationsAditionnels monInfo) {
         super();
-        this.nomFichierPhoto = monInfo.nomFichierPhoto;
-        this.commantaire = monInfo.commantaire;
-        this.documentAnnexe = monInfo.documentAnnexe;
+        this.titreInfo = monInfo.titreInfo;
+        this.type = monInfo.type;
+        this.document = monInfo.document;
     }
 
     // zone méthode

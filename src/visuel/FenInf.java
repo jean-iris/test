@@ -56,6 +56,7 @@ public class FenInf extends javax.swing.JPanel {
         zoneLieuDeces = new javax.swing.JTextField();
         valider = new javax.swing.JButton();
         reinitialiser = new javax.swing.JButton();
+        textID = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(325, 308));
         setMinimumSize(new java.awt.Dimension(325, 308));
@@ -203,6 +204,10 @@ public class FenInf extends javax.swing.JPanel {
             }
         });
 
+        textID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textID.setText(bundle.getString("FenInf.textID.text")); // NOI18N
+        textID.setName(bundle.getString("FenInf.textID.name")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,12 +219,17 @@ public class FenInf extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textPrenom))
-                                .addGap(20, 20, 20)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(zoneNom)
-                                    .addComponent(zonePrenom))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(textPrenom))
+                                        .addGap(20, 20, 20)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(zoneNom)
+                                            .addComponent(zonePrenom)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(textID)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
                                 .addGap(18, 18, 18)
                                 .addComponent(imagePersonne, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -274,11 +284,13 @@ public class FenInf extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imagePersonne, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGap(4, 4, 4)
+                        .addComponent(textID)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(zoneNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(zonePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textPrenom))))
@@ -445,6 +457,7 @@ public class FenInf extends javax.swing.JPanel {
         zoneDateDeces.setText(maPersonne.getIdentite().getDateDeces());
         zoneLieuDeces.setText(maPersonne.getIdentite().getLieuDeces());
         listeSexe.setSelectedItem(maPersonne.getIdentite().getSexe());
+        textID.setText("ID: " + maPersonne.getClePersonne());
         if (maPersonne.getIdentite().isDecede()) {
             checkDeces.setSelected(true);
             zoneDateDeces.setVisible(true);
@@ -628,6 +641,7 @@ public class FenInf extends javax.swing.JPanel {
     private javax.swing.JButton reinitialiser;
     private javax.swing.JLabel textDateDeces;
     private javax.swing.JLabel textDateNais;
+    private javax.swing.JLabel textID;
     private javax.swing.JLabel textLieuDeces;
     private javax.swing.JLabel textLieuNais;
     private javax.swing.JLabel textNom;

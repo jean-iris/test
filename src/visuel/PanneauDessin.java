@@ -812,7 +812,6 @@ public class PanneauDessin extends javax.swing.JPanel {
                 PanneauDessin.this.printAll(gImpr);
                 gImpr.dispose();
                 demandeDImpression.end();
-
             }
         }
     

@@ -3,8 +3,8 @@
  */
 package arbreGene;
 
-import java.awt.Image;
 import java.io.Serializable;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,17 +22,7 @@ import javax.swing.ImageIcon;
  * liste des epoux
  */
 public class Personne implements Serializable{
-    // zone attribus
-    String nom;
-    String prenom;
-    String autrePrenom;
-    DateUtil dateNaissance;
-    String lieuNaissance;
-    boolean decede;
-    String sexe;
-    DateUtil dateDeces;
-    String lieuDeces;
-    ImageIcon imagePersonne;
+    
     
     //</editor-fold>
     // zone constructeur
@@ -206,4 +196,17 @@ public class Personne implements Serializable{
     public void setSexe(String sexe) {
         this.sexe = sexe;
     }
+    
+    // zone attribus
+    String nom;
+    String prenom;
+    String autrePrenom;
+    DateUtil dateNaissance;
+    String lieuNaissance;
+    boolean decede;
+    String sexe;
+    DateUtil dateDeces;
+    String lieuDeces;
+    ImageIcon imagePersonne;
+    ArrayList <InformationsAditionnels> listeInfoAdd;
 }
