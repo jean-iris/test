@@ -24,7 +24,13 @@ public class IconePersonneVide extends ModelIconePersonne {
         initComponents();
         setSize(longueur,longueur);
     }
-
+    
+    public IconePersonneVide(int longueur, Color couleur) {
+        initComponents();
+        setSize(longueur,longueur);
+        setBackground(couleur);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,7 +41,6 @@ public class IconePersonneVide extends ModelIconePersonne {
     private void initComponents() {
 
         setMaximumSize(null);
-        setMinimumSize(null);
         setVerifyInputWhenFocusTarget(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

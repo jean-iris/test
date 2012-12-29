@@ -9,7 +9,14 @@ import arbreGene.TypeLien;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -20,7 +27,7 @@ import utilitaire.GestionFichierGed;
  *
  * @author Guillet
  */
-public class PanneauDessin extends javax.swing.JPanel {
+public class PanneauDessin extends javax.swing.JPanel implements Printable {
 
     /**
      * Creates new form PanneauDessinTemp
@@ -731,7 +738,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         }
         //rajout tour
         //première case
-        ModelIconePersonne nouvelleIcone1 = new IconePersonneVide(bordure);
+        ModelIconePersonne nouvelleIcone1 = new IconePersonneVide(bordure, couleurFont);
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -741,7 +748,7 @@ public class PanneauDessin extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         this.add(nouvelleIcone1, gridBagConstraints);
         //dernière case
-        ModelIconePersonne nouvelleIcone2 = new IconePersonneVide(bordure);
+        ModelIconePersonne nouvelleIcone2 = new IconePersonneVide(bordure, couleurFont);
         GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
         gridBagConstraints2.gridx = maxX + 1;
         gridBagConstraints2.gridy = maxY + 1;
@@ -797,25 +804,64 @@ public class PanneauDessin extends javax.swing.JPanel {
         return couleur;
     }
     
-    public class Imprimer extends JFrame implements  ActionListener {
+    @Override
+    public int print(Graphics g, PageFormat pf, int pageIndex) throws PrinterException {
+        int totalNumPages;
+        //dimension du panel a imprimer
+        Dimension tailleDoc = this.getSize();
+        //hauteur du panel
+        double hauteurDocu = tailleDoc.getHeight();
+        //hauteur de la page
+        double hauteurPage = pf.getImageableHeight();
+        //lageur du panel
+        double largeurDocu = tailleDoc.getWidth();
+        //lageur de la page
+        double largeurPage = pf.getImageableWidth();
+        //total nombre de page
+        totalNumPages = (int)Math.ceil(hauteurDocu / hauteurPage) * (int)Math.ceil(largeurDocu / largeurPage);
+        
+        if (pageIndex >= totalNumPages)
+        {
+            return Printable.NO_SUCH_PAGE;
+        }
+        
+        int numPageMaxX = (int)Math.ceil(largeurDocu / largeurPage);
+        
+        int numPageX = pageIndex % numPageMaxX;
+        int numPageY = (int)Math.floor(pageIndex / numPageMaxX );
+        
+        //creation du graphique
+        Graphics2D g2d = (Graphics2D)g;
+        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        
+        //translation du graphique en fctn des marges
+        g2d.translate(pf.getImageableX() - numPageX * largeurPage, pf.getImageableY() - numPageY * hauteurPage);
+        
+        this.printAll(g2d);
+        
+        return Printable.PAGE_EXISTS;
+    }
+    
+    
+    public class Imprimer extends JFrame implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            Properties props = new Properties();
-	
-            props.setProperty("awt.print.paperSize", "a4");
-            props.setProperty("awt.print.destination", "printer");
-            
-            PrintJob demandeDImpression = getToolkit().getPrintJob(this, "Impression", props);
-            if (demandeDImpression != null) {
-                Graphics gImpr = demandeDImpression.getGraphics();
-                PanneauDessin.this.printAll(gImpr);
-                gImpr.dispose();
-                demandeDImpression.end();
+            PrinterJob imp = PrinterJob.getPrinterJob();
+            imp.setPrintable(PanneauDessin.this);
+            HashPrintRequestAttributeSet attributs = new HashPrintRequestAttributeSet();
+            if (imp.printDialog(attributs)) {
+                try {
+                    imp.print(attributs);
+                } catch (PrinterException ex) {
+                    Logger.getLogger(PanneauDessin.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
-    
     }
+    
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem fondEcrant;
@@ -838,12 +884,12 @@ public class PanneauDessin extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
     // variable
     private int zoom = 100;
+    private int bordure = 5;
     private Dimension dimIconePersonne = null;
     private Dimension dimTextIcone = null;
     private float rapportPoliceText;
     private float rapportPoliceTextHauteur;
     private GridBagLayout grille = null;
-    private Color couleurFont = new Color(238,238,238); // couleur de 0 à 255
     private Integer idCourant = -1;
     private int typeAffichage = 4;
     private int typeIcone = 1;
@@ -852,10 +898,10 @@ public class PanneauDessin extends javax.swing.JPanel {
     private StyledDocument typeEcriture = null;
     private HashMap <Integer, Color> mapCouleurSpecial = new HashMap <Integer, Color>();
     private Color couleurTrai = new Color(0,0,0);
+    private Color couleurFont = new Color(238,238,238); // couleur de 0 à 255
     private Timer timer;
     private TimerTask maTacheDiff;
     private final long TIMEDIFF = 200;
-    private int bordure = 5;
     //TODO variables a définir dans les instances + hautes (class paramètres?)
 }
 
