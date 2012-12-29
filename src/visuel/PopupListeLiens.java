@@ -12,22 +12,22 @@ import arbreGene.ModelTabLien;
  *
  * @author Guillet
  */
-public class PopupListeLien extends javax.swing.JDialog {
+public class PopupListeLiens extends javax.swing.JDialog {
 
-    public PopupListeLien() {
+    public PopupListeLiens() {
         super();
         initComponents();
     }
 
     /**
-     * Creates new form PopupListeLien
+     * Creates new form PopupListeLiens
      */
-    public PopupListeLien(java.awt.Frame parent, boolean modal) {
+    public PopupListeLiens(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
     
-    public PopupListeLien(FPersonne fp, Arbre ar) {
+    public PopupListeLiens(FPersonne fp, Arbre ar) {
         super();
         initComponents();
         fPersSauv = fp;
@@ -111,13 +111,13 @@ public class PopupListeLien extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PopupListeLien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PopupListeLien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PopupListeLien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PopupListeLien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PopupListeLiens.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -127,7 +127,7 @@ public class PopupListeLien extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                PopupListeLien dialog = new PopupListeLien(new javax.swing.JFrame(), true);
+                PopupListeLiens dialog = new PopupListeLiens(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
 
                     @Override
