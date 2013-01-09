@@ -1,6 +1,5 @@
 package arbreGene;
 
-import java.io.PrintWriter;
 import java.io.Serializable;
 
 public class TypeLien implements Serializable{

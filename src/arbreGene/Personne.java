@@ -63,13 +63,22 @@ public class Personne implements Serializable{
         this.nom = unePersonne.nom;
         this.prenom = unePersonne.prenom;
         this.autrePrenom = unePersonne.autrePrenom;
-        this.dateNaissance = unePersonne.dateNaissance;
+        if (unePersonne.dateNaissance != null)
+        {
+            this.dateNaissance = new DateUtil(unePersonne.dateNaissance);
+        }
         this.lieuNaissance = unePersonne.lieuNaissance;
         this.decede = unePersonne.decede;
         this.sexe = unePersonne.sexe;
-        this.dateDeces = unePersonne.dateDeces;
+        if (unePersonne.dateDeces != null)
+        {
+            this.dateDeces = new DateUtil(unePersonne.dateDeces);
+        }
         this.lieuDeces = unePersonne.lieuDeces;
-        this.imagePersonne = unePersonne.imagePersonne;
+        if (unePersonne.imagePersonne != null)
+        {
+            this.imagePersonne = new ImageIcon(unePersonne.imagePersonne.getImage());
+        }
     }
 
     public void remplacer(String nom, String prenom, String autrePrenom, DateUtil dateNaissance, String lieuNaissance,

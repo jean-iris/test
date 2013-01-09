@@ -56,9 +56,9 @@ public class FPersonne implements Serializable{
     */
     public FPersonne(FPersonne unePersonne){
         super();
-        this.identite = unePersonne.identite;
-        this.clePersonne = unePersonne.clePersonne;
-        this.listeTypeLiens = unePersonne.listeTypeLiens;
+        this.identite = new Personne(unePersonne.identite);
+        this.clePersonne = new Integer(unePersonne.clePersonne);
+        this.listeTypeLiens = new ArrayList <TypeLien> (unePersonne.listeTypeLiens);
     }
 
     public FPersonne addTypeLiens (TypeLien tyli){

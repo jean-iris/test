@@ -4,6 +4,7 @@
  */
 package arbreGene;
 
+import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -19,7 +20,8 @@ public class ModelTabLien  extends AbstractTableModel {
         "Date",
         "Lieu"};
     
-    private Object[][] data = null;
+    //private Object[][] data = null;
+    private ArrayList<Object[]> data = new ArrayList <Object[]> ();
     
     @Override
     public String getColumnName(int col) {
@@ -29,7 +31,7 @@ public class ModelTabLien  extends AbstractTableModel {
     @Override
     public int getRowCount() {
         if (data != null) {
-            return data.length;
+            return data.size();
         }
         else {
             return 0;
@@ -43,12 +45,12 @@ public class ModelTabLien  extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return data[rowIndex][columnIndex];
+        return data.get(rowIndex)[columnIndex];
     }
     
     @Override
     public void setValueAt(Object value, int ligne, int col) {
-        data[ligne][col] = value;
+        data.get(ligne)[col] = value;
         fireTableCellUpdated(ligne, col);
     }
     
@@ -56,43 +58,49 @@ public class ModelTabLien  extends AbstractTableModel {
     public boolean isCellEditable(int row, int col)
     { return false; }
     
-    public void addData(TypeLien typeLien, Personne per) {
-        indice ++;
+    public void addData(int id, TypeLien typeLien, Personne per) {
+        Object[] obj = new Object[7];
         switch (typeLien.getType()) 
         {
             case 1: 
-                data[indice][0] = "↑";
+                obj[0] = "↑";
                 break;
             case 2: 
-                data[indice][0] = "↔";
+                obj[0] = "↔";
                 break;
             case 3: 
-                data[indice][0] = "↓";
+                obj[0] = "↓";
                 break;
             default:
-                data[indice][0] = "?";
+                obj[0] = "?";
                 break;
         }
         
-        data[indice][1] = typeLien.getLien();
-        data[indice][2] = "(" + typeLien.getAvecPersonne() + ") " + per.getNom() + " " + per.getPrenom();
+        obj[1] = typeLien.getLien();
+        obj[2] = "(" + typeLien.getAvecPersonne() + ") " + per.getNom() + " " + per.getPrenom();
         if (typeLien.getDate() != null)
         {
-            data[indice][3] = typeLien.getDate().getDate();
+            obj[3] = typeLien.getDate().getDate();
         }
-        data[indice][4] = typeLien.getLieu();
-        
+        obj[4] = typeLien.getLieu();
+        obj[5] = id;
+        obj[6] = typeLien;
+        data.add(obj);
     }
     
     public void suppData() {
         data = null;
     }
     
-    public void creaData(int nbLigne) {
-        data = new Object[nbLigne][getColumnCount() + 1];
-        indice = -1;
+    public Integer getId(int ligne) {
+        return (Integer)data.get(ligne)[5];
     }
     
-    //variables
-    int indice = -1;
+    public TypeLien getTypeLien(int ligne) {
+        return (TypeLien)data.get(ligne)[6];
+    }
+    
+    public void removeRow(int ligne) {
+        data.remove(ligne);
+    }
 }

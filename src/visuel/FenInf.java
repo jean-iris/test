@@ -421,8 +421,6 @@ public class FenInf extends javax.swing.JPanel {
             System.out.println(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FICHIER NON SELECTIONNE"));
         }
         
-        
-        
     }//GEN-LAST:event_imagePersonneActionPerformed
 
     private class EvtDateNai extends java.awt.event.WindowAdapter {
