@@ -287,6 +287,11 @@ public class PopupListeLiens extends javax.swing.JDialog {
         return arbreSauv.getListeCleTout().contains(pers);
     }
     
+    public String getNomPres (int pers) {
+        return arbreSauv.get(pers).getIdentite().getPrenom() + " " + arbreSauv.get(pers).getIdentite().getNom();
+    }
+            
+    
     /**
      * @param args the command line arguments
      */

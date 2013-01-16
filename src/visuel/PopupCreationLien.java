@@ -64,6 +64,7 @@ public class PopupCreationLien extends javax.swing.JDialog {
             tfPersonne2.setText("");
             cbTypeLien1.setSelectedItem("↑");
         }
+        refreshAvecPersonne();
     }
     
     /**
@@ -88,6 +89,7 @@ public class PopupCreationLien extends javax.swing.JDialog {
         bOK = new java.awt.Button();
         bAnnu = new java.awt.Button();
         txtWarning = new javax.swing.JLabel();
+        txtNomPers = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setModal(true);
@@ -110,6 +112,8 @@ public class PopupCreationLien extends javax.swing.JDialog {
         tfLien2.setText("tfLien2");
 
         tfAvecPersonne1.setText("tfAvecP1");
+        tfAvecPersonne1.setMinimumSize(new java.awt.Dimension(15, 20));
+        tfAvecPersonne1.setScrollOffset(4);
         tfAvecPersonne1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tfAvecPersonne1KeyReleased(evt);
@@ -140,6 +144,8 @@ public class PopupCreationLien extends javax.swing.JDialog {
         txtWarning.setForeground(new java.awt.Color(204, 0, 0));
         txtWarning.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        txtNomPers.setText(" ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,9 +171,12 @@ public class PopupCreationLien extends javax.swing.JDialog {
                         .addComponent(tfLien1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAvecPersonne1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tfAvecPersonne1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNomPers))
                     .addComponent(tfAvecPersonne2))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
             .addComponent(txtWarning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -184,8 +193,9 @@ public class PopupCreationLien extends javax.swing.JDialog {
                     .addComponent(txtTypeLien1)
                     .addComponent(cbTypeLien1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfLien1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfAvecPersonne1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPersonne1))
+                    .addComponent(tfAvecPersonne1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPersonne1)
+                    .addComponent(txtNomPers))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfAvecPersonne2)
@@ -204,7 +214,34 @@ public class PopupCreationLien extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void refreshAvecPersonne()
+    {
+        //FIXME il faut que la clé soit un numéro!!!!!!!!!!!!!!!!!!!
+        tfPersonne2.setText(tfAvecPersonne1.getText());
+        if (!"".equals(tfAvecPersonne1.getText()) & tfAvecPersonne1.getText() != null)
+        {
+            if (!pllParent.verifExistePersonne(Integer.parseInt(tfAvecPersonne1.getText())))
+            {
+                txtWarning.setText("ERREUR : la personne " + tfAvecPersonne1.getText() + " n'existe pas");
+                txtNomPers.setText("");
+                bOK.setEnabled(false);
+            }
+            else
+            {
+                txtWarning.setText("");
+                txtNomPers.setText(pllParent.getNomPres(Integer.parseInt(tfAvecPersonne1.getText())));
+                bOK.setEnabled(true);
+            }
+        }
+        else
+        {
+            txtWarning.setText("");
+            txtNomPers.setText("");
+            bOK.setEnabled(false);
+        }
+    }
+    
     private void cbTypeLien1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbTypeLien1ItemStateChanged
         switch (cbTypeLien1.getSelectedIndex()) 
         {
@@ -265,18 +302,7 @@ public class PopupCreationLien extends javax.swing.JDialog {
     }//GEN-LAST:event_bAnnuActionPerformed
 
     private void tfAvecPersonne1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfAvecPersonne1KeyReleased
-        //FIXME il faut que la clé soit un numéro!!!!!!!!!!!!!!!!!!!
-        tfPersonne2.setText(tfAvecPersonne1.getText());
-        if (!pllParent.verifExistePersonne(Integer.parseInt(tfAvecPersonne1.getText())))
-        {
-            txtWarning.setText("ERREUR : la personne " + tfAvecPersonne1.getText() + " n'existe pas");
-            bOK.setEnabled(false);
-        }
-        else
-        {
-            txtWarning.setText("");
-            bOK.setEnabled(true);
-        }
+        refreshAvecPersonne();
     }//GEN-LAST:event_tfAvecPersonne1KeyReleased
 
     /**
@@ -340,6 +366,7 @@ public class PopupCreationLien extends javax.swing.JDialog {
     private javax.swing.JTextField tfLien2;
     private javax.swing.JLabel tfPersonne1;
     private javax.swing.JLabel tfPersonne2;
+    private javax.swing.JLabel txtNomPers;
     private javax.swing.JLabel txtTypeLien1;
     private javax.swing.JLabel txtTypeLien2;
     private javax.swing.JLabel txtWarning;
