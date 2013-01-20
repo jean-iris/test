@@ -528,7 +528,7 @@ public class FenInf extends javax.swing.JPanel {
             //TODO metre a null le lieu de deces et date de deces ?
         }
 
-        laPersonne.getIdentite().remplacer(outil.formater(zoneNom.getText(), 1), outil.formater(zonePrenom.getText(),2), outil.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
+        laPersonne.getIdentite().remplacer(Outils.formater(zoneNom.getText(), 1), Outils.formater(zonePrenom.getText(),2), Outils.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
                 checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), imaTemp); 
         //mise a jours arbre affiché
         modifie = false;
@@ -628,7 +628,7 @@ public class FenInf extends javax.swing.JPanel {
     private FPersonne maPersonne;
     private ImageIcon imaTemp = null;
     private boolean modifie;
-    private Outils outil = new Outils();
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boutonDateDec;
     private javax.swing.JButton boutonDateNais;

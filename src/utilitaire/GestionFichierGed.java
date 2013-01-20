@@ -67,11 +67,11 @@ public class GestionFichierGed {
                         if (separateurAutrePrenom > 0)
                         {
                             autrePrenom = prenom.substring(separateurAutrePrenom + 1);
-                            autrePrenom = outil.formater(autrePrenom,2);
-                            prenom = outil.formater(prenom.substring(0, separateurAutrePrenom) , 2);
+                            autrePrenom = Outils.formater(autrePrenom,2);
+                            prenom = Outils.formater(prenom.substring(0, separateurAutrePrenom) , 2);
                             
                         }
-                        nom = outil.formater(tabLigneGed.get(i).substring(separateur + 1, tabLigneGed.get(i).indexOf("/", separateur + 1)),1);
+                        nom = Outils.formater(tabLigneGed.get(i).substring(separateur + 1, tabLigneGed.get(i).indexOf("/", separateur + 1)),1);
                     }
                     //sex
                     if (tabLigneGed.get(i).indexOf("1 SEX") != -1) {
@@ -576,6 +576,5 @@ public class GestionFichierGed {
         return false;
     }
     
-    
-    private Outils outil = new Outils();
+
 }
