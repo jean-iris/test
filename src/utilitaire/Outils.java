@@ -30,9 +30,7 @@ public class Outils {
                     for (int i = 0; i < tabNom.length; i++)
                     {
                         tabNom[i] = tabNom[i].replaceFirst(".",(tabNom[i].charAt(0)+"").toUpperCase());
-                        result += " " + tabNom[i];
-                       
-
+                        result += " " + tabNom[i];                    
                     }
                     break;
                 case 3:
