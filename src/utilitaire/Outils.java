@@ -13,8 +13,7 @@ public class Outils {
      */
     public static String formater(String obj, int mode)
     {
-       String result = obj; 
-       int indexOfSpace = -1;
+       String result = obj;
         if (obj != null && !"".equals(obj))
         {
             switch (mode)
