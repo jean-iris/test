@@ -18,5 +18,5 @@ Taches restantes:
 - Copie onglet arbre (pointe sur même structure arbre)
 - Pouvoir modifier les fonts des onglets arbres, les couleurs des écris, ... (standard, par onglet arbre)
 - Pouvoir fusionner 2 arbres
-- Formater (nom en majuscule/ prénom commence majuscule puis minuscules...)
+- Formater (nom en majuscule/ prénom commence majuscule puis minuscules...) ok y compris pour les prenoms séparés par des espace
 - Calendrier avec les dates d'anniversaire.
