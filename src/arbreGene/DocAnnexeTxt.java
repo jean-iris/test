@@ -5,7 +5,6 @@
 package arbreGene;
 
 import java.io.Serializable;
-import javax.swing.JPanel;
 
 /**
  *
@@ -33,7 +32,7 @@ public class DocAnnexeTxt extends ModelDocAnnexe implements Serializable {
     }
 
     @Override
-    public JPanel getApercu() {
+    public void getApercu() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     

@@ -34,7 +34,7 @@ public class DocAnnexeImage extends ModelDocAnnexe implements Serializable {
     }
 
     @Override
-    public JPanel getApercu() {
+    public void getApercu() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
