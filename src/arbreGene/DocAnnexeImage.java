@@ -7,6 +7,7 @@ package arbreGene;
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import visuel.PopupDocAnnexeImage;
 
 /**
  *
@@ -35,7 +36,12 @@ public class DocAnnexeImage extends ModelDocAnnexe implements Serializable {
 
     @Override
     public void getApercu() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        PopupDocAnnexeImage popup = new PopupDocAnnexeImage(this);
+        popup.setVisible(true);
+    }
+    
+    public ImageIcon getDoc() {
+        return fichierDocAnnexe;
     }
     
     // zone attribus

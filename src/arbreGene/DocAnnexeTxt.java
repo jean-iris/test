@@ -5,6 +5,7 @@
 package arbreGene;
 
 import java.io.Serializable;
+import visuel.PopupDocAnnexeTxt;
 
 /**
  *
@@ -33,7 +34,12 @@ public class DocAnnexeTxt extends ModelDocAnnexe implements Serializable {
 
     @Override
     public void getApercu() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        PopupDocAnnexeTxt popup = new PopupDocAnnexeTxt(this);
+        popup.setVisible(true);
+    }
+    
+    public String getDoc() {
+        return fichierDocAnnexe;
     }
     
     // zone attribus
