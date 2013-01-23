@@ -217,5 +217,5 @@ public class Personne implements Serializable{
     DateUtil dateDeces;
     String lieuDeces;
     ImageIcon imagePersonne;
-    ArrayList <InformationsAditionnels> listeInfoAdd;
+    ArrayList <ModelDocAnnexe> listeInfoAdd;
 }
