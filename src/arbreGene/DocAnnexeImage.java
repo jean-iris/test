@@ -7,6 +7,7 @@ package arbreGene;
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import visuel.ApercuDocAnnexeImage;
 import visuel.PopupDocAnnexeImage;
 
 /**
@@ -28,16 +29,21 @@ public class DocAnnexeImage extends ModelDocAnnexe implements Serializable {
     public String getType() {
         return type;
     }
+    
+    @Override
+    public void getPopup() {
+        PopupDocAnnexeImage popup = new PopupDocAnnexeImage(this);
+        popup.setVisible(true);
+    }
+
+    @Override
+    public JPanel getApercu() {
+        return new ApercuDocAnnexeImage(fichierDocAnnexe);
+    }
 
     @Override
     public String getTitre() {
         return titreDocAnnexe;
-    }
-
-    @Override
-    public void getApercu() {
-        PopupDocAnnexeImage popup = new PopupDocAnnexeImage(this);
-        popup.setVisible(true);
     }
     
     public ImageIcon getDoc() {

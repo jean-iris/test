@@ -24,7 +24,7 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
         super();
         initComponents();
         champTitre.setText(doc.getTitre());
-        zoneText.setText(doc.getDoc());
+        zoneTxt.setText(doc.getDoc());
     }
 
     /**
@@ -42,7 +42,7 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
         boutonOk = new javax.swing.JButton();
         boutonAnnu = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        zoneText = new javax.swing.JTextArea();
+        zoneTxt = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -79,9 +79,9 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        zoneText.setColumns(20);
-        zoneText.setRows(5);
-        jScrollPane1.setViewportView(zoneText);
+        zoneTxt.setColumns(20);
+        zoneTxt.setRows(5);
+        jScrollPane1.setViewportView(zoneTxt);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,6 +149,6 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panneauTitre;
-    private javax.swing.JTextArea zoneText;
+    private javax.swing.JTextArea zoneTxt;
     // End of variables declaration//GEN-END:variables
 }

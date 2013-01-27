@@ -19,6 +19,8 @@ public abstract class ModelDocAnnexe implements Serializable {
     
     public abstract String getTitre();
     
-    public abstract void getApercu();
+    public abstract void getPopup();
+    
+    public abstract JPanel getApercu();
     
 }
