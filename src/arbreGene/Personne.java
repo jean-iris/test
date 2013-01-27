@@ -206,6 +206,10 @@ public class Personne implements Serializable{
         this.sexe = sexe;
     }
     
+    public ArrayList<ModelDocAnnexe> getListeDoc() {
+        return listeInfoAdd;
+    }
+    
     // zone attribus
     String nom;
     String prenom;
