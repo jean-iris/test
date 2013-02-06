@@ -5,6 +5,7 @@ package arbreGene;
 
 import java.io.Serializable;
 import javax.swing.JPanel;
+import visuel.PopupListeDocAnnexe;
 
 /**
  * @author YOHAN
@@ -19,8 +20,9 @@ public abstract class ModelDocAnnexe implements Serializable {
     
     public abstract String getTitre();
     
-    public abstract void getPopup();
+    public abstract void getPopup(PopupListeDocAnnexe parent);
     
     public abstract JPanel getApercu();
     
+    public abstract void setTitre(String titre);
 }

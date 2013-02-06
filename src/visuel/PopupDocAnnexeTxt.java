@@ -20,11 +20,18 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
         initComponents();
     }
 
-    public PopupDocAnnexeTxt(DocAnnexeTxt doc) {
+    public PopupDocAnnexeTxt(DocAnnexeTxt docIni, PopupListeDocAnnexe parent) {
         super();
         initComponents();
-        champTitre.setText(doc.getTitre());
-        zoneTxt.setText(doc.getDoc());
+        this.parent = parent;
+        if (docIni.getTitre() != null) {
+            champTitre.setText(docIni.getTitre());
+        }
+        if (docIni.getDoc() != null) {
+            zoneTxt.setText(docIni.getDoc());
+        }
+        
+        crea = (docIni.getTitre() == null & docIni.getDoc() == null);
     }
 
     /**
@@ -45,12 +52,23 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
         zoneTxt = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setModal(true);
 
         jLabel1.setText("Titre : ");
 
         boutonOk.setText("Ok");
+        boutonOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonOkActionPerformed(evt);
+            }
+        });
 
         boutonAnnu.setText("Annuler");
+        boutonAnnu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonAnnuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panneauTitreLayout = new javax.swing.GroupLayout(panneauTitre);
         panneauTitre.setLayout(panneauTitreLayout);
@@ -100,6 +118,22 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void boutonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonOkActionPerformed
+        DocAnnexeTxt doc = new DocAnnexeTxt();
+        doc.setTitre(champTitre.getText());
+        doc.setDoc(zoneTxt.getText());
+        if (!crea)
+        {
+            parent.Supprime();
+        }
+        parent.Ajout(doc);
+        dispose();
+    }//GEN-LAST:event_boutonOkActionPerformed
+
+    private void boutonAnnuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAnnuActionPerformed
+        dispose();
+    }//GEN-LAST:event_boutonAnnuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,4 +185,6 @@ public class PopupDocAnnexeTxt extends javax.swing.JDialog {
     private javax.swing.JPanel panneauTitre;
     private javax.swing.JTextArea zoneTxt;
     // End of variables declaration//GEN-END:variables
+    private PopupListeDocAnnexe parent;
+    private boolean crea = true;
 }

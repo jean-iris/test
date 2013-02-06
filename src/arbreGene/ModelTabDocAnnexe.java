@@ -54,11 +54,12 @@ public class ModelTabDocAnnexe extends AbstractTableModel {
     public boolean isCellEditable(int row, int col)
     { return false; }
     
-    public void addData(ModelDocAnnexe doc) {
-        Object[] obj = new Object[3];
+    public void addData(int ind, ModelDocAnnexe doc) {
+        Object[] obj = new Object[4];
         obj[0] = doc.getType();
         obj[1] = doc.getTitre();
-        obj[2] = doc;
+        obj[2] = ind;
+        obj[3] = doc;
         data.add(obj);
     }
     
@@ -67,11 +68,14 @@ public class ModelTabDocAnnexe extends AbstractTableModel {
     }
     
     public ModelDocAnnexe getDoc(int ligne) {
-        return (ModelDocAnnexe)data.get(ligne)[2];
+        return (ModelDocAnnexe)data.get(ligne)[3];
     }
     
     public void removeRow(int ligne) {
         data.remove(ligne);
     }
     
+    public int getId(int ligne) {
+        return (Integer) data.get(ligne)[2];
+    }
 }

@@ -4,8 +4,11 @@
  */
 package visuel;
 
+import arbreGene.DocAnnexeImage;
+import arbreGene.DocAnnexeTxt;
+import arbreGene.FPersonne;
 import arbreGene.ModelDocAnnexe;
-import arbreGene.ModelTabLien;
+import arbreGene.ModelTabDocAnnexe;
 import java.util.ArrayList;
 
 /**
@@ -22,9 +25,17 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         initComponents();
     }
     
-    public PopupListeDocAnnexe(ArrayList<ModelDocAnnexe> listeDoc) {
+    public PopupListeDocAnnexe(FPersonne fp) {
         super();
         initComponents();
+        maPersonne = fp;
+        ArrayList<ModelDocAnnexe> listeDoc = fp.getIdentite().getListeDoc();
+        if (listeDoc != null) {
+            for (int ind = 0; ind < listeDoc.size(); ind++)
+            {
+                mod.addData(ind, listeDoc.get(ind));
+            }
+        }
     }
 
     /**
@@ -37,7 +48,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabListeDoc = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         ajoutLien = new javax.swing.JButton();
@@ -46,29 +57,54 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         Ok = new javax.swing.JButton();
         annuler = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        choixTypeDoc = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jTable1.setModel(mod);
-        jScrollPane1.setViewportView(jTable1);
+        tabListeDoc.setModel(mod);
+        jScrollPane1.setViewportView(tabListeDoc);
 
         jLabel1.setText("Apercu :");
 
         ajoutLien.setText("en Annexe");
+        ajoutLien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ajoutLienActionPerformed(evt);
+            }
+        });
 
         modif.setText("Modifier");
+        modif.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modifActionPerformed(evt);
+            }
+        });
 
         sup.setText("Supprimer");
+        sup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                supActionPerformed(evt);
+            }
+        });
 
         Ok.setText("Ok");
+        Ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OkActionPerformed(evt);
+            }
+        });
 
         annuler.setText("Annuler");
+        annuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                annulerActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Ajout");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "une image", "un texte" }));
+        choixTypeDoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "une image", "un texte" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,7 +118,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
                         .addGap(100, 100, 100)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(choixTypeDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ajoutLien)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -108,7 +144,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(choixTypeDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ajoutLien))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -134,9 +170,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -152,6 +186,89 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ajoutLienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajoutLienActionPerformed
+        
+        ModelDocAnnexe tl1 = null;
+        switch (choixTypeDoc.getSelectedIndex()) 
+        {
+            case 0: //image
+                tl1 = new DocAnnexeImage();
+                break;
+            case 1: //txt
+                tl1 = new DocAnnexeTxt();
+                break;
+        }
+        tl1.getPopup(this);
+        
+    }//GEN-LAST:event_ajoutLienActionPerformed
+
+    private void modifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifActionPerformed
+        int select = tabListeDoc.getSelectedRow();
+        
+        mod.getDoc(select).getPopup(this);
+    }//GEN-LAST:event_modifActionPerformed
+
+    private void supActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supActionPerformed
+        Supprime ();
+    }//GEN-LAST:event_supActionPerformed
+
+    private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
+        if (listeASupprimer != null)
+        {
+            for (int ind = 0; ind < listeASupprimer.size(); ind++)
+            {
+                maPersonne.getIdentite().getListeDoc().remove(listeASupprimer.get(ind));
+            }
+        }
+        
+        if (listeACreer != null) 
+        {
+            for (int ind = 0; ind < listeACreer.size(); ind++)
+            {
+                maPersonne.getIdentite().getListeDoc().add(listeACreer.get(ind));
+            }
+        }
+        dispose();
+    }//GEN-LAST:event_OkActionPerformed
+
+    private void annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annulerActionPerformed
+        dispose();
+    }//GEN-LAST:event_annulerActionPerformed
+    
+    public void Supprime () {
+        System.out.println("test suprime");
+        int select = tabListeDoc.getSelectedRow();
+        int ind = mod.getId(select);
+        if (ind != -1) // ancien lien existe dans l'arbre donc a supprimer
+        {
+            listeASupprimer.add(mod.getDoc(select));
+        }
+        else // ancien lien pas encore créé dans l'arbre donc a enlever des éléments à créer
+        {
+            if (listeACreer != null)
+            {
+                for (int ind2 = 0; ind2 < listeACreer.size(); ind2++)
+                {
+                    if (listeACreer.get(ind2) == mod.getDoc(select))
+                    {
+                        listeACreer.remove(ind2);
+                    }
+                }
+            }
+        }
+        mod.removeRow(select);
+        mod.fireTableStructureChanged();
+    }
+    
+    public void Ajout (ModelDocAnnexe doc) {
+        if (doc != null)
+        {
+            listeACreer.add(doc);
+            mod.addData(-1, doc);
+            mod.fireTableStructureChanged();
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -197,15 +314,18 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
     private javax.swing.JButton Ok;
     private javax.swing.JButton ajoutLien;
     private javax.swing.JButton annuler;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox choixTypeDoc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton modif;
     private javax.swing.JButton sup;
+    private javax.swing.JTable tabListeDoc;
     // End of variables declaration//GEN-END:variables
-    private ModelTabLien mod = new ModelTabLien();
+    private ModelTabDocAnnexe mod = new ModelTabDocAnnexe();
+    private ArrayList <ModelDocAnnexe> listeASupprimer = new ArrayList <ModelDocAnnexe> ();
+    private ArrayList <ModelDocAnnexe> listeACreer = new ArrayList <ModelDocAnnexe> ();
+    private FPersonne maPersonne;
 }

@@ -25,13 +25,19 @@ public class PopupDocAnnexeImage extends javax.swing.JDialog {
         initComponents();
     }
 
-    public PopupDocAnnexeImage(DocAnnexeImage doc) {
+    public PopupDocAnnexeImage(DocAnnexeImage docIni, PopupListeDocAnnexe parent) {
         super();
         initComponents();
-        champTitre.setText(doc.getTitre());
-        imaTemp = doc.getDoc();
-        Image ima2 = imaTemp.getImage().getScaledInstance(zoneImage.getWidth(), zoneImage.getHeight(), java.awt.Image.SCALE_SMOOTH);
-        zoneImage.setIcon(new ImageIcon(ima2));
+        this.parent = parent;
+        if (docIni.getTitre() != null) {
+            champTitre.setText(docIni.getTitre());
+        }
+        imaTemp = docIni.getDoc();
+        if (imaTemp != null) {
+            Image ima2 = imaTemp.getImage().getScaledInstance(zoneImage.getWidth(), zoneImage.getHeight(), java.awt.Image.SCALE_SMOOTH);
+            zoneImage.setIcon(new ImageIcon(ima2));
+        }
+        crea = (docIni.getTitre() == null & docIni.getDoc() == null);
     }
 
     /**
@@ -51,6 +57,7 @@ public class PopupDocAnnexeImage extends javax.swing.JDialog {
         boutonAnnu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setModal(true);
 
         zoneImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,8 +68,18 @@ public class PopupDocAnnexeImage extends javax.swing.JDialog {
         jLabel1.setText("Titre : ");
 
         boutonOk.setText("Ok");
+        boutonOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonOkActionPerformed(evt);
+            }
+        });
 
         boutonAnnu.setText("Annuler");
+        boutonAnnu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutonAnnuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panneauTitreLayout = new javax.swing.GroupLayout(panneauTitre);
         panneauTitre.setLayout(panneauTitreLayout);
@@ -130,6 +147,22 @@ public class PopupDocAnnexeImage extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_zoneImageActionPerformed
 
+    private void boutonAnnuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAnnuActionPerformed
+        dispose();
+    }//GEN-LAST:event_boutonAnnuActionPerformed
+
+    private void boutonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonOkActionPerformed
+        DocAnnexeImage doc = new DocAnnexeImage();
+        doc.setTitre(champTitre.getText());
+        doc.setDoc(imaTemp);
+        parent.Ajout(doc);
+        if (!crea)
+        {
+            parent.Supprime();
+        }
+        dispose();
+    }//GEN-LAST:event_boutonOkActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -180,4 +213,6 @@ public class PopupDocAnnexeImage extends javax.swing.JDialog {
     private javax.swing.JButton zoneImage;
     // End of variables declaration//GEN-END:variables
     private ImageIcon imaTemp;
+    private PopupListeDocAnnexe parent;
+    private boolean crea = true;
 }

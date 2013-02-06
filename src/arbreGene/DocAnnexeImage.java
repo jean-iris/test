@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import visuel.ApercuDocAnnexeImage;
 import visuel.PopupDocAnnexeImage;
+import visuel.PopupListeDocAnnexe;
 
 /**
  *
@@ -31,8 +32,8 @@ public class DocAnnexeImage extends ModelDocAnnexe implements Serializable {
     }
     
     @Override
-    public void getPopup() {
-        PopupDocAnnexeImage popup = new PopupDocAnnexeImage(this);
+    public void getPopup(PopupListeDocAnnexe parent) {
+        PopupDocAnnexeImage popup = new PopupDocAnnexeImage(this, parent);
         popup.setVisible(true);
     }
 
@@ -50,8 +51,19 @@ public class DocAnnexeImage extends ModelDocAnnexe implements Serializable {
         return fichierDocAnnexe;
     }
     
+    @Override
+    public void setTitre(String titre) {
+        titreDocAnnexe = titre;
+    }
+
+    public void setDoc(ImageIcon ima) {
+        fichierDocAnnexe = ima;
+    }
+    
     // zone attribus
     String titreDocAnnexe;
     String type = "ima";
     ImageIcon fichierDocAnnexe;
+
+    
 }

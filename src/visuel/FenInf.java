@@ -438,7 +438,7 @@ public class FenInf extends javax.swing.JPanel {
     }//GEN-LAST:event_imagePersonneActionPerformed
 
     private void boutonDocAnnexeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonDocAnnexeActionPerformed
-        PopupListeDocAnnexe popup = new PopupListeDocAnnexe(maPersonne.getIdentite().getListeDoc());
+        PopupListeDocAnnexe popup = new PopupListeDocAnnexe(maPersonne);
         popup.setVisible(true);
     }//GEN-LAST:event_boutonDocAnnexeActionPerformed
 

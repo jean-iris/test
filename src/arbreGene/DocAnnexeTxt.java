@@ -8,6 +8,7 @@ import java.io.Serializable;
 import javax.swing.JPanel;
 import visuel.ApercuDocAnnexeTxt;
 import visuel.PopupDocAnnexeTxt;
+import visuel.PopupListeDocAnnexe;
 
 /**
  *
@@ -18,7 +19,7 @@ public class DocAnnexeTxt extends ModelDocAnnexe implements Serializable {
         super();
     }
     
-    public DocAnnexeTxt(String titre, String fichier) {
+    public DocAnnexeTxt(PopupListeDocAnnexe parent, String titre, String fichier) {
         super();
         titreDocAnnexe = titre;
         fichierDocAnnexe = fichier;
@@ -35,8 +36,8 @@ public class DocAnnexeTxt extends ModelDocAnnexe implements Serializable {
     }
 
     @Override
-    public void getPopup() {
-        PopupDocAnnexeTxt popup = new PopupDocAnnexeTxt(this);
+    public void getPopup(PopupListeDocAnnexe parent) {
+        PopupDocAnnexeTxt popup = new PopupDocAnnexeTxt(this, parent);
         popup.setVisible(true);
     }
     
@@ -47,6 +48,15 @@ public class DocAnnexeTxt extends ModelDocAnnexe implements Serializable {
     @Override
     public JPanel getApercu() {
         return new ApercuDocAnnexeTxt(fichierDocAnnexe);
+    }
+    
+    @Override
+    public void setTitre(String titre) {
+        titreDocAnnexe = titre;
+    }
+
+    public void setDoc(String txt) {
+        fichierDocAnnexe = txt;
     }
     
     // zone attribus
