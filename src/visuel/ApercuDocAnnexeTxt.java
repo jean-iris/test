@@ -4,9 +4,6 @@
  */
 package visuel;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author Guillet

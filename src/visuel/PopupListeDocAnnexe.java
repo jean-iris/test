@@ -10,6 +10,7 @@ import arbreGene.FPersonne;
 import arbreGene.ModelDocAnnexe;
 import arbreGene.ModelTabDocAnnexe;
 import java.util.ArrayList;
+import javax.swing.JPanel;
 
 /**
  *
@@ -58,11 +59,16 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         annuler = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         choixTypeDoc = new javax.swing.JComboBox();
-        jPanel2 = new javax.swing.JPanel();
+        apercu = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tabListeDoc.setModel(mod);
+        tabListeDoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabListeDocMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabListeDoc);
 
         jLabel1.setText("Apercu :");
@@ -154,14 +160,14 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
                 .addComponent(jLabel1))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout apercuLayout = new javax.swing.GroupLayout(apercu);
+        apercu.setLayout(apercuLayout);
+        apercuLayout.setHorizontalGroup(
+            apercuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        apercuLayout.setVerticalGroup(
+            apercuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 291, Short.MAX_VALUE)
         );
 
@@ -171,7 +177,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(apercu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,7 +186,7 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(apercu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -204,8 +210,10 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
 
     private void modifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifActionPerformed
         int select = tabListeDoc.getSelectedRow();
-        
-        mod.getDoc(select).getPopup(this);
+        if (select != -1)
+        {
+            mod.getDoc(select).getPopup(this);
+        }
     }//GEN-LAST:event_modifActionPerformed
 
     private void supActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supActionPerformed
@@ -234,6 +242,18 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
     private void annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annulerActionPerformed
         dispose();
     }//GEN-LAST:event_annulerActionPerformed
+
+    private void tabListeDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabListeDocMouseClicked
+        int select = tabListeDoc.getSelectedRow();
+        apercu.removeAll();
+        if (select != -1)
+        {
+            JPanel panneau = mod.getDoc(select).getApercu();
+            apercu.add(panneau);
+            //FIXME: apercu non affiché
+        }
+        
+    }//GEN-LAST:event_tabListeDocMouseClicked
     
     public void Supprime () {
         System.out.println("test suprime");
@@ -314,11 +334,11 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
     private javax.swing.JButton Ok;
     private javax.swing.JButton ajoutLien;
     private javax.swing.JButton annuler;
+    private javax.swing.JPanel apercu;
     private javax.swing.JComboBox choixTypeDoc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton modif;
     private javax.swing.JButton sup;
