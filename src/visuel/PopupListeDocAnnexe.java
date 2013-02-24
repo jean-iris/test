@@ -249,7 +249,17 @@ public class PopupListeDocAnnexe extends javax.swing.JDialog {
         if (select != -1)
         {
             JPanel panneau = mod.getDoc(select).getApercu();
-            apercu.add(panneau);
+            javax.swing.GroupLayout apercuLayout = new javax.swing.GroupLayout(apercu);
+            apercu.setLayout(apercuLayout);
+            apercuLayout.setHorizontalGroup(
+                apercuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panneau, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            );
+            apercuLayout.setVerticalGroup(
+                apercuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panneau, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            );
+            
             //FIXME: apercu non affiché
         }
         

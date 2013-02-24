@@ -22,8 +22,7 @@ public class ApercuDocAnnexeImage extends javax.swing.JPanel {
 
     public ApercuDocAnnexeImage(ImageIcon fichierDocAnnexe) {
         initComponents();
-        Image ima2 = fichierDocAnnexe.getImage().getScaledInstance(zoneImage.getWidth(), zoneImage.getHeight(), java.awt.Image.SCALE_SMOOTH);
-        zoneImage.setIcon(new ImageIcon(ima2));
+        zoneImage.setIcon(fichierDocAnnexe);
     }
 
     /**

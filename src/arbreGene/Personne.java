@@ -207,6 +207,10 @@ public class Personne implements Serializable{
     }
     
     public ArrayList<ModelDocAnnexe> getListeDoc() {
+        if (listeInfoAdd == null)
+        {
+            listeInfoAdd = new ArrayList <ModelDocAnnexe>();
+        }
         return listeInfoAdd;
     }
     
