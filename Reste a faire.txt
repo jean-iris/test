@@ -20,4 +20,3 @@ Taches restantes:
 - Pouvoir fusionner 2 arbres
 - Formater (nom en majuscule/ prénom commence majuscule puis minuscules...) ok y compris pour les prenoms séparés par des espace
 - Calendrier avec les dates d'anniversaire.
-test du 01-03-2013
