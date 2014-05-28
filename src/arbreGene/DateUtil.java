@@ -94,7 +94,32 @@ public class DateUtil implements Serializable{
         }
 
     }
+//
+//    public Date getDateSimple() {
+//        return dateSimple;
+//    }
 
+    public void setDateSimple(Date dateSimple) {
+        this.dateSimple = dateSimple;
+    }
+
+//    public Date getDateDebut() {
+//        return dateDebut;
+//    }
+
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+//    public Date getDateFin() {
+//        return dateFin;
+//    }
+
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
+    }
+
+    
     public void setDateConnus(String date) {
         if (date.length() != 0)
         {

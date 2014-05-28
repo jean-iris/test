@@ -68,6 +68,7 @@ public class PopupDate extends JDialog {
             this.dat = dat;
             if ( dat == null )
             {
+                this.dat = new DateUtil();
                     this.dateU = new DateUtil();
             } else
             {

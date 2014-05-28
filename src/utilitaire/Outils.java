@@ -1,35 +1,30 @@
 package utilitaire;
 
 public class Outils {
-    
+
     /**
      *
      * @param obj
-     * @param mode vaut :
-     *      1 pour tout en maj
-     *      2 pour première lettre en maj
-     *      3 pour formater la date
+     * @param mode vaut : 1 pour tout en maj 2 pour première lettre en maj 3
+     * pour formater la date
      * @return
      */
-    public static String formater(String obj, int mode)
-    {
-       String result = obj;
-        if (obj != null && !"".equals(obj))
-        {
-            switch (mode)
-            {
+    public static String formater(String obj, int mode) {
+        String modif = obj.trim();
+        String result = obj.trim();
+        if (modif != null && !"".equals(modif)) {
+            switch (mode) {
                 case 1:
                     //passage en maj
-                    result = obj.toUpperCase();
+                    result = modif.toUpperCase();
                     break;
                 case 2:
-                    String[] tabNom = obj.split(" ");
+                    String[] tabNom = modif.split(" ");
                     //1ère lettre en maj, le reste en min
                     result = "";
-                    for (int i = 0; i < tabNom.length; i++)
-                    {
-                        tabNom[i] = tabNom[i].replaceFirst(".",(tabNom[i].charAt(0)+"").toUpperCase());
-                        result += " " + tabNom[i];                    
+                    for (int i = 0; i < tabNom.length; i++) {
+                            tabNom[i] = tabNom[i].replaceFirst(".", (tabNom[i].charAt(0) + "").toUpperCase());
+                            result += " " + tabNom[i];
                     }
                     break;
                 case 3:

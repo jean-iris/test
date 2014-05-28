@@ -1,0 +1,3117 @@
+0 HEAD 
+0 @I0@ INDI
+1 NAME  Yohan/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 23/02/1984
+2 PLAC nancy
+0 @I1@ INDI
+1 NAME  Jean/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 20/12/1952
+2 PLAC La poueze
+0 @I2@ INDI
+1 NAME  Yvette/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/05/1951
+2 PLAC la poueze
+0 @I3@ INDI
+1 NAME  David/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 09/06/1982
+2 PLAC le mans
+0 @I4@ INDI
+1 NAME  Jean/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 03/04/1906
+2 PLAC aze (mayenne)
+1 DEAT 
+2 DATE 30/07/1986
+0 @I5@ INDI
+1 NAME  Madeleine/REVERDY/
+1 SEX F
+1 BIRT 
+2 DATE 27/01/1911
+2 PLAC saint fort (mayenne)
+1 DEAT 
+2 PLAC Angers
+0 @I6@ INDI
+1 NAME Madeleine/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 13/01/1931
+2 PLAC vern d'anjou
+0 @I7@ INDI
+1 NAME Jean/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 25/05/1932
+2 PLAC vern d'anjou
+0 @I8@ INDI
+1 NAME jeannine/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 15/07/1933
+2 PLAC vern d'anjou
+0 @I9@ INDI
+1 NAME Emile/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 25/09/1934
+2 PLAC l'anjouere (la poueze/ maine et loire)
+1 DEAT 
+2 DATE 01/01/2008
+0 @I10@ INDI
+1 NAME Alexandre/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 08/10/1935
+0 @I11@ INDI
+1 NAME Henri/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 13/01/1937
+2 PLAC la poueze
+0 @I12@ INDI
+1 NAME  Marie/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 08/02/1939
+1 DEAT 
+2 DATE 01/01/1939
+0 @I13@ INDI
+1 NAME Louis/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 24/03/1941
+2 PLAC la poueze
+0 @I14@ INDI
+1 NAME Andre/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 03/04/1943
+2 PLAC la poueze
+0 @I15@ INDI
+1 NAME Marguerite/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 17/04/1944
+2 PLAC la poueze
+0 @I16@ INDI
+1 NAME Helene/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 27/01/1947
+2 PLAC la poueze
+0 @I17@ INDI
+1 NAME  Christiane/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/03/1953
+2 PLAC Angers
+0 @I18@ INDI
+1 NAME Colette/FOUGERAS/
+1 SEX F
+1 BIRT 
+2 DATE 26/11/1941
+0 @I19@ INDI
+1 NAME  Anne/CHEVRY/
+1 SEX F
+1 BIRT 
+2 DATE 06/12/1937
+0 @I20@ INDI
+1 NAME Henriette/LENEVEU/
+1 SEX F
+1 BIRT 
+2 DATE 25/07/1938
+0 @I21@ INDI
+1 NAME Simone/COURTIN/
+1 SEX F
+1 BIRT 
+2 DATE 22/02/1943
+0 @I22@ INDI
+1 NAME Danile/BERNARD/
+1 SEX F
+1 BIRT 
+2 DATE 12/12/1947
+0 @I23@ INDI
+1 NAME Alain/BAUMARD/
+1 SEX M
+1 BIRT 
+2 DATE 25/01/1939
+0 @I24@ INDI
+1 NAME Jose/MOLINO/
+1 SEX M
+1 BIRT 
+2 DATE 18/07/1942
+0 @I25@ INDI
+1 NAME Joelle/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 14/02/1961
+0 @I26@ INDI
+1 NAME Evelyne/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 17/02/1962
+0 @I27@ INDI
+1 NAME Catherine/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/02/1963
+0 @I28@ INDI
+1 NAME  Jean/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 25/02/1965
+0 @I29@ INDI
+1 NAME Isabelle/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 14/04/1966
+0 @I30@ INDI
+1 NAME Nadege/GUILLET/
+1 SEX F
+1 BIRT 
+2 DATE 23/05/1981
+1 DEAT 
+2 DATE 01/01/1981
+0 @I31@ INDI
+1 NAME Xing/ZHANG/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1983
+0 @I32@ INDI
+1 NAME  Francois/REVERDY/
+1 SEX M
+1 BIRT 
+2 DATE 03/02/1866
+2 PLAC moulins (la guerches/ vitré/ ile et vilaine)
+0 @I33@ INDI
+1 NAME  Louise/FRANCOIS/
+1 SEX F
+1 BIRT 
+2 DATE 04/09/1871
+2 PLAC Bazouges (mayenne)
+1 DEAT 
+2 DATE 18/02/1947
+2 PLAC menil (mayenne)
+0 @I34@ INDI
+1 NAME Louise/REVERDY/
+1 SEX F
+0 @I35@ INDI
+1 NAME Henriette/REVERDY/
+1 SEX F
+0 @I36@ INDI
+1 NAME  Marie/REVERDY/
+1 SEX F
+1 BIRT 
+2 DATE 23/06/1893
+2 PLAC Bazouges (mayenne)
+1 DEAT 
+2 DATE 25/10/1967
+2 PLAC chateau gontier
+0 @I37@ INDI
+1 NAME Louis/REVERDY/
+1 SEX M
+0 @I38@ INDI
+1 NAME Juliette/REVERDY/
+1 SEX F
+0 @I39@ INDI
+1 NAME Unknown/FOUASSIER/
+1 SEX M
+0 @I40@ INDI
+1 NAME Unknown/GUERIN/
+1 SEX M
+0 @I41@ INDI
+1 NAME Fernande/BUQUET/
+1 SEX F
+0 @I42@ INDI
+1 NAME Louis/GAUTIER/
+1 SEX M
+0 @I43@ INDI
+1 NAME  Francois/FRANCOIS/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1835
+0 @I44@ INDI
+1 NAME Sophie/GAIGNEUX/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1835
+0 @I45@ INDI
+1 NAME  Francois/REVERDY/
+1 SEX M
+1 BIRT 
+2 DATE 02/09/1828
+2 PLAC moulin (guerche/ vitre/ ile et villaines)
+1 DEAT 
+2 DATE 17/03/1877
+2 PLAC moulin (guerche/ vitre/ ile et villaines)
+0 @I46@ INDI
+1 NAME  Victoire/SARRAZIN/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1833
+2 PLAC Izé
+1 DEAT 
+2 DATE 08/08/1876
+2 PLAC moulin (guerche/ vitre/ ile et villaines)
+0 @I47@ INDI
+1 NAME Francois/REVERDY/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1792
+0 @I48@ INDI
+1 NAME Francoise/LEBRETON/
+1 SEX F
+0 @I49@ INDI
+1 NAME  Armand/SARRAZIN/
+1 SEX M
+1 BIRT 
+2 DATE 10/10/1808
+2 PLAC moulins
+0 @I50@ INDI
+1 NAME  Victoire/BUFFET/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1815
+0 @I51@ INDI
+1 NAME Francois/BUFFET/
+1 SEX M
+1 BIRT 
+2 DATE 12/03/1781
+2 PLAC Toufsaine de rennes /Val d'Izé / ile et vilaines
+0 @I52@ INDI
+1 NAME  Jeanne/GOUPIL/
+1 SEX F
+1 BIRT 
+2 DATE 07/03/1777
+2 PLAC erbrée / ile et vilaines
+0 @I53@ INDI
+1 NAME Francois/SARRAZIN/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1755
+1 DEAT 
+2 DATE 20/08/1808
+2 PLAC moulins
+0 @I54@ INDI
+1 NAME Julienne/MARION/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/0001
+0 @I55@ INDI
+1 NAME  Jean/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1874
+0 @I56@ INDI
+1 NAME  Melanie/DION/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1877
+0 @I57@ INDI
+1 NAME Emile/GAUTIER/
+1 SEX M
+0 @I58@ INDI
+1 NAME Andre/GAUTIER/
+1 SEX M
+0 @I59@ INDI
+1 NAME Louis/GAUTIER/
+1 SEX M
+0 @I60@ INDI
+1 NAME Marguerite//
+1 SEX F
+0 @I61@ INDI
+1 NAME Unknown/DELETRE/
+1 SEX M
+0 @I62@ INDI
+1 NAME Robert/DELETRE/
+1 SEX M
+0 @I63@ INDI
+1 NAME Michel/GAUTIER/
+1 SEX M
+0 @I64@ INDI
+1 NAME Huguette/GAUTIER/
+1 SEX F
+0 @I65@ INDI
+1 NAME Yvette/GAUTIER/
+1 SEX F
+0 @I66@ INDI
+1 NAME Joseph/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 10/09/1832
+0 @I67@ INDI
+1 NAME Marie/FOUCHE/
+1 SEX F
+1 BIRT 
+2 DATE 28/10/1838
+0 @I68@ INDI
+1 NAME Joseph/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1810
+0 @I69@ INDI
+1 NAME Jeanne/BELLANGER/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1803
+0 @I70@ INDI
+1 NAME Jacques/FOUCHE/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1806
+0 @I71@ INDI
+1 NAME Perrine/DAVID/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1811
+0 @I72@ INDI
+1 NAME  Marie/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 28/04/1862
+0 @I73@ INDI
+1 NAME  Josephe/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 30/08/1864
+0 @I74@ INDI
+1 NAME  Louis/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 21/03/1867
+0 @I75@ INDI
+1 NAME  Aimee/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/09/1869
+0 @I76@ INDI
+1 NAME  Anne/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 21/01/1872
+0 @I77@ INDI
+1 NAME  Louise/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 01/05/1875
+0 @I78@ INDI
+1 NAME Unknown/RABU/
+1 SEX M
+0 @I79@ INDI
+1 NAME francois/LETORT/
+1 SEX M
+0 @I80@ INDI
+1 NAME Unknown/RABERGEAU/
+1 SEX M
+0 @I81@ INDI
+1 NAME Alfred/RABERGEAU/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1899
+0 @I82@ INDI
+1 NAME Marie/COTIER/
+1 SEX F
+0 @I83@ INDI
+1 NAME Rene/RABERGEAU/
+1 SEX M
+0 @I84@ INDI
+1 NAME  Marie/RABERGEAU/
+1 SEX F
+0 @I85@ INDI
+1 NAME Simone/RABERGEAU/
+1 SEX F
+0 @I86@ INDI
+1 NAME Gorges/LHERBETTE/
+1 SEX M
+0 @I87@ INDI
+1 NAME Jean/GUILLET/
+1 SEX M
+0 @I88@ INDI
+1 NAME Liliane/GUILLET/
+1 SEX F
+1 BIRT 
+2 DATE 24/06/1951
+0 @I89@ INDI
+1 NAME Daniel/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 26/02/1957
+0 @I90@ INDI
+1 NAME Michel/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 01/07/1959
+0 @I91@ INDI
+1 NAME Olivier/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 09/06/1961
+0 @I92@ INDI
+1 NAME Thierry/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 05/09/1965
+0 @I93@ INDI
+1 NAME Claudine/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/06/1960
+0 @I94@ INDI
+1 NAME  Marie/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 11/09/1962
+0 @I95@ INDI
+1 NAME Gilles/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 30/06/1965
+0 @I96@ INDI
+1 NAME Veronique/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 06/07/1960
+0 @I97@ INDI
+1 NAME  Marie/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 17/06/1961
+0 @I98@ INDI
+1 NAME  Stéphane/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 11/02/1969
+0 @I99@ INDI
+1 NAME Stéphane/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 19/04/1970
+0 @I100@ INDI
+1 NAME Lionel/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 17/01/1973
+0 @I101@ INDI
+1 NAME Vincent/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 25/05/1972
+0 @I102@ INDI
+1 NAME Sylvain/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 29/05/1976
+0 @I103@ INDI
+1 NAME Elisabeth/BAUMARD/
+1 SEX F
+1 BIRT 
+2 DATE 01/11/1966
+0 @I104@ INDI
+1 NAME Bruno/BAUMARD/
+1 SEX M
+1 BIRT 
+2 DATE 19/09/1968
+0 @I105@ INDI
+1 NAME Christophe/BAUMARD/
+1 SEX M
+1 BIRT 
+2 DATE 18/03/1970
+0 @I106@ INDI
+1 NAME Laurent/MOLINO/
+1 SEX M
+1 BIRT 
+2 DATE 17/09/1967
+0 @I107@ INDI
+1 NAME Linda/MOLINO/
+1 SEX F
+1 BIRT 
+2 DATE 17/06/1973
+0 @I108@ INDI
+1 NAME Stephanie/MOLINO/
+1 SEX F
+1 BIRT 
+2 DATE 27/08/1980
+0 @I109@ INDI
+1 NAME Jacques/BAUDRY/
+1 SEX M
+1 BIRT 
+2 DATE 12/08/1957
+0 @I110@ INDI
+1 NAME Adeline/BAUDRY/
+1 SEX F
+1 BIRT 
+2 DATE 25/12/1982
+0 @I111@ INDI
+1 NAME Xavier/BAUDRY/
+1 SEX M
+1 BIRT 
+2 DATE 02/01/1988
+0 @I112@ INDI
+1 NAME Gilbert/LEGER/
+1 SEX M
+1 BIRT 
+2 DATE 02/05/1959
+0 @I113@ INDI
+1 NAME Marie/LEGER/
+1 SEX F
+1 BIRT 
+2 DATE 17/01/1989
+0 @I114@ INDI
+1 NAME Amelie/LEGER/
+1 SEX F
+1 BIRT 
+2 DATE 28/03/1991
+0 @I115@ INDI
+1 NAME  Jean/TROUVE/
+1 SEX M
+1 BIRT 
+2 DATE 18/07/1959
+0 @I116@ INDI
+1 NAME Emilie/TROUVE/
+1 SEX F
+1 BIRT 
+2 DATE 09/04/1987
+0 @I117@ INDI
+1 NAME Nicolas/TROUVE/
+1 SEX M
+1 BIRT 
+2 DATE 12/05/1989
+0 @I118@ INDI
+1 NAME Maeva/BAUDRY/
+1 SEX F
+0 @I119@ INDI
+1 NAME  Marie/PAILLER/
+1 SEX F
+1 BIRT 
+2 DATE 25/09/1966
+0 @I120@ INDI
+1 NAME Antoine/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 11/11/1996
+0 @I121@ INDI
+1 NAME Helene/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 07/09/1998
+0 @I122@ INDI
+1 NAME Bernard/MALLET/
+1 SEX M
+1 BIRT 
+2 DATE 28/10/1961
+0 @I123@ INDI
+1 NAME Angelique/MALLET/
+1 SEX F
+1 BIRT 
+2 DATE 01/03/1994
+0 @I124@ INDI
+1 NAME Lucie/MALLET/
+1 SEX F
+1 BIRT 
+2 DATE 15/02/1997
+0 @I125@ INDI
+1 NAME Roger/DOMMERGUE/
+1 SEX M
+1 BIRT 
+2 DATE 22/07/1954
+0 @I126@ INDI
+1 NAME Nelly/DOMMERGUE/
+1 SEX F
+1 BIRT 
+2 DATE 17/01/1989
+0 @I127@ INDI
+1 NAME Jerome/DOMMERGUE/
+1 SEX M
+1 BIRT 
+2 DATE 12/05/1992
+0 @I128@ INDI
+1 NAME Corinne/GUILLET/
+1 SEX F
+1 BIRT 
+2 DATE 16/06/1983
+0 @I129@ INDI
+1 NAME Philippe/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 02/07/1985
+0 @I130@ INDI
+1 NAME Damien/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 25/10/1990
+0 @I131@ INDI
+1 NAME Claire/TRIBONDEAU/
+1 SEX F
+1 BIRT 
+2 DATE 20/05/1967
+0 @I132@ INDI
+1 NAME Thibault/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 27/07/1997
+0 @I133@ INDI
+1 NAME Alienor/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 16/07/2005
+0 @I134@ INDI
+1 NAME Sophie/QUOEURMEAT/
+1 SEX F
+1 BIRT 
+2 DATE 07/06/1971
+0 @I135@ INDI
+1 NAME Danae/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 15/02/1996
+0 @I136@ INDI
+1 NAME Isia/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 29/08/1999
+0 @I137@ INDI
+1 NAME Nathan/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 29/08/1999
+0 @I138@ INDI
+1 NAME Eric/MENARD/
+1 SEX M
+1 BIRT 
+2 DATE 26/05/1971
+0 @I139@ INDI
+1 NAME  Pierre/MENARD/
+1 SEX M
+1 BIRT 
+2 DATE 01/10/1994
+0 @I140@ INDI
+1 NAME Melanie/MENARD/
+1 SEX F
+1 BIRT 
+2 DATE 04/02/1998
+0 @I141@ INDI
+1 NAME Annie/JAFFRAY/
+1 SEX F
+1 BIRT 
+2 DATE 24/01/1967
+0 @I142@ INDI
+1 NAME Mickael/BAUMARD/
+1 SEX M
+1 BIRT 
+2 DATE 13/01/1992
+0 @I143@ INDI
+1 NAME Melodie/BAUMARD/
+1 SEX F
+1 BIRT 
+2 DATE 26/03/1994
+0 @I144@ INDI
+1 NAME Béatrice/DAVID/
+1 SEX F
+1 BIRT 
+2 DATE 30/06/1965
+0 @I145@ INDI
+1 NAME Amandine/BAUMARD/
+1 SEX F
+1 BIRT 
+2 DATE 14/08/1993
+0 @I146@ INDI
+1 NAME Jeremy/BAUMARD/
+1 SEX M
+1 BIRT 
+2 DATE 19/06/1995
+0 @I147@ INDI
+1 NAME Alexandra/BAUMARD/
+1 SEX F
+1 BIRT 
+2 DATE 03/02/1997
+0 @I148@ INDI
+1 NAME Christelle/MALARY/
+1 SEX F
+1 BIRT 
+2 DATE 31/07/1968
+0 @I149@ INDI
+1 NAME Maxime/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 09/01/1998
+0 @I150@ INDI
+1 NAME Emeline/GAUTIER/
+1 SEX F
+1 BIRT 
+2 DATE 18/12/2001
+0 @I151@ INDI
+1 NAME Marius/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 27/06/2005
+0 @I152@ INDI
+1 NAME Beatrice/BOUGET/
+1 SEX F
+1 BIRT 
+2 DATE 27/08/1974
+0 @I153@ INDI
+1 NAME Kelvin/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 22/05/2004
+0 @I154@ INDI
+1 NAME Elouan/GAUTIER/
+1 SEX M
+1 BIRT 
+2 DATE 26/01/2009
+0 @I155@ INDI
+1 NAME Valerie//
+1 SEX F
+0 @I156@ INDI
+1 NAME Frederique/PAYEN/
+1 SEX F
+1 BIRT 
+2 DATE 20/05/1967
+0 @I157@ INDI
+1 NAME Laurent/BRONCHARD/
+1 SEX M
+1 BIRT 
+2 DATE 27/07/1969
+0 @I158@ INDI
+1 NAME Lea/BRONCHARD/
+1 SEX F
+1 BIRT 
+2 DATE 16/08/1999
+0 @I159@ INDI
+1 NAME Aurealia/MOLINO/
+1 SEX F
+1 BIRT 
+2 DATE 14/02/1993
+0 @I160@ INDI
+1 NAME  Jean/MOLINO/
+1 SEX M
+1 BIRT 
+2 DATE 17/03/1994
+0 @I161@ INDI
+1 NAME Jerome/MOLINO/
+1 SEX M
+1 BIRT 
+2 DATE 03/02/1998
+0 @I162@ INDI
+1 NAME Christian/LARDEUX/
+1 SEX M
+0 @I163@ INDI
+1 NAME Christelle/LARDEUX/
+1 SEX F
+1 BIRT 
+2 DATE 01/08/1971
+0 @I164@ INDI
+1 NAME Delphine/LARDEUX/
+1 SEX F
+1 BIRT 
+2 DATE 02/08/1972
+0 @I165@ INDI
+1 NAME Romeo/LARDEUX/
+1 SEX M
+1 BIRT 
+2 DATE 13/01/1976
+0 @I166@ INDI
+1 NAME Philippe/FLEURANCE/
+1 SEX M
+0 @I167@ INDI
+1 NAME Remi/FLEURANCE/
+1 SEX M
+0 @I168@ INDI
+1 NAME Sylviane//
+1 SEX F
+0 @I169@ INDI
+1 NAME Mathilde/GUILLET/
+1 SEX F
+1 BIRT 
+2 DATE 01/12/2000
+0 @I170@ INDI
+1 NAME Charlotte/GUILLET/
+1 SEX F
+1 BIRT 
+2 DATE 13/03/2002
+0 @I171@ INDI
+1 NAME Sonia//
+1 SEX F
+0 @I172@ INDI
+1 NAME Pierre/GUILLET/
+1 SEX M
+0 @I173@ INDI
+1 NAME Landry/GUILLET/
+1 SEX M
+0 @I174@ INDI
+1 NAME Melodie/GUILLET/
+1 SEX F
+0 @I175@ INDI
+1 NAME Irene/LHERBETTE/
+1 SEX F
+0 @I176@ INDI
+1 NAME Helene/LHERBETTE/
+1 SEX F
+0 @I177@ INDI
+1 NAME Didier/LHERBETTE/
+1 SEX M
+0 @I178@ INDI
+1 NAME Martine/LHERBETTE/
+1 SEX F
+0 @I179@ INDI
+1 NAME Nicolas/VEVAUX/
+1 SEX M
+0 @I180@ INDI
+1 NAME Bruyere/LARDEUX/
+1 SEX F
+0 @I181@ INDI
+1 NAME Simon/LARDEUX/
+1 SEX M
+0 @I182@ INDI
+1 NAME Maya/LARDEUX/
+1 SEX F
+0 @I183@ INDI
+1 NAME Pierrick/AUFFRAY/
+1 SEX M
+0 @I184@ INDI
+1 NAME Anaele/AUFFRAY/
+1 SEX F
+0 @I185@ INDI
+1 NAME Partick/CRUAUD/
+1 SEX M
+0 @I186@ INDI
+1 NAME Guillome/CRUAUD/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1983
+0 @I187@ INDI
+1 NAME Nicolat/CRUAUD/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1986
+0 @I188@ INDI
+1 NAME Eric/GORET/
+1 SEX M
+0 @I189@ INDI
+1 NAME Baptiste/GORET/
+1 SEX M
+0 @I190@ INDI
+1 NAME Dimitri/GORET/
+1 SEX M
+0 @I191@ INDI
+1 NAME Justine/GORET/
+1 SEX F
+0 @I192@ INDI
+1 NAME  Jean/COQUEREAU/
+1 SEX M
+0 @I193@ INDI
+1 NAME Benjamin/COQUEREAU/
+1 SEX M
+0 @I194@ INDI
+1 NAME Alexis/COQUEREAU/
+1 SEX M
+0 @I195@ INDI
+1 NAME Jean/GUILLET/
+1 SEX M
+1 BIRT 
+2 DATE 07/08/1883
+0 @I196@ INDI
+1 NAME  Marie/BONNEAU/
+1 SEX F
+1 BIRT 
+2 DATE 01/01/1899
+0 @I197@ INDI
+1 NAME jean/FROCQ/
+1 SEX M
+0 @I198@ INDI
+1 NAME Jean/GOUPIL/
+1 SEX M
+0 @I199@ INDI
+1 NAME Jacquette/RAITIF/
+1 SEX F
+0 @I200@ INDI
+1 NAME  Eugene/FOUASSIER/
+1 SEX M
+1 BIRT 
+2 DATE 14/07/1874
+2 PLAC Daon (mayenne)
+0 @I201@ INDI
+1 NAME  Louis/FOUASSIER/
+1 SEX M
+0 @I202@ INDI
+1 NAME Henriette/PREDESEILLE/
+1 SEX F
+0 @I203@ INDI
+1 NAME Rene/BUFFET/
+1 SEX M
+0 @I204@ INDI
+1 NAME Francoise/DESHAYER/
+1 SEX F
+0 @I205@ INDI
+1 NAME Marcel/FOUASSIER/
+1 SEX M
+0 @I206@ INDI
+1 NAME Unknown//
+1 SEX F
+0 @I207@ INDI
+1 NAME Michel/FOUASSIER/
+1 SEX M
+0 @I208@ INDI
+1 NAME Alice/FOUASSIER/
+1 SEX F
+0 @I209@ INDI
+1 NAME Odile/FOUASSIER/
+1 SEX F
+0 @I210@ INDI
+1 NAME Remi/FOUASSIER/
+1 SEX M
+0 @I211@ INDI
+1 NAME Louis/REVERDY/
+1 SEX M
+0 @I212@ INDI
+1 NAME Helene/REVERDY/
+1 SEX F
+0 @I213@ INDI
+1 NAME Rene/HOUDBINE/
+1 SEX M
+0 @I214@ INDI
+1 NAME Christophe/HOUDBINE/
+1 SEX M
+0 @I215@ INDI
+1 NAME Laurence//
+1 SEX F
+0 @I216@ INDI
+1 NAME Nicolas/HOUDBINE/
+1 SEX M
+0 @I217@ INDI
+1 NAME Marie/HOUDBINE/
+1 SEX F
+0 @I218@ INDI
+1 NAME Jeannette//
+1 SEX F
+0 @I219@ INDI
+1 NAME Michel/REVERDY/
+1 SEX M
+0 @I220@ INDI
+1 NAME Jocelyne/REVERDY/
+1 SEX F
+0 @I221@ INDI
+1 NAME Odile/REVERDY/
+1 SEX F
+0 @I222@ INDI
+1 NAME Loïc/REVERDY/
+1 SEX M
+0 @I223@ INDI
+1 NAME Chantal/REVERDY/
+1 SEX F
+0 @I224@ INDI
+1 NAME Unknown//
+1 SEX M
+0 @I225@ INDI
+1 NAME Henri/FRANCOIS/
+1 SEX M
+0 @I226@ INDI
+1 NAME Marie/FRANCOIS/
+1 SEX F
+0 @I227@ INDI
+1 NAME Jules/FRANCOIS/
+1 SEX M
+0 @I228@ INDI
+1 NAME Francois/SARRAZIN/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1785
+0 @I229@ INDI
+1 NAME  Jean/SARRAZIN/
+1 SEX M
+1 BIRT 
+2 DATE 01/01/1787
+0 @I230@ INDI
+1 NAME Francois/SARRAZIN/
+1 SEX M
+0 @I231@ INDI
+1 NAME Jacquinne/JOLY/
+1 SEX F
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR Y
+1 CHIL @I0@
+1 CHIL @I3@
+1 CHIL @I30@
+0 @F2@ FAM
+1 HUSB @I0@
+1 HUSB @I1@
+1 enfant de Y
+1 parent de Y
+0 @F3@ FAM
+1 HUSB @I0@
+1 WIFE @I2@
+1 enfant de Y
+1 parent de Y
+0 @F4@ FAM
+1 WIFE @I84@
+1 HUSB @I87@
+1 MARR Y
+1 CHIL @I1@
+1 CHIL @I88@
+1 CHIL @I89@
+1 CHIL @I90@
+1 CHIL @I91@
+1 CHIL @I92@
+0 @F5@ FAM
+1 HUSB @I1@
+1 HUSB @I3@
+1 parent de Y
+1 enfant de Y
+0 @F6@ FAM
+1 HUSB @I1@
+1 WIFE @I30@
+1 parent de Y
+1 enfant de Y
+0 @F7@ FAM
+1 HUSB @I1@
+1 HUSB @I87@
+1 enfant de Y
+1 parent de Y
+0 @F8@ FAM
+1 HUSB @I1@
+1 WIFE @I84@
+1 enfant de Y
+1 parent de Y
+0 @F9@ FAM
+1 HUSB @I4@
+1 WIFE @I5@
+1 MARR Y
+1 CHIL @I2@
+1 CHIL @I6@
+1 CHIL @I7@
+1 CHIL @I8@
+1 CHIL @I9@
+1 CHIL @I10@
+1 CHIL @I11@
+1 CHIL @I12@
+1 CHIL @I13@
+1 CHIL @I14@
+1 CHIL @I15@
+1 CHIL @I16@
+1 CHIL @I17@
+0 @F10@ FAM
+1 WIFE @I2@
+1 HUSB @I3@
+1 parent de Y
+1 enfant de Y
+0 @F11@ FAM
+1 WIFE @I2@
+1 WIFE @I30@
+1 parent de Y
+1 enfant de Y
+0 @F12@ FAM
+1 WIFE @I2@
+1 HUSB @I4@
+1 enfant de Y
+1 parent de Y
+0 @F13@ FAM
+1 WIFE @I2@
+1 WIFE @I5@
+1 enfant de Y
+1 parent de Y
+0 @F14@ FAM
+1 HUSB @I3@
+1 WIFE @I31@
+1 MARR Y
+0 @F15@ FAM
+1 HUSB @I55@
+1 WIFE @I56@
+1 MARR Y
+1 CHIL @I4@
+1 CHIL @I42@
+1 CHIL @I57@
+0 @F16@ FAM
+1 HUSB @I4@
+1 WIFE @I6@
+1 parent de Y
+1 enfant de Y
+0 @F17@ FAM
+1 HUSB @I4@
+1 HUSB @I7@
+1 parent de Y
+1 enfant de Y
+0 @F18@ FAM
+1 HUSB @I4@
+1 WIFE @I8@
+1 parent de Y
+1 enfant de Y
+0 @F19@ FAM
+1 HUSB @I4@
+1 HUSB @I9@
+1 parent de Y
+1 enfant de Y
+0 @F20@ FAM
+1 HUSB @I4@
+1 HUSB @I10@
+1 parent de Y
+1 enfant de Y
+0 @F21@ FAM
+1 HUSB @I4@
+1 HUSB @I11@
+1 parent de Y
+1 enfant de Y
+0 @F22@ FAM
+1 HUSB @I4@
+1 WIFE @I12@
+1 parent de Y
+1 enfant de Y
+0 @F23@ FAM
+1 HUSB @I4@
+1 HUSB @I13@
+1 parent de Y
+1 enfant de Y
+0 @F24@ FAM
+1 HUSB @I4@
+1 HUSB @I14@
+1 parent de Y
+1 enfant de Y
+0 @F25@ FAM
+1 HUSB @I4@
+1 WIFE @I15@
+1 parent de Y
+1 enfant de Y
+0 @F26@ FAM
+1 HUSB @I4@
+1 WIFE @I16@
+1 parent de Y
+1 enfant de Y
+0 @F27@ FAM
+1 HUSB @I4@
+1 WIFE @I17@
+1 parent de Y
+1 enfant de Y
+0 @F28@ FAM
+1 HUSB @I4@
+1 HUSB @I55@
+1 enfant de Y
+1 parent de Y
+0 @F29@ FAM
+1 HUSB @I4@
+1 WIFE @I56@
+1 enfant de Y
+1 parent de Y
+0 @F30@ FAM
+1 HUSB @I32@
+1 WIFE @I33@
+1 MARR Y
+2 DATE 01/01/1892
+1 CHIL @I5@
+1 CHIL @I34@
+1 CHIL @I35@
+1 CHIL @I36@
+1 CHIL @I37@
+1 CHIL @I38@
+0 @F31@ FAM
+1 WIFE @I5@
+1 WIFE @I6@
+1 parent de Y
+1 enfant de Y
+0 @F32@ FAM
+1 WIFE @I5@
+1 HUSB @I7@
+1 parent de Y
+1 enfant de Y
+0 @F33@ FAM
+1 WIFE @I5@
+1 WIFE @I8@
+1 parent de Y
+1 enfant de Y
+0 @F34@ FAM
+1 WIFE @I5@
+1 HUSB @I9@
+1 parent de Y
+1 enfant de Y
+0 @F35@ FAM
+1 WIFE @I5@
+1 HUSB @I10@
+1 parent de Y
+1 enfant de Y
+0 @F36@ FAM
+1 WIFE @I5@
+1 HUSB @I11@
+1 parent de Y
+1 enfant de Y
+0 @F37@ FAM
+1 WIFE @I5@
+1 WIFE @I12@
+1 parent de Y
+1 enfant de Y
+0 @F38@ FAM
+1 WIFE @I5@
+1 HUSB @I13@
+1 parent de Y
+1 enfant de Y
+0 @F39@ FAM
+1 WIFE @I5@
+1 HUSB @I14@
+1 parent de Y
+1 enfant de Y
+0 @F40@ FAM
+1 WIFE @I5@
+1 WIFE @I15@
+1 parent de Y
+1 enfant de Y
+0 @F41@ FAM
+1 WIFE @I5@
+1 WIFE @I16@
+1 parent de Y
+1 enfant de Y
+0 @F42@ FAM
+1 WIFE @I5@
+1 WIFE @I17@
+1 parent de Y
+1 enfant de Y
+0 @F43@ FAM
+1 WIFE @I5@
+1 HUSB @I32@
+1 enfant de Y
+1 parent de Y
+0 @F44@ FAM
+1 WIFE @I5@
+1 WIFE @I33@
+1 enfant de Y
+1 parent de Y
+0 @F45@ FAM
+1 HUSB @I7@
+1 WIFE @I18@
+1 MARR Y
+1 CHIL @I25@
+1 CHIL @I26@
+1 CHIL @I27@
+1 CHIL @I28@
+1 CHIL @I29@
+0 @F46@ FAM
+1 HUSB @I7@
+1 WIFE @I25@
+1 parent de Y
+1 enfant de Y
+0 @F47@ FAM
+1 HUSB @I7@
+1 WIFE @I26@
+1 parent de Y
+1 enfant de Y
+0 @F48@ FAM
+1 HUSB @I7@
+1 WIFE @I27@
+1 parent de Y
+1 enfant de Y
+0 @F49@ FAM
+1 HUSB @I7@
+1 HUSB @I28@
+1 parent de Y
+1 enfant de Y
+0 @F50@ FAM
+1 HUSB @I7@
+1 WIFE @I29@
+1 parent de Y
+1 enfant de Y
+0 @F51@ FAM
+1 HUSB @I9@
+1 WIFE @I19@
+1 MARR Y
+1 CHIL @I93@
+1 CHIL @I94@
+1 CHIL @I95@
+0 @F52@ FAM
+1 HUSB @I9@
+1 WIFE @I93@
+1 parent de Y
+1 enfant de Y
+0 @F53@ FAM
+1 HUSB @I9@
+1 WIFE @I94@
+1 parent de Y
+1 enfant de Y
+0 @F54@ FAM
+1 HUSB @I9@
+1 HUSB @I95@
+1 parent de Y
+1 enfant de Y
+0 @F55@ FAM
+1 HUSB @I10@
+1 WIFE @I20@
+1 MARR Y
+1 CHIL @I96@
+1 CHIL @I97@
+1 CHIL @I98@
+0 @F56@ FAM
+1 HUSB @I10@
+1 WIFE @I96@
+1 parent de Y
+1 enfant de Y
+0 @F57@ FAM
+1 HUSB @I10@
+1 WIFE @I97@
+1 parent de Y
+1 enfant de Y
+0 @F58@ FAM
+1 HUSB @I10@
+1 HUSB @I98@
+1 parent de Y
+1 enfant de Y
+0 @F59@ FAM
+1 HUSB @I13@
+1 WIFE @I21@
+1 MARR Y
+1 CHIL @I99@
+1 CHIL @I100@
+0 @F60@ FAM
+1 HUSB @I13@
+1 HUSB @I99@
+1 parent de Y
+1 enfant de Y
+0 @F61@ FAM
+1 HUSB @I13@
+1 HUSB @I100@
+1 parent de Y
+1 enfant de Y
+0 @F62@ FAM
+1 HUSB @I14@
+1 WIFE @I22@
+1 MARR Y
+1 CHIL @I101@
+1 CHIL @I102@
+0 @F63@ FAM
+1 HUSB @I14@
+1 HUSB @I101@
+1 parent de Y
+1 enfant de Y
+0 @F64@ FAM
+1 HUSB @I14@
+1 HUSB @I102@
+1 parent de Y
+1 enfant de Y
+0 @F65@ FAM
+1 WIFE @I15@
+1 HUSB @I23@
+1 MARR Y
+1 CHIL @I103@
+1 CHIL @I104@
+1 CHIL @I105@
+0 @F66@ FAM
+1 WIFE @I15@
+1 WIFE @I103@
+1 parent de Y
+1 enfant de Y
+0 @F67@ FAM
+1 WIFE @I15@
+1 HUSB @I104@
+1 parent de Y
+1 enfant de Y
+0 @F68@ FAM
+1 WIFE @I15@
+1 HUSB @I105@
+1 parent de Y
+1 enfant de Y
+0 @F69@ FAM
+1 WIFE @I16@
+1 HUSB @I24@
+1 MARR Y
+1 CHIL @I106@
+1 CHIL @I107@
+1 CHIL @I108@
+0 @F70@ FAM
+1 WIFE @I16@
+1 HUSB @I106@
+1 parent de Y
+1 enfant de Y
+0 @F71@ FAM
+1 WIFE @I16@
+1 WIFE @I107@
+1 parent de Y
+1 enfant de Y
+0 @F72@ FAM
+1 WIFE @I16@
+1 WIFE @I108@
+1 parent de Y
+1 enfant de Y
+0 @F73@ FAM
+1 WIFE @I18@
+1 WIFE @I25@
+1 parent de Y
+1 enfant de Y
+0 @F74@ FAM
+1 WIFE @I18@
+1 WIFE @I26@
+1 parent de Y
+1 enfant de Y
+0 @F75@ FAM
+1 WIFE @I18@
+1 WIFE @I27@
+1 parent de Y
+1 enfant de Y
+0 @F76@ FAM
+1 WIFE @I18@
+1 HUSB @I28@
+1 parent de Y
+1 enfant de Y
+0 @F77@ FAM
+1 WIFE @I18@
+1 WIFE @I29@
+1 parent de Y
+1 enfant de Y
+0 @F78@ FAM
+1 WIFE @I19@
+1 WIFE @I93@
+1 parent de Y
+1 enfant de Y
+0 @F79@ FAM
+1 WIFE @I19@
+1 WIFE @I94@
+1 parent de Y
+1 enfant de Y
+0 @F80@ FAM
+1 WIFE @I19@
+1 HUSB @I95@
+1 parent de Y
+1 enfant de Y
+0 @F81@ FAM
+1 WIFE @I20@
+1 WIFE @I96@
+1 parent de Y
+1 enfant de Y
+0 @F82@ FAM
+1 WIFE @I20@
+1 WIFE @I97@
+1 parent de Y
+1 enfant de Y
+0 @F83@ FAM
+1 WIFE @I20@
+1 HUSB @I98@
+1 parent de Y
+1 enfant de Y
+0 @F84@ FAM
+1 WIFE @I21@
+1 HUSB @I99@
+1 parent de Y
+1 enfant de Y
+0 @F85@ FAM
+1 WIFE @I21@
+1 HUSB @I100@
+1 parent de Y
+1 enfant de Y
+0 @F86@ FAM
+1 WIFE @I22@
+1 HUSB @I101@
+1 parent de Y
+1 enfant de Y
+0 @F87@ FAM
+1 WIFE @I22@
+1 HUSB @I102@
+1 parent de Y
+1 enfant de Y
+0 @F88@ FAM
+1 HUSB @I23@
+1 WIFE @I103@
+1 parent de Y
+1 enfant de Y
+0 @F89@ FAM
+1 HUSB @I23@
+1 HUSB @I104@
+1 parent de Y
+1 enfant de Y
+0 @F90@ FAM
+1 HUSB @I23@
+1 HUSB @I105@
+1 parent de Y
+1 enfant de Y
+0 @F91@ FAM
+1 HUSB @I24@
+1 HUSB @I106@
+1 parent de Y
+1 enfant de Y
+0 @F92@ FAM
+1 HUSB @I24@
+1 WIFE @I107@
+1 parent de Y
+1 enfant de Y
+0 @F93@ FAM
+1 HUSB @I24@
+1 WIFE @I108@
+1 parent de Y
+1 enfant de Y
+0 @F94@ FAM
+1 WIFE @I25@
+1 HUSB @I109@
+1 MARR Y
+1 CHIL @I110@
+1 CHIL @I111@
+1 CHIL @I118@
+0 @F95@ FAM
+1 WIFE @I25@
+1 WIFE @I110@
+1 parent de Y
+1 enfant de Y
+0 @F96@ FAM
+1 WIFE @I25@
+1 HUSB @I111@
+1 parent de Y
+1 enfant de Y
+0 @F97@ FAM
+1 WIFE @I25@
+1 WIFE @I118@
+1 parent de Y
+1 enfant de Y
+0 @F98@ FAM
+1 WIFE @I26@
+1 HUSB @I112@
+1 MARR Y
+1 CHIL @I113@
+1 CHIL @I114@
+0 @F99@ FAM
+1 WIFE @I26@
+1 WIFE @I113@
+1 parent de Y
+1 enfant de Y
+0 @F100@ FAM
+1 WIFE @I26@
+1 WIFE @I114@
+1 parent de Y
+1 enfant de Y
+0 @F101@ FAM
+1 WIFE @I27@
+1 HUSB @I115@
+1 MARR Y
+1 CHIL @I116@
+1 CHIL @I117@
+0 @F102@ FAM
+1 WIFE @I27@
+1 WIFE @I116@
+1 parent de Y
+1 enfant de Y
+0 @F103@ FAM
+1 WIFE @I27@
+1 HUSB @I117@
+1 parent de Y
+1 enfant de Y
+0 @F104@ FAM
+1 HUSB @I28@
+1 WIFE @I119@
+1 DIV Y
+1 CHIL @I120@
+1 CHIL @I121@
+0 @F105@ FAM
+1 HUSB @I28@
+1 HUSB @I120@
+1 parent de Y
+1 enfant de Y
+0 @F106@ FAM
+1 HUSB @I28@
+1 WIFE @I121@
+1 parent de Y
+1 enfant de Y
+0 @F107@ FAM
+1 WIFE @I29@
+1 HUSB @I122@
+1 MARR Y
+1 CHIL @I123@
+1 CHIL @I124@
+0 @F108@ FAM
+1 WIFE @I29@
+1 WIFE @I123@
+1 parent de Y
+1 enfant de Y
+0 @F109@ FAM
+1 WIFE @I29@
+1 WIFE @I124@
+1 parent de Y
+1 enfant de Y
+0 @F110@ FAM
+1 HUSB @I45@
+1 WIFE @I46@
+1 MARR Y
+1 CHIL @I32@
+0 @F111@ FAM
+1 HUSB @I32@
+1 WIFE @I34@
+1 parent de Y
+1 enfant de Y
+0 @F112@ FAM
+1 HUSB @I32@
+1 WIFE @I35@
+1 parent de Y
+1 enfant de Y
+0 @F113@ FAM
+1 HUSB @I32@
+1 WIFE @I36@
+1 parent de Y
+1 enfant de Y
+0 @F114@ FAM
+1 HUSB @I32@
+1 HUSB @I37@
+1 parent de Y
+1 enfant de Y
+0 @F115@ FAM
+1 HUSB @I32@
+1 WIFE @I38@
+1 parent de Y
+1 enfant de Y
+0 @F116@ FAM
+1 HUSB @I32@
+1 HUSB @I45@
+1 enfant de Y
+1 parent de Y
+0 @F117@ FAM
+1 HUSB @I32@
+1 WIFE @I46@
+1 enfant de Y
+1 parent de Y
+0 @F118@ FAM
+1 HUSB @I43@
+1 WIFE @I44@
+1 MARR Y
+1 CHIL @I33@
+1 CHIL @I225@
+1 CHIL @I226@
+1 CHIL @I227@
+0 @F119@ FAM
+1 WIFE @I33@
+1 WIFE @I34@
+1 parent de Y
+1 enfant de Y
+0 @F120@ FAM
+1 WIFE @I33@
+1 WIFE @I35@
+1 parent de Y
+1 enfant de Y
+0 @F121@ FAM
+1 WIFE @I33@
+1 WIFE @I36@
+1 parent de Y
+1 enfant de Y
+0 @F122@ FAM
+1 WIFE @I33@
+1 HUSB @I37@
+1 parent de Y
+1 enfant de Y
+0 @F123@ FAM
+1 WIFE @I33@
+1 WIFE @I38@
+1 parent de Y
+1 enfant de Y
+0 @F124@ FAM
+1 WIFE @I33@
+1 HUSB @I43@
+1 enfant de Y
+1 parent de Y
+0 @F125@ FAM
+1 WIFE @I33@
+1 WIFE @I44@
+1 enfant de Y
+1 parent de Y
+0 @F126@ FAM
+1 WIFE @I34@
+1 HUSB @I39@
+1 MARR Y
+1 CHIL @I205@
+0 @F127@ FAM
+1 WIFE @I34@
+1 HUSB @I205@
+1 parent de Y
+1 enfant de Y
+0 @F128@ FAM
+1 WIFE @I35@
+1 HUSB @I40@
+1 MARR Y
+0 @F129@ FAM
+1 WIFE @I36@
+1 HUSB @I200@
+1 MARR Y
+0 @F130@ FAM
+1 HUSB @I37@
+1 WIFE @I41@
+1 MARR Y
+1 CHIL @I211@
+1 CHIL @I212@
+0 @F131@ FAM
+1 HUSB @I37@
+1 HUSB @I211@
+1 parent de Y
+1 enfant de Y
+0 @F132@ FAM
+1 HUSB @I37@
+1 WIFE @I212@
+1 parent de Y
+1 enfant de Y
+0 @F133@ FAM
+1 WIFE @I38@
+1 HUSB @I42@
+1 DIV Y
+1 CHIL @I58@
+1 CHIL @I59@
+0 @F134@ FAM
+1 WIFE @I38@
+1 HUSB @I58@
+1 parent de Y
+1 enfant de Y
+0 @F135@ FAM
+1 WIFE @I38@
+1 HUSB @I59@
+1 parent de Y
+1 enfant de Y
+0 @F136@ FAM
+1 HUSB @I39@
+1 HUSB @I205@
+1 parent de Y
+1 enfant de Y
+0 @F137@ FAM
+1 WIFE @I41@
+1 HUSB @I211@
+1 parent de Y
+1 enfant de Y
+0 @F138@ FAM
+1 WIFE @I41@
+1 WIFE @I212@
+1 parent de Y
+1 enfant de Y
+0 @F139@ FAM
+1 HUSB @I42@
+1 WIFE @I60@
+1 MARR Y
+1 CHIL @I63@
+1 CHIL @I64@
+1 CHIL @I65@
+0 @F140@ FAM
+1 HUSB @I42@
+1 HUSB @I55@
+1 enfant de Y
+1 parent de Y
+0 @F141@ FAM
+1 HUSB @I42@
+1 WIFE @I56@
+1 enfant de Y
+1 parent de Y
+0 @F142@ FAM
+1 HUSB @I42@
+1 HUSB @I58@
+1 parent de Y
+1 enfant de Y
+0 @F143@ FAM
+1 HUSB @I42@
+1 HUSB @I59@
+1 parent de Y
+1 enfant de Y
+0 @F144@ FAM
+1 HUSB @I42@
+1 HUSB @I63@
+1 parent de Y
+1 enfant de Y
+0 @F145@ FAM
+1 HUSB @I42@
+1 WIFE @I64@
+1 parent de Y
+1 enfant de Y
+0 @F146@ FAM
+1 HUSB @I42@
+1 WIFE @I65@
+1 parent de Y
+1 enfant de Y
+0 @F147@ FAM
+1 HUSB @I43@
+1 HUSB @I225@
+1 parent de Y
+1 enfant de Y
+0 @F148@ FAM
+1 HUSB @I43@
+1 WIFE @I226@
+1 parent de Y
+1 enfant de Y
+0 @F149@ FAM
+1 HUSB @I43@
+1 HUSB @I227@
+1 parent de Y
+1 enfant de Y
+0 @F150@ FAM
+1 WIFE @I44@
+1 HUSB @I225@
+1 parent de Y
+1 enfant de Y
+0 @F151@ FAM
+1 WIFE @I44@
+1 WIFE @I226@
+1 parent de Y
+1 enfant de Y
+0 @F152@ FAM
+1 WIFE @I44@
+1 HUSB @I227@
+1 parent de Y
+1 enfant de Y
+0 @F153@ FAM
+1 HUSB @I47@
+1 WIFE @I48@
+1 MARR Y
+1 CHIL @I45@
+0 @F154@ FAM
+1 HUSB @I45@
+1 HUSB @I47@
+1 enfant de Y
+1 parent de Y
+0 @F155@ FAM
+1 HUSB @I45@
+1 WIFE @I48@
+1 enfant de Y
+1 parent de Y
+0 @F156@ FAM
+1 HUSB @I49@
+1 WIFE @I50@
+1 MARR Y
+1 CHIL @I46@
+0 @F157@ FAM
+1 WIFE @I46@
+1 HUSB @I49@
+1 enfant de Y
+1 parent de Y
+0 @F158@ FAM
+1 WIFE @I46@
+1 WIFE @I50@
+1 enfant de Y
+1 parent de Y
+0 @F159@ FAM
+1 HUSB @I53@
+1 WIFE @I54@
+1 MARR Y
+1 CHIL @I49@
+1 CHIL @I228@
+1 CHIL @I229@
+0 @F160@ FAM
+1 HUSB @I49@
+1 HUSB @I53@
+1 enfant de Y
+1 parent de Y
+0 @F161@ FAM
+1 HUSB @I49@
+1 WIFE @I54@
+1 enfant de Y
+1 parent de Y
+0 @F162@ FAM
+1 HUSB @I51@
+1 WIFE @I52@
+1 MARR Y
+2 DATE 18/05/1812
+1 CHIL @I50@
+0 @F163@ FAM
+1 WIFE @I50@
+1 HUSB @I51@
+1 enfant de Y
+1 parent de Y
+0 @F164@ FAM
+1 WIFE @I50@
+1 WIFE @I52@
+1 enfant de Y
+1 parent de Y
+0 @F165@ FAM
+1 HUSB @I203@
+1 WIFE @I204@
+1 MARR Y
+1 CHIL @I51@
+0 @F166@ FAM
+1 HUSB @I51@
+1 HUSB @I203@
+1 enfant de Y
+1 parent de Y
+0 @F167@ FAM
+1 HUSB @I51@
+1 WIFE @I204@
+1 enfant de Y
+1 parent de Y
+0 @F168@ FAM
+1 WIFE @I52@
+1 HUSB @I197@
+1 DIV Y
+0 @F169@ FAM
+1 HUSB @I198@
+1 WIFE @I199@
+1 MARR Y
+1 CHIL @I52@
+0 @F170@ FAM
+1 WIFE @I52@
+1 HUSB @I198@
+1 enfant de Y
+1 parent de Y
+0 @F171@ FAM
+1 WIFE @I52@
+1 WIFE @I199@
+1 enfant de Y
+1 parent de Y
+0 @F172@ FAM
+1 HUSB @I230@
+1 WIFE @I231@
+1 MARR Y
+1 CHIL @I53@
+0 @F173@ FAM
+1 HUSB @I53@
+1 HUSB @I228@
+1 parent de Y
+1 enfant de Y
+0 @F174@ FAM
+1 HUSB @I53@
+1 HUSB @I229@
+1 parent de Y
+1 enfant de Y
+0 @F175@ FAM
+1 HUSB @I53@
+1 HUSB @I230@
+1 enfant de Y
+1 parent de Y
+0 @F176@ FAM
+1 HUSB @I53@
+1 WIFE @I231@
+1 enfant de Y
+1 parent de Y
+0 @F177@ FAM
+1 WIFE @I54@
+1 HUSB @I228@
+1 parent de Y
+1 enfant de Y
+0 @F178@ FAM
+1 WIFE @I54@
+1 HUSB @I229@
+1 parent de Y
+1 enfant de Y
+0 @F179@ FAM
+1 HUSB @I66@
+1 WIFE @I67@
+1 MARR Y
+1 CHIL @I55@
+1 CHIL @I72@
+1 CHIL @I73@
+1 CHIL @I74@
+1 CHIL @I75@
+1 CHIL @I76@
+1 CHIL @I77@
+0 @F180@ FAM
+1 HUSB @I55@
+1 HUSB @I57@
+1 parent de Y
+1 enfant de Y
+0 @F181@ FAM
+1 HUSB @I55@
+1 HUSB @I66@
+1 enfant de Y
+1 parent de Y
+0 @F182@ FAM
+1 HUSB @I55@
+1 WIFE @I67@
+1 enfant de Y
+1 parent de Y
+0 @F183@ FAM
+1 WIFE @I56@
+1 HUSB @I57@
+1 parent de Y
+1 enfant de Y
+0 @F184@ FAM
+1 WIFE @I60@
+1 HUSB @I61@
+1 DIV Y
+1 CHIL @I62@
+0 @F185@ FAM
+1 WIFE @I60@
+1 HUSB @I62@
+1 parent de Y
+1 enfant de Y
+0 @F186@ FAM
+1 WIFE @I60@
+1 HUSB @I63@
+1 parent de Y
+1 enfant de Y
+0 @F187@ FAM
+1 WIFE @I60@
+1 WIFE @I64@
+1 parent de Y
+1 enfant de Y
+0 @F188@ FAM
+1 WIFE @I60@
+1 WIFE @I65@
+1 parent de Y
+1 enfant de Y
+0 @F189@ FAM
+1 HUSB @I61@
+1 HUSB @I62@
+1 parent de Y
+1 enfant de Y
+0 @F190@ FAM
+1 HUSB @I68@
+1 WIFE @I69@
+1 MARR Y
+1 CHIL @I66@
+0 @F191@ FAM
+1 HUSB @I66@
+1 WIFE @I72@
+1 parent de Y
+1 enfant de Y
+0 @F192@ FAM
+1 HUSB @I66@
+1 HUSB @I73@
+1 parent de Y
+1 enfant de Y
+0 @F193@ FAM
+1 HUSB @I66@
+1 HUSB @I74@
+1 parent de Y
+1 enfant de Y
+0 @F194@ FAM
+1 HUSB @I66@
+1 WIFE @I75@
+1 parent de Y
+1 enfant de Y
+0 @F195@ FAM
+1 HUSB @I66@
+1 WIFE @I76@
+1 parent de Y
+1 enfant de Y
+0 @F196@ FAM
+1 HUSB @I66@
+1 WIFE @I77@
+1 parent de Y
+1 enfant de Y
+0 @F197@ FAM
+1 HUSB @I66@
+1 HUSB @I68@
+1 enfant de Y
+1 parent de Y
+0 @F198@ FAM
+1 HUSB @I66@
+1 WIFE @I69@
+1 enfant de Y
+1 parent de Y
+0 @F199@ FAM
+1 HUSB @I70@
+1 WIFE @I71@
+1 MARR Y
+1 CHIL @I67@
+0 @F200@ FAM
+1 WIFE @I67@
+1 WIFE @I72@
+1 parent de Y
+1 enfant de Y
+0 @F201@ FAM
+1 WIFE @I67@
+1 HUSB @I73@
+1 parent de Y
+1 enfant de Y
+0 @F202@ FAM
+1 WIFE @I67@
+1 HUSB @I74@
+1 parent de Y
+1 enfant de Y
+0 @F203@ FAM
+1 WIFE @I67@
+1 WIFE @I75@
+1 parent de Y
+1 enfant de Y
+0 @F204@ FAM
+1 WIFE @I67@
+1 WIFE @I76@
+1 parent de Y
+1 enfant de Y
+0 @F205@ FAM
+1 WIFE @I67@
+1 WIFE @I77@
+1 parent de Y
+1 enfant de Y
+0 @F206@ FAM
+1 WIFE @I67@
+1 HUSB @I70@
+1 enfant de Y
+1 parent de Y
+0 @F207@ FAM
+1 WIFE @I67@
+1 WIFE @I71@
+1 enfant de Y
+1 parent de Y
+0 @F208@ FAM
+1 WIFE @I72@
+1 HUSB @I80@
+1 MARR Y
+1 CHIL @I81@
+0 @F209@ FAM
+1 WIFE @I72@
+1 HUSB @I81@
+1 parent de Y
+1 enfant de Y
+0 @F210@ FAM
+1 WIFE @I75@
+1 HUSB @I79@
+1 MARR Y
+0 @F211@ FAM
+1 WIFE @I77@
+1 HUSB @I78@
+1 MARR Y
+0 @F212@ FAM
+1 HUSB @I80@
+1 HUSB @I81@
+1 parent de Y
+1 enfant de Y
+0 @F213@ FAM
+1 HUSB @I81@
+1 WIFE @I82@
+1 MARR Y
+1 CHIL @I83@
+1 CHIL @I84@
+1 CHIL @I85@
+0 @F214@ FAM
+1 HUSB @I81@
+1 HUSB @I83@
+1 parent de Y
+1 enfant de Y
+0 @F215@ FAM
+1 HUSB @I81@
+1 WIFE @I84@
+1 parent de Y
+1 enfant de Y
+0 @F216@ FAM
+1 HUSB @I81@
+1 WIFE @I85@
+1 parent de Y
+1 enfant de Y
+0 @F217@ FAM
+1 WIFE @I82@
+1 HUSB @I83@
+1 parent de Y
+1 enfant de Y
+0 @F218@ FAM
+1 WIFE @I82@
+1 WIFE @I84@
+1 parent de Y
+1 enfant de Y
+0 @F219@ FAM
+1 WIFE @I82@
+1 WIFE @I85@
+1 parent de Y
+1 enfant de Y
+0 @F220@ FAM
+1 WIFE @I84@
+1 WIFE @I88@
+1 parent de Y
+1 enfant de Y
+0 @F221@ FAM
+1 WIFE @I84@
+1 HUSB @I89@
+1 parent de Y
+1 enfant de Y
+0 @F222@ FAM
+1 WIFE @I84@
+1 HUSB @I90@
+1 parent de Y
+1 enfant de Y
+0 @F223@ FAM
+1 WIFE @I84@
+1 HUSB @I91@
+1 parent de Y
+1 enfant de Y
+0 @F224@ FAM
+1 WIFE @I84@
+1 HUSB @I92@
+1 parent de Y
+1 enfant de Y
+0 @F225@ FAM
+1 WIFE @I85@
+1 HUSB @I86@
+1 MARR Y
+1 CHIL @I175@
+1 CHIL @I176@
+1 CHIL @I177@
+1 CHIL @I178@
+0 @F226@ FAM
+1 WIFE @I85@
+1 WIFE @I175@
+1 parent de Y
+1 enfant de Y
+0 @F227@ FAM
+1 WIFE @I85@
+1 WIFE @I176@
+1 parent de Y
+1 enfant de Y
+0 @F228@ FAM
+1 WIFE @I85@
+1 HUSB @I177@
+1 parent de Y
+1 enfant de Y
+0 @F229@ FAM
+1 WIFE @I85@
+1 WIFE @I178@
+1 parent de Y
+1 enfant de Y
+0 @F230@ FAM
+1 HUSB @I86@
+1 WIFE @I175@
+1 parent de Y
+1 enfant de Y
+0 @F231@ FAM
+1 HUSB @I86@
+1 WIFE @I176@
+1 parent de Y
+1 enfant de Y
+0 @F232@ FAM
+1 HUSB @I86@
+1 HUSB @I177@
+1 parent de Y
+1 enfant de Y
+0 @F233@ FAM
+1 HUSB @I86@
+1 WIFE @I178@
+1 parent de Y
+1 enfant de Y
+0 @F234@ FAM
+1 HUSB @I195@
+1 WIFE @I196@
+1 MARR Y
+1 CHIL @I87@
+0 @F235@ FAM
+1 HUSB @I87@
+1 WIFE @I88@
+1 parent de Y
+1 enfant de Y
+0 @F236@ FAM
+1 HUSB @I87@
+1 HUSB @I89@
+1 parent de Y
+1 enfant de Y
+0 @F237@ FAM
+1 HUSB @I87@
+1 HUSB @I90@
+1 parent de Y
+1 enfant de Y
+0 @F238@ FAM
+1 HUSB @I87@
+1 HUSB @I91@
+1 parent de Y
+1 enfant de Y
+0 @F239@ FAM
+1 HUSB @I87@
+1 HUSB @I92@
+1 parent de Y
+1 enfant de Y
+0 @F240@ FAM
+1 HUSB @I87@
+1 HUSB @I195@
+1 enfant de Y
+1 parent de Y
+0 @F241@ FAM
+1 HUSB @I87@
+1 WIFE @I196@
+1 enfant de Y
+1 parent de Y
+0 @F242@ FAM
+1 WIFE @I88@
+1 HUSB @I162@
+1 DIV Y
+1 CHIL @I163@
+1 CHIL @I164@
+1 CHIL @I165@
+0 @F243@ FAM
+1 WIFE @I88@
+1 HUSB @I166@
+1 MARR Y
+1 CHIL @I167@
+0 @F244@ FAM
+1 WIFE @I88@
+1 WIFE @I163@
+1 parent de Y
+1 enfant de Y
+0 @F245@ FAM
+1 WIFE @I88@
+1 WIFE @I164@
+1 parent de Y
+1 enfant de Y
+0 @F246@ FAM
+1 WIFE @I88@
+1 HUSB @I165@
+1 parent de Y
+1 enfant de Y
+0 @F247@ FAM
+1 WIFE @I88@
+1 HUSB @I167@
+1 parent de Y
+1 enfant de Y
+0 @F248@ FAM
+1 HUSB @I89@
+1 WIFE @I94@
+1 MARR Y
+1 CHIL @I128@
+1 CHIL @I129@
+1 CHIL @I130@
+0 @F249@ FAM
+1 HUSB @I89@
+1 WIFE @I128@
+1 parent de Y
+1 enfant de Y
+0 @F250@ FAM
+1 HUSB @I89@
+1 HUSB @I129@
+1 parent de Y
+1 enfant de Y
+0 @F251@ FAM
+1 HUSB @I89@
+1 HUSB @I130@
+1 parent de Y
+1 enfant de Y
+0 @F252@ FAM
+1 HUSB @I91@
+1 WIFE @I168@
+1 MARR Y
+1 CHIL @I169@
+1 CHIL @I170@
+0 @F253@ FAM
+1 HUSB @I91@
+1 WIFE @I169@
+1 parent de Y
+1 enfant de Y
+0 @F254@ FAM
+1 HUSB @I91@
+1 WIFE @I170@
+1 parent de Y
+1 enfant de Y
+0 @F255@ FAM
+1 HUSB @I92@
+1 WIFE @I171@
+1 MARR Y
+1 CHIL @I172@
+1 CHIL @I173@
+1 CHIL @I174@
+0 @F256@ FAM
+1 HUSB @I92@
+1 HUSB @I172@
+1 parent de Y
+1 enfant de Y
+0 @F257@ FAM
+1 HUSB @I92@
+1 HUSB @I173@
+1 parent de Y
+1 enfant de Y
+0 @F258@ FAM
+1 HUSB @I92@
+1 WIFE @I174@
+1 parent de Y
+1 enfant de Y
+0 @F259@ FAM
+1 WIFE @I93@
+1 HUSB @I125@
+1 MARR Y
+1 CHIL @I126@
+1 CHIL @I127@
+0 @F260@ FAM
+1 WIFE @I93@
+1 WIFE @I126@
+1 parent de Y
+1 enfant de Y
+0 @F261@ FAM
+1 WIFE @I93@
+1 HUSB @I127@
+1 parent de Y
+1 enfant de Y
+0 @F262@ FAM
+1 WIFE @I94@
+1 WIFE @I128@
+1 parent de Y
+1 enfant de Y
+0 @F263@ FAM
+1 WIFE @I94@
+1 HUSB @I129@
+1 parent de Y
+1 enfant de Y
+0 @F264@ FAM
+1 WIFE @I94@
+1 HUSB @I130@
+1 parent de Y
+1 enfant de Y
+0 @F265@ FAM
+1 HUSB @I95@
+1 WIFE @I131@
+1 MARR Y
+1 CHIL @I132@
+1 CHIL @I133@
+0 @F266@ FAM
+1 HUSB @I95@
+1 HUSB @I132@
+1 parent de Y
+1 enfant de Y
+0 @F267@ FAM
+1 HUSB @I95@
+1 WIFE @I133@
+1 parent de Y
+1 enfant de Y
+0 @F268@ FAM
+1 HUSB @I98@
+1 WIFE @I134@
+1 DIV Y
+1 CHIL @I135@
+1 CHIL @I136@
+1 CHIL @I137@
+0 @F269@ FAM
+1 HUSB @I98@
+1 WIFE @I135@
+1 parent de Y
+1 enfant de Y
+0 @F270@ FAM
+1 HUSB @I98@
+1 WIFE @I136@
+1 parent de Y
+1 enfant de Y
+0 @F271@ FAM
+1 HUSB @I98@
+1 HUSB @I137@
+1 parent de Y
+1 enfant de Y
+0 @F272@ FAM
+1 HUSB @I99@
+1 WIFE @I148@
+1 MARR Y
+1 CHIL @I149@
+1 CHIL @I150@
+1 CHIL @I151@
+0 @F273@ FAM
+1 HUSB @I99@
+1 HUSB @I149@
+1 parent de Y
+1 enfant de Y
+0 @F274@ FAM
+1 HUSB @I99@
+1 WIFE @I150@
+1 parent de Y
+1 enfant de Y
+0 @F275@ FAM
+1 HUSB @I99@
+1 HUSB @I151@
+1 parent de Y
+1 enfant de Y
+0 @F276@ FAM
+1 HUSB @I100@
+1 WIFE @I152@
+1 MARR Y
+1 CHIL @I153@
+1 CHIL @I154@
+0 @F277@ FAM
+1 HUSB @I100@
+1 HUSB @I153@
+1 parent de Y
+1 enfant de Y
+0 @F278@ FAM
+1 HUSB @I100@
+1 HUSB @I154@
+1 parent de Y
+1 enfant de Y
+0 @F279@ FAM
+1 HUSB @I101@
+1 WIFE @I155@
+1 MARR Y
+0 @F280@ FAM
+1 WIFE @I103@
+1 HUSB @I138@
+1 MARR Y
+1 CHIL @I139@
+1 CHIL @I140@
+0 @F281@ FAM
+1 WIFE @I103@
+1 HUSB @I139@
+1 parent de Y
+1 enfant de Y
+0 @F282@ FAM
+1 WIFE @I103@
+1 WIFE @I140@
+1 parent de Y
+1 enfant de Y
+0 @F283@ FAM
+1 HUSB @I104@
+1 WIFE @I141@
+1 MARR Y
+1 CHIL @I142@
+1 CHIL @I143@
+0 @F284@ FAM
+1 HUSB @I104@
+1 HUSB @I142@
+1 parent de Y
+1 enfant de Y
+0 @F285@ FAM
+1 HUSB @I104@
+1 WIFE @I143@
+1 parent de Y
+1 enfant de Y
+0 @F286@ FAM
+1 HUSB @I105@
+1 WIFE @I144@
+1 MARR Y
+1 CHIL @I145@
+1 CHIL @I146@
+1 CHIL @I147@
+0 @F287@ FAM
+1 HUSB @I105@
+1 WIFE @I145@
+1 parent de Y
+1 enfant de Y
+0 @F288@ FAM
+1 HUSB @I105@
+1 HUSB @I146@
+1 parent de Y
+1 enfant de Y
+0 @F289@ FAM
+1 HUSB @I105@
+1 WIFE @I147@
+1 parent de Y
+1 enfant de Y
+0 @F290@ FAM
+1 HUSB @I106@
+1 WIFE @I156@
+1 MARR Y
+1 CHIL @I159@
+1 CHIL @I160@
+1 CHIL @I161@
+0 @F291@ FAM
+1 HUSB @I106@
+1 WIFE @I159@
+1 parent de Y
+1 enfant de Y
+0 @F292@ FAM
+1 HUSB @I106@
+1 HUSB @I160@
+1 parent de Y
+1 enfant de Y
+0 @F293@ FAM
+1 HUSB @I106@
+1 HUSB @I161@
+1 parent de Y
+1 enfant de Y
+0 @F294@ FAM
+1 WIFE @I107@
+1 HUSB @I157@
+1 DIV Y
+1 CHIL @I158@
+0 @F295@ FAM
+1 WIFE @I107@
+1 WIFE @I158@
+1 parent de Y
+1 enfant de Y
+0 @F296@ FAM
+1 HUSB @I109@
+1 WIFE @I110@
+1 parent de Y
+1 enfant de Y
+0 @F297@ FAM
+1 HUSB @I109@
+1 HUSB @I111@
+1 parent de Y
+1 enfant de Y
+0 @F298@ FAM
+1 HUSB @I109@
+1 WIFE @I118@
+1 parent de Y
+1 enfant de Y
+0 @F299@ FAM
+1 HUSB @I112@
+1 WIFE @I113@
+1 parent de Y
+1 enfant de Y
+0 @F300@ FAM
+1 HUSB @I112@
+1 WIFE @I114@
+1 parent de Y
+1 enfant de Y
+0 @F301@ FAM
+1 HUSB @I115@
+1 WIFE @I116@
+1 parent de Y
+1 enfant de Y
+0 @F302@ FAM
+1 HUSB @I115@
+1 HUSB @I117@
+1 parent de Y
+1 enfant de Y
+0 @F303@ FAM
+1 WIFE @I119@
+1 HUSB @I120@
+1 parent de Y
+1 enfant de Y
+0 @F304@ FAM
+1 WIFE @I119@
+1 WIFE @I121@
+1 parent de Y
+1 enfant de Y
+0 @F305@ FAM
+1 HUSB @I122@
+1 WIFE @I123@
+1 parent de Y
+1 enfant de Y
+0 @F306@ FAM
+1 HUSB @I122@
+1 WIFE @I124@
+1 parent de Y
+1 enfant de Y
+0 @F307@ FAM
+1 HUSB @I125@
+1 WIFE @I126@
+1 parent de Y
+1 enfant de Y
+0 @F308@ FAM
+1 HUSB @I125@
+1 HUSB @I127@
+1 parent de Y
+1 enfant de Y
+0 @F309@ FAM
+1 WIFE @I131@
+1 HUSB @I132@
+1 parent de Y
+1 enfant de Y
+0 @F310@ FAM
+1 WIFE @I131@
+1 WIFE @I133@
+1 parent de Y
+1 enfant de Y
+0 @F311@ FAM
+1 WIFE @I134@
+1 WIFE @I135@
+1 parent de Y
+1 enfant de Y
+0 @F312@ FAM
+1 WIFE @I134@
+1 WIFE @I136@
+1 parent de Y
+1 enfant de Y
+0 @F313@ FAM
+1 WIFE @I134@
+1 HUSB @I137@
+1 parent de Y
+1 enfant de Y
+0 @F314@ FAM
+1 HUSB @I138@
+1 HUSB @I139@
+1 parent de Y
+1 enfant de Y
+0 @F315@ FAM
+1 HUSB @I138@
+1 WIFE @I140@
+1 parent de Y
+1 enfant de Y
+0 @F316@ FAM
+1 WIFE @I141@
+1 HUSB @I142@
+1 parent de Y
+1 enfant de Y
+0 @F317@ FAM
+1 WIFE @I141@
+1 WIFE @I143@
+1 parent de Y
+1 enfant de Y
+0 @F318@ FAM
+1 WIFE @I144@
+1 WIFE @I145@
+1 parent de Y
+1 enfant de Y
+0 @F319@ FAM
+1 WIFE @I144@
+1 HUSB @I146@
+1 parent de Y
+1 enfant de Y
+0 @F320@ FAM
+1 WIFE @I144@
+1 WIFE @I147@
+1 parent de Y
+1 enfant de Y
+0 @F321@ FAM
+1 WIFE @I148@
+1 HUSB @I149@
+1 parent de Y
+1 enfant de Y
+0 @F322@ FAM
+1 WIFE @I148@
+1 WIFE @I150@
+1 parent de Y
+1 enfant de Y
+0 @F323@ FAM
+1 WIFE @I148@
+1 HUSB @I151@
+1 parent de Y
+1 enfant de Y
+0 @F324@ FAM
+1 WIFE @I152@
+1 HUSB @I153@
+1 parent de Y
+1 enfant de Y
+0 @F325@ FAM
+1 WIFE @I152@
+1 HUSB @I154@
+1 parent de Y
+1 enfant de Y
+0 @F326@ FAM
+1 WIFE @I156@
+1 WIFE @I159@
+1 parent de Y
+1 enfant de Y
+0 @F327@ FAM
+1 WIFE @I156@
+1 HUSB @I160@
+1 parent de Y
+1 enfant de Y
+0 @F328@ FAM
+1 WIFE @I156@
+1 HUSB @I161@
+1 parent de Y
+1 enfant de Y
+0 @F329@ FAM
+1 HUSB @I157@
+1 WIFE @I158@
+1 parent de Y
+1 enfant de Y
+0 @F330@ FAM
+1 HUSB @I162@
+1 WIFE @I163@
+1 parent de Y
+1 enfant de Y
+0 @F331@ FAM
+1 HUSB @I162@
+1 WIFE @I164@
+1 parent de Y
+1 enfant de Y
+0 @F332@ FAM
+1 HUSB @I162@
+1 HUSB @I165@
+1 parent de Y
+1 enfant de Y
+0 @F333@ FAM
+1 WIFE @I163@
+1 HUSB @I179@
+1 MARR Y
+1 CHIL @I180@
+1 CHIL @I181@
+1 CHIL @I182@
+0 @F334@ FAM
+1 WIFE @I163@
+1 WIFE @I180@
+1 parent de Y
+1 enfant de Y
+0 @F335@ FAM
+1 WIFE @I163@
+1 HUSB @I181@
+1 parent de Y
+1 enfant de Y
+0 @F336@ FAM
+1 WIFE @I163@
+1 WIFE @I182@
+1 parent de Y
+1 enfant de Y
+0 @F337@ FAM
+1 WIFE @I164@
+1 HUSB @I183@
+1 DIV Y
+1 CHIL @I184@
+0 @F338@ FAM
+1 WIFE @I164@
+1 WIFE @I184@
+1 parent de Y
+1 enfant de Y
+0 @F339@ FAM
+1 HUSB @I166@
+1 HUSB @I167@
+1 parent de Y
+1 enfant de Y
+0 @F340@ FAM
+1 WIFE @I168@
+1 WIFE @I169@
+1 parent de Y
+1 enfant de Y
+0 @F341@ FAM
+1 WIFE @I168@
+1 WIFE @I170@
+1 parent de Y
+1 enfant de Y
+0 @F342@ FAM
+1 WIFE @I171@
+1 HUSB @I172@
+1 parent de Y
+1 enfant de Y
+0 @F343@ FAM
+1 WIFE @I171@
+1 HUSB @I173@
+1 parent de Y
+1 enfant de Y
+0 @F344@ FAM
+1 WIFE @I171@
+1 WIFE @I174@
+1 parent de Y
+1 enfant de Y
+0 @F345@ FAM
+1 WIFE @I175@
+1 HUSB @I185@
+1 MARR Y
+1 CHIL @I186@
+1 CHIL @I187@
+0 @F346@ FAM
+1 WIFE @I175@
+1 HUSB @I186@
+1 parent de Y
+1 enfant de Y
+0 @F347@ FAM
+1 WIFE @I175@
+1 HUSB @I187@
+1 parent de Y
+1 enfant de Y
+0 @F348@ FAM
+1 WIFE @I176@
+1 HUSB @I192@
+1 MARR Y
+1 CHIL @I193@
+1 CHIL @I194@
+0 @F349@ FAM
+1 WIFE @I176@
+1 HUSB @I193@
+1 parent de Y
+1 enfant de Y
+0 @F350@ FAM
+1 WIFE @I176@
+1 HUSB @I194@
+1 parent de Y
+1 enfant de Y
+0 @F351@ FAM
+1 WIFE @I178@
+1 HUSB @I188@
+1 MARR Y
+1 CHIL @I189@
+1 CHIL @I190@
+1 CHIL @I191@
+0 @F352@ FAM
+1 WIFE @I178@
+1 HUSB @I189@
+1 parent de Y
+1 enfant de Y
+0 @F353@ FAM
+1 WIFE @I178@
+1 HUSB @I190@
+1 parent de Y
+1 enfant de Y
+0 @F354@ FAM
+1 WIFE @I178@
+1 WIFE @I191@
+1 parent de Y
+1 enfant de Y
+0 @F355@ FAM
+1 HUSB @I179@
+1 WIFE @I180@
+1 parent de Y
+1 enfant de Y
+0 @F356@ FAM
+1 HUSB @I179@
+1 HUSB @I181@
+1 parent de Y
+1 enfant de Y
+0 @F357@ FAM
+1 HUSB @I179@
+1 WIFE @I182@
+1 parent de Y
+1 enfant de Y
+0 @F358@ FAM
+1 HUSB @I183@
+1 WIFE @I184@
+1 parent de Y
+1 enfant de Y
+0 @F359@ FAM
+1 HUSB @I185@
+1 HUSB @I186@
+1 parent de Y
+1 enfant de Y
+0 @F360@ FAM
+1 HUSB @I185@
+1 HUSB @I187@
+1 parent de Y
+1 enfant de Y
+0 @F361@ FAM
+1 HUSB @I188@
+1 HUSB @I189@
+1 parent de Y
+1 enfant de Y
+0 @F362@ FAM
+1 HUSB @I188@
+1 HUSB @I190@
+1 parent de Y
+1 enfant de Y
+0 @F363@ FAM
+1 HUSB @I188@
+1 WIFE @I191@
+1 parent de Y
+1 enfant de Y
+0 @F364@ FAM
+1 HUSB @I192@
+1 HUSB @I193@
+1 parent de Y
+1 enfant de Y
+0 @F365@ FAM
+1 HUSB @I192@
+1 HUSB @I194@
+1 parent de Y
+1 enfant de Y
+0 @F366@ FAM
+1 HUSB @I201@
+1 WIFE @I202@
+1 MARR Y
+1 CHIL @I200@
+0 @F367@ FAM
+1 HUSB @I200@
+1 HUSB @I201@
+1 enfant de Y
+1 parent de Y
+0 @F368@ FAM
+1 HUSB @I200@
+1 WIFE @I202@
+1 enfant de Y
+1 parent de Y
+0 @F369@ FAM
+1 HUSB @I205@
+1 WIFE @I206@
+1 MARR Y
+1 CHIL @I207@
+1 CHIL @I208@
+1 CHIL @I209@
+1 CHIL @I210@
+0 @F370@ FAM
+1 HUSB @I205@
+1 HUSB @I207@
+1 parent de Y
+1 enfant de Y
+0 @F371@ FAM
+1 HUSB @I205@
+1 WIFE @I208@
+1 parent de Y
+1 enfant de Y
+0 @F372@ FAM
+1 HUSB @I205@
+1 WIFE @I209@
+1 parent de Y
+1 enfant de Y
+0 @F373@ FAM
+1 HUSB @I205@
+1 HUSB @I210@
+1 parent de Y
+1 enfant de Y
+0 @F374@ FAM
+1 WIFE @I206@
+1 HUSB @I207@
+1 parent de Y
+1 enfant de Y
+0 @F375@ FAM
+1 WIFE @I206@
+1 WIFE @I208@
+1 parent de Y
+1 enfant de Y
+0 @F376@ FAM
+1 WIFE @I206@
+1 WIFE @I209@
+1 parent de Y
+1 enfant de Y
+0 @F377@ FAM
+1 WIFE @I206@
+1 HUSB @I210@
+1 parent de Y
+1 enfant de Y
+0 @F378@ FAM
+1 HUSB @I211@
+1 WIFE @I218@
+1 DIV Y
+1 CHIL @I219@
+1 CHIL @I220@
+1 CHIL @I221@
+1 CHIL @I222@
+1 CHIL @I223@
+0 @F379@ FAM
+1 HUSB @I211@
+1 HUSB @I219@
+1 parent de Y
+1 enfant de Y
+0 @F380@ FAM
+1 HUSB @I211@
+1 WIFE @I220@
+1 parent de Y
+1 enfant de Y
+0 @F381@ FAM
+1 HUSB @I211@
+1 WIFE @I221@
+1 parent de Y
+1 enfant de Y
+0 @F382@ FAM
+1 HUSB @I211@
+1 HUSB @I222@
+1 parent de Y
+1 enfant de Y
+0 @F383@ FAM
+1 HUSB @I211@
+1 WIFE @I223@
+1 parent de Y
+1 enfant de Y
+0 @F384@ FAM
+1 WIFE @I212@
+1 HUSB @I213@
+1 MARR Y
+1 CHIL @I214@
+0 @F385@ FAM
+1 WIFE @I212@
+1 HUSB @I214@
+1 parent de Y
+1 enfant de Y
+0 @F386@ FAM
+1 HUSB @I213@
+1 HUSB @I214@
+1 parent de Y
+1 enfant de Y
+0 @F387@ FAM
+1 HUSB @I214@
+1 WIFE @I215@
+1 MARR Y
+1 CHIL @I216@
+1 CHIL @I217@
+0 @F388@ FAM
+1 HUSB @I214@
+1 HUSB @I216@
+1 parent de Y
+1 enfant de Y
+0 @F389@ FAM
+1 HUSB @I214@
+1 WIFE @I217@
+1 parent de Y
+1 enfant de Y
+0 @F390@ FAM
+1 WIFE @I215@
+1 HUSB @I216@
+1 parent de Y
+1 enfant de Y
+0 @F391@ FAM
+1 WIFE @I215@
+1 WIFE @I217@
+1 parent de Y
+1 enfant de Y
+0 @F392@ FAM
+1 WIFE @I218@
+1 HUSB @I224@
+1 MARR Y
+0 @F393@ FAM
+1 WIFE @I218@
+1 HUSB @I219@
+1 parent de Y
+1 enfant de Y
+0 @F394@ FAM
+1 WIFE @I218@
+1 WIFE @I220@
+1 parent de Y
+1 enfant de Y
+0 @F395@ FAM
+1 WIFE @I218@
+1 WIFE @I221@
+1 parent de Y
+1 enfant de Y
+0 @F396@ FAM
+1 WIFE @I218@
+1 HUSB @I222@
+1 parent de Y
+1 enfant de Y
+0 @F397@ FAM
+1 WIFE @I218@
+1 WIFE @I223@
+1 parent de Y
+1 enfant de Y
+0 TRLR 

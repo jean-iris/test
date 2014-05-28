@@ -11,7 +11,7 @@ import visuel.FenPrinc;
  * @author Guillet
  *
  */
-public class Main {
+public class Main{
 
 	/**
 	 * @param args

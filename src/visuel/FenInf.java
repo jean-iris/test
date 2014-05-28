@@ -4,8 +4,11 @@
  */
 package visuel;
 
+import arbreGene.DateUtil;
 import arbreGene.FPersonne;
 import java.awt.Image;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -58,6 +61,7 @@ public class FenInf extends javax.swing.JPanel {
         reinitialiser = new javax.swing.JButton();
         textID = new javax.swing.JLabel();
         boutonDocAnnexe = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(325, 308));
         setMinimumSize(new java.awt.Dimension(325, 308));
@@ -158,6 +162,11 @@ public class FenInf extends javax.swing.JPanel {
                 checkDecesStateChanged(evt);
             }
         });
+        checkDeces.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkDecesActionPerformed(evt);
+            }
+        });
 
         textDateDeces.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textDateDeces.setText(bundle.getString("FenInf.textDateDeces.text")); // NOI18N
@@ -217,77 +226,83 @@ public class FenInf extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText(bundle.getString("FenInf.jButton1.text")); // NOI18N
+        jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(textLieuNais, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(zoneLieuNais, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(textPrenom))
-                                        .addGap(20, 20, 20)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(zoneNom, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                                            .addComponent(zonePrenom)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(textID)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(18, 18, 18)
-                                .addComponent(imagePersonne, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(etiSecondPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(zoneAutrePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(valider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(reinitialiser)
-                        .addGap(56, 56, 56))
+                        .addComponent(textLieuDeces, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(zoneLieuDeces))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(checkDeces)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textDateDeces)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(zoneDateDeces, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(boutonDateDec, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(textSex)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(listeSexe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(boutonDocAnnexe, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(28, 28, 28))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(valider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(reinitialiser))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(textLieuDeces, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(zoneLieuDeces))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(textDateNais)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(zoneDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boutonDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(textSex)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(listeSexe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(checkDeces)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(textDateDeces)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(zoneDateDeces, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boutonDateDec, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(boutonDocAnnexe)
+                                    .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textPrenom))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(zonePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(zoneNom, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(textID))
+                        .addGap(18, 18, 18)
+                        .addComponent(imagePersonne, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(etiSecondPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addComponent(zoneAutrePrenom))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textDateNais)
+                                .addGap(18, 18, 18)
+                                .addComponent(zoneDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(boutonDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textLieuNais, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(zoneLieuNais, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -303,23 +318,24 @@ public class FenInf extends javax.swing.JPanel {
                             .addComponent(textNom, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(zoneNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(zonePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textPrenom))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(etiSecondPrenom)
-                    .addComponent(zoneAutrePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textPrenom)
+                            .addComponent(zonePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textDateNais)
-                    .addComponent(zoneDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boutonDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(zoneAutrePrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiSecondPrenom))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boutonDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textDateNais)
+                        .addComponent(zoneDateNais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(textLieuNais)
                     .addComponent(zoneLieuNais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textSex)
                     .addComponent(listeSexe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -335,7 +351,9 @@ public class FenInf extends javax.swing.JPanel {
                     .addComponent(textLieuDeces)
                     .addComponent(zoneLieuDeces, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(boutonDocAnnexe)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boutonDocAnnexe)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(valider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -344,18 +362,19 @@ public class FenInf extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boutonDateNaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonDateNaisActionPerformed
-        // modif date de naissance avec date picker
-        PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
-        popup.setVisible(true);
-        popup.addWindowListener(new EvtDateNai());
-    }//GEN-LAST:event_boutonDateNaisActionPerformed
 
     private void boutonDateDecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonDateDecActionPerformed
         // appui sur le bouton popup date de décès prendre un date picker
-        PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilDeces(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
-        popup.setVisible(true);
-        popup.addWindowListener(new EvtDateDec());
+//        PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilDeces(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+        dateTemp = maPersonne.getIdentite().getDateUtilDeces();
+        if (dateTemp == null) {
+            dateTemp = new DateUtil();
+            maPersonne.getIdentite().setDateDece(dateTemp);
+            dateTemp = maPersonne.getIdentite().getDateUtilDeces();
+        }
+        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+        popupDec.addWindowListener(new EvtDateDec());
+        popupDec.setVisible(true);
     }//GEN-LAST:event_boutonDateDecActionPerformed
 
     private void validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerActionPerformed
@@ -434,7 +453,7 @@ public class FenInf extends javax.swing.JPanel {
         } else {
             System.out.println(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("FICHIER NON SELECTIONNE"));
         }
-        
+
     }//GEN-LAST:event_imagePersonneActionPerformed
 
     private void boutonDocAnnexeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonDocAnnexeActionPerformed
@@ -442,22 +461,90 @@ public class FenInf extends javax.swing.JPanel {
         popup.setVisible(true);
     }//GEN-LAST:event_boutonDocAnnexeActionPerformed
 
-    private class EvtDateNai extends java.awt.event.WindowAdapter {
+    private void checkDecesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDecesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkDecesActionPerformed
 
-        @Override
-        public void windowClosed(java.awt.event.WindowEvent e) {
-            zoneDateNais.setText(maPersonne.getIdentite().getDateNaissance());
-            modifie = true;
+    private void boutonDateNaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonDateNaisActionPerformed
+        // TODO add your handling code here:
+//        dateTemp = maPersonne.getIdentite().getDateUtilDeces();
+//        if (dateTemp == null) {
+//            dateTemp = new DateUtil();
+//        }
+//        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+//        popupDec.addWindowListener(new EvtDateDec());
+//        popupDec.setVisible(true);
+
+        popupNais = new Popup1(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+        //       PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+        popupNais.addWindowListener(new EvtDateNai());
+        popupNais.setVisible(true);
+    }//GEN-LAST:event_boutonDateNaisActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dateTemp = maPersonne.getIdentite().getDateUtilNaissance();
+        if (dateTemp == null) {
+            dateTemp = new DateUtil();
         }
-    }
+        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+        popupDec.addWindowListener(new EvtDateNai());
+        popupDec.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
+//        private void boutonDateNaisActionPerformed(java.awt.event.ActionEvent evt) {                                               
+//        // modif date de naissance avec date picker
+//        Popup1 popup = new Popup1(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+//        //       PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+//        popup.addWindowListener(new EvtDateNai()); 
+//        popup.setVisible(true);
+//    }   
+//    private class EvtDateNai extends java.awt.event.WindowAdapter {
+//
+//        @Override
+//        public void windowClosed(java.awt.event.WindowEvent e) {
+//             zoneDateNais.setText(maPersonne.getIdentite().getDateNaissance());
+//            modifie = true;
+//        }       
+//    }
     private class EvtDateDec extends java.awt.event.WindowAdapter {
 
         @Override
-        public void windowClosed(java.awt.event.WindowEvent e) {
-            zoneDateDeces.setText(maPersonne.getIdentite().getDateDeces());
-            modifie = true;
+        public void windowClosed(WindowEvent e) {
+            //todo ici, récupérer la date saisie dans le datepicker
+            if (e.getWindow() == popupDec) {
+                if (dateTemp.getDate() != null) {
+                    maPersonne.getIdentite().setDateDece(dateTemp);
+                }
+                zoneDateDeces.setText(maPersonne.getIdentite().getDateDeces());
+                modifie = true;
+            }
+            if (e.getWindow() == popupNais) {
+                zoneDateNais.setText(maPersonne.getIdentite().getDateNaissance());
+                modifie = true;
+                //super.windowClosed(e);
+            }
         }
+    }
+
+    private class EvtDateNai extends java.awt.event.WindowAdapter {
+
+        @Override
+        public void windowClosed(WindowEvent e) {
+            if (e.getWindow() == popupNais) {
+                zoneDateNais.setText(maPersonne.getIdentite().getDateNaissance());
+                modifie = true;
+                //super.windowClosed(e);
+            }
+            if (e.getWindow() == popupDec) {
+                if (dateTemp.getDate() != null) {
+                    maPersonne.getIdentite().setDateDece(dateTemp);
+                }
+
+                zoneDateDeces.setText(maPersonne.getIdentite().getDateDeces());
+                modifie = true;
+            }
+        }
+
     }
 
 //    zone des méthodes personnelles
@@ -490,10 +577,9 @@ public class FenInf extends javax.swing.JPanel {
             textLieuDeces.setVisible(false);
             boutonDateDec.setVisible(false);
         }
-        
+
         imaTemp = maPersonne.getIdentite().getImagePersonne();
-        if (imaTemp == null)
-        {
+        if (imaTemp == null) {
             Image ima1 = null;
             if (maPersonne.getIdentite().getSexe().equals(java.util.ResourceBundle.getBundle("visuel/Bundle").getString("HOMME"))) {
                 ima1 = new ImageIcon("images généalogie/homme4.JPG").getImage(); //NOI18N
@@ -507,14 +593,12 @@ public class FenInf extends javax.swing.JPanel {
                 Image ima2 = ima1.getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
                 imagePersonne.setIcon(new ImageIcon(ima2));
             }
-            
-        }
-        else
-        {
+
+        } else {
             Image ima2 = imaTemp.getImage().getScaledInstance(imagePersonne.getWidth(), imagePersonne.getHeight(), java.awt.Image.SCALE_SMOOTH);
             imagePersonne.setIcon(new ImageIcon(ima2));
         }
-        
+
         repaint();
         modifie = false;
     }
@@ -546,23 +630,25 @@ public class FenInf extends javax.swing.JPanel {
         if (!maPersonne.getIdentite().isDecede()) {
             //TODO metre a null le lieu de deces et date de deces ?
         }
+        DateUtil uneDate = maPersonne.getIdentite().getDateUtilDeces();
 
-        laPersonne.getIdentite().remplacer(Outils.formater(zoneNom.getText(), 1), Outils.formater(zonePrenom.getText(),2), Outils.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
-                checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), imaTemp); 
+//              laPersonne.getIdentite().remplacer(Outils.formater(zoneNom.getText(), 1), Outils.formater(zonePrenom.getText(),2), Outils.formater(zoneAutrePrenom.getText(),2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
+//                checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), maPersonne.getIdentite().getDateUtilDeces(), zoneLieuDeces.getText(), imaTemp); 
+        laPersonne.getIdentite().remplacer(Outils.formater(zoneNom.getText(), 1), Outils.formater(zonePrenom.getText(), 2), Outils.formater(zoneAutrePrenom.getText(), 2), maPersonne.getIdentite().getDateUtilNaissance(), zoneLieuNais.getText(),
+                checkDeces.isSelected(), (String) listeSexe.getSelectedItem(), uneDate, zoneLieuDeces.getText(), imaTemp);
         //mise a jours arbre affiché
         modifie = false;
     }
 
     // zone des méthodes métiers
 //    public void modifInternational(java.util.Locale langueLocale) {
-        protected void modifInternational(java.util.ResourceBundle bundle){
+    protected void modifInternational(java.util.ResourceBundle bundle) {
         // demande l'internationalisation des sous fenetres
 //        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("visuel/Bundle"); // NOI18N
         setName(bundle.getString("FenInf.name")); // NOI18N
 
-        listeSexe.setModel(new javax.swing.DefaultComboBoxModel(new String[] {bundle.getString("HOMME"),bundle.getString("FEMME") }));
-        
-        
+        listeSexe.setModel(new javax.swing.DefaultComboBoxModel(new String[]{bundle.getString("HOMME"), bundle.getString("FEMME")}));
+
         textNom.setText(bundle.getString("FenInf.textNom.text")); // NOI18N
         textNom.setName(bundle.getString("FenInf.textNom.name")); // NOI18N
 
@@ -631,7 +717,6 @@ public class FenInf extends javax.swing.JPanel {
 
         valider.setName(bundle.getString("FenInf.valider.name")); // NOI18N
 
-
         reinitialiser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         reinitialiser.setText(bundle.getString("FenInf.reinitialiser.text")); // NOI18N
         reinitialiser.setName(bundle.getString("FenInf.reinitialiser.name")); // NOI18N 
@@ -655,6 +740,7 @@ public class FenInf extends javax.swing.JPanel {
     private javax.swing.JCheckBox checkDeces;
     private javax.swing.JLabel etiSecondPrenom;
     private javax.swing.JButton imagePersonne;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox listeSexe;
     private javax.swing.JButton reinitialiser;
     private javax.swing.JLabel textDateDeces;
@@ -674,4 +760,7 @@ public class FenInf extends javax.swing.JPanel {
     private javax.swing.JTextField zoneNom;
     private javax.swing.JTextField zonePrenom;
     // End of variables declaration//GEN-END:variables
+DateUtil dateTemp;
+    Popup1 popupDec;
+    Popup1 popupNais;
 }
