@@ -38,6 +38,7 @@
 2 DATE 27/01/1911
 2 PLAC saint fort (mayenne)
 1 DEAT 
+2 DATE 30/04/2014
 2 PLAC Angers
 0 @I6@ INDI
 1 NAME Madeleine/GAUTIER/
@@ -2016,22 +2017,22 @@
 1 CHIL @I62@
 0 @F185@ FAM
 1 WIFE @I60@
-1 HUSB @I62@
+1 HUSB @I63@
 1 parent de Y
 1 enfant de Y
 0 @F186@ FAM
 1 WIFE @I60@
-1 HUSB @I63@
+1 WIFE @I64@
 1 parent de Y
 1 enfant de Y
 0 @F187@ FAM
 1 WIFE @I60@
-1 WIFE @I64@
+1 WIFE @I65@
 1 parent de Y
 1 enfant de Y
 0 @F188@ FAM
 1 WIFE @I60@
-1 WIFE @I65@
+1 HUSB @I62@
 1 parent de Y
 1 enfant de Y
 0 @F189@ FAM

@@ -372,7 +372,7 @@ public class FenInf extends javax.swing.JPanel {
             maPersonne.getIdentite().setDateDece(dateTemp);
             dateTemp = maPersonne.getIdentite().getDateUtilDeces();
         }
-        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+        popupDec = new PopupDate(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
         popupDec.addWindowListener(new EvtDateDec());
         popupDec.setVisible(true);
     }//GEN-LAST:event_boutonDateDecActionPerformed
@@ -471,11 +471,11 @@ public class FenInf extends javax.swing.JPanel {
 //        if (dateTemp == null) {
 //            dateTemp = new DateUtil();
 //        }
-//        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+//        popupDec = new PopupDate(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
 //        popupDec.addWindowListener(new EvtDateDec());
 //        popupDec.setVisible(true);
 
-        popupNais = new Popup1(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+        popupNais = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
         //       PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
         popupNais.addWindowListener(new EvtDateNai());
         popupNais.setVisible(true);
@@ -486,14 +486,14 @@ public class FenInf extends javax.swing.JPanel {
         if (dateTemp == null) {
             dateTemp = new DateUtil();
         }
-        popupDec = new Popup1(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
+        popupDec = new PopupDate(null, dateTemp, java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE DÉCÈS"));
         popupDec.addWindowListener(new EvtDateNai());
         popupDec.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 //        private void boutonDateNaisActionPerformed(java.awt.event.ActionEvent evt) {                                               
 //        // modif date de naissance avec date picker
-//        Popup1 popup = new Popup1(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
+//        PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
 //        //       PopupDate popup = new PopupDate(null, maPersonne.getIdentite().getDateUtilNaissance(), java.util.ResourceBundle.getBundle("visuel/Bundle").getString("DATE DE NAISSANCE"));
 //        popup.addWindowListener(new EvtDateNai()); 
 //        popup.setVisible(true);
@@ -761,6 +761,6 @@ public class FenInf extends javax.swing.JPanel {
     private javax.swing.JTextField zonePrenom;
     // End of variables declaration//GEN-END:variables
 DateUtil dateTemp;
-    Popup1 popupDec;
-    Popup1 popupNais;
+    PopupDate popupDec;
+    PopupDate popupNais;
 }
