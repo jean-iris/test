@@ -8,17 +8,27 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
- * @author YOHAN V1 créé le 15/02/2010 Cette classe contient les données d'une
- * personne: son nom son prénom sa date de naissance, son lieu de naissance,
+ * @author YOHAN 
+ * V1 créé le 15/02/2010 Cette classe contient les données d'une personne
+ * son nom son prénom sa date de naissance, son lieu de naissance,
  * s'il est mort, sa date de décès, son lieu de décès, liste des fichiers
  * archives, liste des epoux
  */
 public class Personne implements Serializable {
-
     //</editor-fold>
     // zone constructeur
+
     /**
-     * constructeur paramétré
+     * construit une personne issue d'un ficher Ged donc sans image
+     * @param nom
+     * @param prenom
+     * @param autrePrenom
+     * @param dateNaissance
+     * @param lieuNaissance
+     * @param decede indicatif si la personne est décédée
+     * @param sexe
+     * @param dateDeces 
+     * @param lieuDeces 
      */
     public Personne(String nom, String prenom, String autrePrenom, DateUtil dateNaissance, String lieuNaissance,
             boolean decede, String sexe, DateUtil dateDeces, String lieuDeces) {
@@ -69,6 +79,19 @@ public class Personne implements Serializable {
         }
     }
 
+    /**
+     * 
+     * @param nom
+     * @param prenom
+     * @param autrePrenom
+     * @param dateNaissance
+     * @param lieuNaissance
+     * @param decede
+     * @param sexe
+     * @param dateDeces
+     * @param lieuDeces
+     * @param imagePersonne 
+     */
     public void remplacer(String nom, String prenom, String autrePrenom, DateUtil dateNaissance, String lieuNaissance,
             boolean decede, String sexe, DateUtil dateDeces, String lieuDeces, ImageIcon imagePersonne) {
         this.nom = nom;
